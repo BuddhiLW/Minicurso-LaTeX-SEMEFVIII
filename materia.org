@@ -1,0 +1,250 @@
+bibliography:bib.bib
+
+* Título
+*Elementos de $\LaTeX$ e aplicações modernas.*
+
+* Objetivos para SEMEF
+** Contextualização
+O $\TeX$, quando foi inventado e idelizado, não podia possivelmente
+ser melhor preparado à extensa gama de integrações com outras
+linguagens, a que define em parte sua utilidade moderna.
+
+Nesse minicurso, tanto os elementos base do $\LaTeX$ e sua sintaxe serão
+abordados, quanto os diferentes ecossistemas em que a linguagem pervade.
+
+** Tecnologias a serem abordadas
+*** Org-mode
+Markdown que segue o paradigma Literate Programming (cite:knuth1984literate)
+- =org-latex-export-to-pdf=
+- =org-latex-export-to-tex=
+**** Literate programming
+***** Definição:
+*Separar as Linguagens Naturais das Linguages Artificiais de Programação, em um mesmo documento.*
+# Separate Natural Language (NL) from Artificial Programming Language (APL).
+***** Exemplo: Álgebra Simbólica Computacional
+Vamos usar dois pacotes =Simbolics.jl= e =Latexify.jl= (Julia).
+#+begin_src julia :session main :result output
+  using Symbolics
+  using Latexify
+#+end_src
+
+#+RESULTS:
+
+***** Descrevamos uma função,
+
+- Descrever:  $f(x,y) = xe^{x+y}$.
+# Describe f(x,y) = xe^{x+y}
+
+#+begin_src julia :session main :result output
+  f(x,y) = x*exp(x+y)
+#+end_src
+
+#+RESULTS:
+
+***** Derivemos a função
+
+Symbolicamente, definimos os operadores Derivada Parcial (Del ↔ ∂).
+# Symbolically,
+
+#+begin_src julia :session main :result output 
+  @variables x,y
+  ∂x = Differential(x)
+  ∂y = Differential(y)
+#+end_src
+
+#+RESULTS:
+: Differential(y)
+
+***** Pela regra da cadeia,
+
+Agora, basta derivarmos,
+# Further, we can derive
+\begin{equation}
+\begin{aligned}
+\dfrac{\partial{f(x,y)}}{\partial{x}}&= \dfrac{\partial{x}}{\partial{x}}e^{x+y} + x\dfrac{\partial{(e^{x+y})}}{\partial{x}}\\
+&=1.e^{x+y} + x(1.e^{x+y})
+\end{aligned}
+\end{equation}
+
+#+begin_src julia :session main :result output
+  ∂x_f=expand_derivatives(∂x(f(x,y)))
+#+end_src
+
+#+RESULTS:
+: exp(x + y) + x*exp(x + y)
+
+***** Fatoração
+
+Podemos simplificar,
+# Also, we can simply
+\begin{equation}
+\begin{aligned}
+\dfrac{\partial{f(x,y)}}{\partial{x}}&=  \dfrac{\partial{x}}{\partial{x}}e^{x+y} + x\dfrac{\partial{(e^{x+y})}}{\partial{x}}\\
+\Leftrightarrow \dfrac{\partial{f(x,y)}}{\partial{x}} &= e^{x+y}.(1+x)
+\end{aligned}
+\end{equation}
+
+#+begin_src julia :session main :result output
+  simplify(∂x_f)
+#+end_src
+
+#+RESULTS:
+: exp(x + y)*(1 + x)
+
+***** Transformar em LaTeX
+
+Que tal transformar em $\LaTeX$?
+#What about we tranform it in LaTeX?
+
+#+begin_src julia :session main :result output
+  latexify(simplify(∂x_f))
+#+end_src
+
+#+RESULTS:
+: \begin{equation}
+: e^{x + y} \left( 1 + x \right)
+: \end{equation}
+
+ \begin{equation}
+ e^{x + y} \left( 1 + x \right)
+ \end{equation}
+**** Outro exemplo
+
+#+begin_src julia :session main :result output
+  using RandomMatrices
+#+end_src
+
+#+RESULTS:
+
+#+NAME: 8914a214-4214-47a2-a871-bb69c25e7e62
+#+begin_src ein-julia :session localhost :results output
+  using Symbolics
+  using Latexify
+  using RandomMatrices
+  Q = rand(Haar(1),3) 
+#+end_src
+
+#+RESULTS: 8914a214-4214-47a2-a871-bb69c25e7e62
+: 3×3 Matrix{Float64}:
+:   0.194844   0.405287   0.893184
+:  -0.239204   0.902776  -0.357458
+:  -0.951219  -0.144005   0.272847
+
+#+NAME: 02a397f3-3058-41c5-9830-07edff386ab9
+#+begin_src ein-julia :session localhost :results output
+Q'
+#+end_src
+
+#+RESULTS: 02a397f3-3058-41c5-9830-07edff386ab9
+: 3×3 adjoint(::Matrix{Float64}) with eltype Float64:
+:  0.194844  -0.239204  -0.951219
+:  0.405287   0.902776  -0.144005
+:  0.893184  -0.357458   0.272847
+
+#+NAME: e2b760f3-d753-4a28-a47e-752ee60e3081
+#+begin_src ein-julia :session localhost :results output
+latexify(Q)
+#+end_src
+
+\begin{equation}
+\left[
+\begin{array}{ccc}
+0.1948440436711394 & 0.40528714656366793 & 0.8931842628910112 \\
+-0.2392044782795365 & 0.9027761994517172 & -0.357458181154842 \\
+-0.9512187005189152 & -0.14400507815279662 & 0.2728470656784 \\
+\end{array}
+\right]
+\end{equation}
+
+
+#+NAME: 60d880ba-5a98-4ed7-b504-bca8af0e33aa
+#+begin_src ein-julia :session localhost :results output
+latexify(Q')
+#+end_src
+
+\begin{equation}
+\left[
+\begin{array}{ccc}
+0.1948440436711394 & -0.2392044782795365 & -0.9512187005189152 \\
+0.40528714656366793 & 0.9027761994517172 & -0.14400507815279662 \\
+0.8931842628910112 & -0.357458181154842 & 0.2728470656784 \\
+\end{array}
+\right]
+\end{equation}
+
+#+NAME: 30b8fcf4-8260-40eb-b851-4e4a8ca9b659
+#+begin_src ein-julia :session localhost :results output
+latexify([[i round(x; digits = 2)] for (i, x) in enumerate(Q)])
+#+end_src
+
+#+RESULTS: 30b8fcf4-8260-40eb-b851-4e4a8ca9b659
+\begin{equation}
+\left[
+\begin{array}{ccc}
+\left[
+\begin{array}{cc}
+1.0 & 0.19 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+4.0 & 0.41 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+7.0 & 0.89 \\
+\end{array}
+\right] \\
+\left[
+\begin{array}{cc}
+2.0 & -0.24 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+5.0 & 0.9 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+8.0 & -0.36 \\
+\end{array}
+\right] \\
+\left[
+\begin{array}{cc}
+3.0 & -0.95 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+6.0 & -0.14 \\
+\end{array}
+\right] & \left[
+\begin{array}{cc}
+9.0 & 0.27 \\
+\end{array}
+\right] \\
+\end{array}
+\right]
+\end{equation}
+
+
+#+NAME: f981e615-625a-4149-a8f3-0b9abb559d4a
+#+begin_src ein-julia :session localhost :results output
+size(Q)
+#+end_src
+
+#+RESULTS: f981e615-625a-4149-a8f3-0b9abb559d4a
+: (3, 3)
+
+
+#+NAME: 7d5ee2c5-ada5-4faa-91db-28b609a52aca
+#+begin_src ein-julia :session localhost :results output
+  latexify(round.(Q; digits = 3))
+#+end_src
+
+\begin{equation}
+\left[
+\begin{array}{ccc}
+0.195 & 0.405 & 0.893 \\
+-0.239 & 0.903 & -0.357 \\
+-0.951 & -0.144 & 0.273 \\
+\end{array}
+\right]
+\end{equation}

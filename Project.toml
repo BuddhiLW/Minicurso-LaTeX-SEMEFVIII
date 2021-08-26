@@ -1,0 +1,4 @@
+[deps]
+Latexify = "23fbe1c1-3f47-55db-b15f-69d7ec21a316"
+RandomMatrices = "2576dda1-a324-5b11-aa66-c48ed7e3c618"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"

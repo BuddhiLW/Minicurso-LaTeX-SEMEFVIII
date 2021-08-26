@@ -1,0 +1,44 @@
+% Created 2021-08-14 Sat 17:52
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstnewenvironment{common-lispcode}
+{\lstset{language={Lisp},basicstyle={\ttfamily\footnotesize},frame=single,breaklines=true}}
+{}
+\newcommand{\python}[1]{\lstset{language={Python},basicstyle={\ttfamily\small}}\lstinline{#1}}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+common-lispcode
+
+\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=Python,label=orgc87043b,caption= ,captionpos=b}
+\begin{lstlisting}
+y = 13
+x = str(y)
+\end{lstlisting}
+
+This is an inline snippet of Python: \python{x = str(y)}.
+\end{document}

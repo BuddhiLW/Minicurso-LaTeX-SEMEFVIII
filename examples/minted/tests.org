@@ -1,0 +1,68 @@
+ #+LATEX_CLASS: article
+ #+LaTeX_HEADER: \usepackage{listings}
+ #+LaTeX_HEADER: \lstnewenvironment{common-lispcode}
+ #+LaTeX_HEADER: {\lstset{language={Lisp},basicstyle={\ttfamily\footnotesize},frame=single,breaklines=true}}
+ #+LaTeX_HEADER: {}
+ #+LaTeX_HEADER: \newcommand{\python}[1]{\lstset{language={Python},basicstyle={\ttfamily\small}}\lstinline{#1}}
+
+ #+name: setup-listings
+ #+begin_src emacs-lisp :exports both :results silent
+  (setq org-latex-listings 'listings)
+  (setq org-latex-custom-lang-environments
+        '((emacs-lisp "common-lispcode")))
+  (setq org-latex-listings-options
+        '(("frame" "lines")
+          ("basicstyle" "\\footnotesize")
+          ("numbers" "left")
+          ("numberstyle" "\\tiny")))
+  (setq org-latex-to-pdf-process
+        '("pdflatex -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -interaction nonstopmode -output-directory %o %f"))
+  (org-add-link-type
+   "latex" nil
+   (lambda (path desc format)
+     (cond
+      ((eq format 'html)
+       (format "<span class=\"%s\">%s</span>" path desc))
+      ((eq format 'latex)
+       (format "\\%s{%s}" path desc)))))
+ #+end_src
+
+ #+name: another-listing
+ #+begin_src python :exports code
+   y = 13
+   x = str(y)
+ #+end_src
+
+ #+RESULTS: another-listing
+ : None
+
+ This is an inline snippet of Python: [[latex:python][x = str(y)]].
+
+#+NAME: 33f01789-c2ed-4a84-b2bf-5b2d65b60e2c
+#+begin_src ein-julia :session localhost :results output
+using Plots
+loadpath = "/tmp/"
+anim = Animation(loadpath,String[])
+p = plot([sin,cos], 0, pi, size=(300,300))
+scatter!([0], [sin,cos])
+for i in 0:0.1:pi
+    p[3] = [i], [sin(i)]
+    p[4] = [i], [cos(i)]    
+    frame(anim)
+end
+#+end_src
+
+#+RESULTS: 33f01789-c2ed-4a84-b2bf-5b2d65b60e2c
+
+#+NAME: 3d4ab378-f4de-4733-b38c-09fdad332275
+#+begin_src ein-julia :session localhost :results output
+  run( `ffmpeg -r 15 -i /tmp/"%06d.png" -vcodec libx264 -crf 25 "file.mp4"` )
+#+end_src
+
+[[file:file.mp4][file:~/PP/LaTeX/SEMEF-minicurso/file.mp4]]
+
+#+begin_src emacs-lisp
+  (ffmpeg-player-video (expand-file-name "./file.mp4"))
+#+end_src

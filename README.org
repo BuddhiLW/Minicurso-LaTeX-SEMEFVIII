@@ -11,4 +11,27 @@ Nesse minicurso, tanto os elementos base do $\LaTeX$ e sua sintaxe serão
 abordados, quanto os diferentes ecossistemas em que a linguagem pervade.
 
   
+* Tópicos a serem abordados
+- Motivação a se usar um Integrated Development Environemnt (IDE)
+  + Apresentação de uma alternativa, o Emacs
+- Org-mode e exportações rápidas com LaTeX como backend.
+- MathJax (web), AUCTeX (preview) e outras aplicações modernas, baseadas na sintaxe do LaTeX.
+- Partes de um documento escrito em LaTeX
+  + Preâmbulo e ambientes (Prática).
+    * Escopo de variáveis (Teoria).
+  + Variável local (Prática).
+    * Variáveis dinâmicas (Teoria).
+- Sintaxe 
+- Alguns pacotes importantes, por área.
+  - Tabelas estilizadas.
+  - Gráficos e imagens geradas pelo LaTeX.
+  - Citações.
+  
+* O diretório
+#+begin_src shell
+  $ tree -L 1 
+#+end_src
+
+#+begin_example
+#+end_example
 

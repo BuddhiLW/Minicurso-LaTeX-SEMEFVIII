@@ -1,0 +1,43 @@
+ #+LATEX_CLASS: article
+ #+LaTeX_HEADER: \usepackage{minted}
+ #+LaTeX_HEADER: \usemintedstyle{emacs}
+ #+LaTeX_HEADER: \newminted{common-lisp}{fontsize=\footnotesize}
+
+  #+name: another-listing
+ #+begin_src python :exports code
+   y = 13
+   x = str(y)
+ #+end_src
+
+ #+RESULTS: another-listing
+ : None
+
+ This is an inline snippet of Python: [[latex:python][x = str(y)]].
+
+#+NAME: 33f01789-c2ed-4a84-b2bf-5b2d65b60e2c
+#+begin_src ein-julia :session localhost :results output
+using Plots
+loadpath = "/tmp/"
+anim = Animation(loadpath,String[])
+p = plot([sin,cos], 0, pi, size=(300,300))
+scatter!([0], [sin,cos])
+for i in 0:0.1:pi
+    p[3] = [i], [sin(i)]
+    p[4] = [i], [cos(i)]    
+    frame(anim)
+end
+#+end_src
+
+#+RESULTS: 33f01789-c2ed-4a84-b2bf-5b2d65b60e2c
+
+#+NAME: 3d4ab378-f4de-4733-b38c-09fdad332275
+#+begin_src ein-julia :session localhost :results output
+  run( `ffmpeg -r 15 -i /tmp/"%06d.png" -vcodec libx264 -crf 25 "file.mp4"` )
+#+end_src
+
+# [[file:file.mp4][file:~/PP/LaTeX/SEMEF-minicurso/file.mp4]]
+
+#+begin_src emacs-lisp
+  (ffmpeg-player-video (expand-file-name "./file.mp4"))
+#+end_src
+

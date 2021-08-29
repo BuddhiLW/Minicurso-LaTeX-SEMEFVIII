@@ -1,4 +1,4 @@
-% Created 2021-08-26 Thu 17:39
+% Created 2021-08-26 Thu 17:44
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -15,10 +15,9 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{listings}
-\lstnewenvironment{common-lispcode}
-{\lstset{language={Lisp},basicstyle={\ttfamily\footnotesize},frame=single,breaklines=true}}
-{}
-\newcommand{\python}[1]{\lstset{language={Python},basicstyle={\ttfamily\small}}\lstinline{#1}}
+\usepackage{minted}
+\usemintedstyle{emacs}
+\newminted{common-lisp}{fontsize=\footnotesize}
 \date{\today}
 \title{}
 \hypersetup{
@@ -32,17 +31,15 @@
 
 \tableofcontents
 
-common-lispcode
-
-\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=Python,label=org4c24359,caption= ,captionpos=b}
+\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=Python,label=org7c62360,caption= ,captionpos=b}
 \begin{lstlisting}
 y = 13
 x = str(y)
 \end{lstlisting}
 
-This is an inline snippet of Python: \python{x = str(y)}.
+% This is an inline snippet of Python: \python{x = str(y)}.
 
-\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=ein-julia,label=orgd31871e,caption= ,captionpos=b}
+\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=ein-julia,label=org291f625,caption= ,captionpos=b}
 \begin{lstlisting}
 using Plots
 loadpath = "/tmp/"
@@ -56,12 +53,10 @@ for i in 0:0.1:pi
 end
 \end{lstlisting}
 
-\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=ein-julia,label=orga2d481f,caption= ,captionpos=b}
+\lstset{frame=lines,basicstyle=\footnotesize,numbers=left,numberstyle=\tiny,language=ein-julia,label=org1f15611,caption= ,captionpos=b}
 \begin{lstlisting}
 run( `ffmpeg -r 15 -i /tmp/"%06d.png" -vcodec libx264 -crf 25 "file.mp4"` )
 \end{lstlisting}
-
-\href{file.mp4}{file:\textasciitilde{}/PP/\LaTeX{}/SEMEF-minicurso/file.mp4}
 
 common-lispcode
 \end{document}

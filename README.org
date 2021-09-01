@@ -24,7 +24,6 @@ abordados, quanto os diferentes ecossistemas em que a linguagem pervade.
    * Tabelas estilizadas.
    * Gráficos e imagens geradas pelo LaTeX.
    * Citações.
-  
 * O diretório
 #+begin_src shell
   $ tree -L 1 
@@ -33,3 +32,13 @@ abordados, quanto os diferentes ecossistemas em que a linguagem pervade.
 #+begin_example
 #+end_example
 
+* Outros minicursos e fontes de informação.
+- (Luiz Eleno) Material introdutório e exemplo de uso =Beamer=.
+  + LaTeX tutorial for newbies (2020):  https://github.com/luizeleno/LaTeX-tutorial-for-newbies
+- (Rebeca Bacani) Material introdutório e motivacional do uso de LaTeX.
+  + A crash course LaTeX (2017): https://edisciplinas.usp.br/mod/folder/view.php?id=3587478&lang=en
+- (Pedro Branquinho) Material introdutório abordando diversos casos de uso e sintaxe:
+  + Minicurso de LaTeX, LabEEL: https://github.com/BuddhiLW/MC-LaTeX
+    * Aula 1 - Introdução ao LaTeX: https://www.youtube.com/watch?v=spYCKElN-v0
+    * Aula 2 - Produção de Relatórios, Artigos e Teses: https://www.youtube.com/watch?v=eYltXjJ9glc
+    * Aula 3 - Referências e Apresentações com a Classe Beamer:  https://www.youtube.com/watch?v=OiB3oLoE4pQ

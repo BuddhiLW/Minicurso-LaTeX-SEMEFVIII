@@ -1,0 +1,20 @@
+* Org-mode
+** Algumas referências
+*** Carsten Dominik, Google talk (2008):
+#+ATTR_HTML: :width 600px
+[[file:img/google.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/google.png]]
+Emacs Org-mode - a system for note-taking and project planning
+https://www.youtube.com/watch?v=oJTwQvgfgMM
+
+*** Thibault Lestang, Oxford (2020):
+#+ATTR_HTML: :width 600px
+[[file:img/oxford.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/oxford.png]]
+Reproducible Research with GNU Emacs and Org-mode:
+https://www.youtube.com/watch?v=AP4LX8L7MFM
+
+** Argumento principal do por quê usar Org Mode
+
+#+begin_quote
+*Arquivos texto* são os únicos arquivos genuinamente portáveis
+#+end_quote
+- C. Dominik (2008)

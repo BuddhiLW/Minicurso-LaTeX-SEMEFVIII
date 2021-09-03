@@ -1,0 +1,24 @@
+#+TITLE:  O LaTeX e alguns modelos!
+#+AUTHOR:  Pedro G. Branquinho
+# #+EMAIL: pedro.branquinho@usp.br
+# #+BEAMER_FRAME_LEVEL: 2
+# #+OPTIONS: H:2 toc:t num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Berlin
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+# #+DATE: @@beamer: \scriptsize{Sintaxe e a base de \LaTeX} \\ Universidade de São Paulo - DEMAR@@
+
+#+STARTUP: latexpreview
+#+STARTUP: imagepreview
+# #+startup:beamer
+
+* Sumário de tópicos
+** Sintaxe básica
+*** Podemos utilizar itemização padrão
+- Um item
+- Outro item
+  
+*** Também podemos utilizar a numerada
+1. Primeiro item
+2. Segundo item

@@ -1,0 +1,19 @@
+# #+STARTUP: latexpreview
+# #+STARTUP: imagepreview
+
+#+startup:beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+
+#+TITLE:  Introdução ao LaTeX
+#+AUTHOR:  Branquinho
+#+EMAIL: pedro.branquinho@usp.br
+#+DATE: \scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR
+
+#+BEAMER_FRAME_LEVEL: 2
+
+* Primeiro slide
+** FOO
+lipsum
+* Segundo slide
+** BAR

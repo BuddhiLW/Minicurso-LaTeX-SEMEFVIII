@@ -1,4 +1,402 @@
 #+STARTUP: latexpreview
 #+STARTUP: imagepreview
 
-* 
+#+TITLE:  O LaTeX e alguns modelos
+#+AUTHOR:  Pedro G. Branquinho 
+#+EMAIL: pedro.branquinho@usp.br
+#+BEAMER_FRAME_LEVEL: 3
+#+LATEX_CLASS: beamer
+#+BEAMER_COLOR_THEME: seahorse
+#+LATEX_CLASS_OPTIONS: [bigger]
+#+BEAMER_HEADER: \setbeamertemplate{itemize item}{\ding{166}}
+#+BEAMER_HEADER: \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+#+BEAMER_HEADER: \setbeamertemplate{enumerate item}[circle]
+#+BEAMER_HEADER: \setbeamercolor{block title}{bg=red!30!white,fg=black}
+#+BEAMER_THEME: Madrid [height=20pt]
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+#+DATE: @@beamer:  Universidade de São Paulo - DEMAR@@
+
+#+LaTeX_HEADER: \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+#+LANGUAGE:  pt
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:niltags:not-in-toc
+
+#+latex_header: \usepackage{pifont}
+#+LATEX_HEADER:\usepackage{verbatim}
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER:\def\verbatim@font{\scriptsize\ttfamily}
+#+LATEX_HEADER:\makeatother
+
+* Sumário de tópicos
+** Pioneiros e Fundadores
+*** Origem de TeX - Knuth (1978)
+**** Imagem do Knuth
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+# algum texto
+#+ATTR_HTML: :width 200px
+#+ATTR_LATEX: :width 1.02\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/KnuthAtOpenContentAlliance.jpg][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/KnuthAtOpenContentAlliance.jpg]]
+**** Código Imagem
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]
+                  {./img/Knuth.png}
+\end{figure}
+#+end_example
+
+
+*** Roupagem moderna, LaTeX - Leslie Lamport (1985)
+**** Imagem Lamport
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+ATTR_HTML: :width 200px
+#+ATTR_LATEX: :width 1.02\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/Leslie_Lamport.jpg][file:./img/Leslie_Lamport.jpg]]
+**** Código da Imagem
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]
+                  {./img/Lamport.png}
+\end{figure}
+#+end_example 
+
+** Aplicações que utilizam de LaTeX
+*** MathJax - LaTeX na Web
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width 1.02\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/mathjax.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/mathjax.png]]
+
+
+*** Org-mode e AUCTeX (O código que usamos)
+**** Código da Equação de Navier-Stokes
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+begin_example
+  \begin{equation}
+          \begin{aligned}
+          \dfrac{\partial{\vec{V}}}{\partial{t}}
+          + \vec{V}.\nabla{\vec{V}}
+          = - \dfrac{\nabla{p}}{\rho}
+          + \nu{}\nabla^2{\vec{V}}
+          \end{aligned}
+  \end{equation}
+#+end_example
+
+**** Renderização Equação de Navier-Stokes
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+\begin{equation}
+        \begin{aligned}
+        \dfrac{\partial{\vec{V}}}{\partial{t}} + \vec{V}.\nabla{\vec{V}} = - \dfrac{\nabla{p}}{\rho} + \nu{}\nabla^2{\vec{V}}
+        \end{aligned}
+\end{equation}
+
+*** Dentro do Org-mode, no Emacs
+#+ATTR_BEAMER: :overlay <+->
+- Preview em tempo real.
+- Aparência customizável.
+- Ecossistema para programação.
+  
+#+ATTR_HTML: :width 1000px
+#+ATTR_LATEX: :width 0.8\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/orgmode-auctex.png][file:./img/orgmode-auctex2.png]]
+
+** Sintaxe básica de listagem e enumeração
+*** Itemize
+#+BEAMER: 
+**** Como renderiza:                                             :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_export latex
+\begin{itemize}
+\item Primeiro item
+\item Segundo item
+\end{itemize}
+#+end_export
+
+**** O código:                                                   :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_example
+
+
+*** Enumerate
+**** Como renderiza:                                             :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_export latex
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_export
+**** O código:                                                   :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_example
+
+** Tabelas
+*** Tabela Simples
+**** Exemplo
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+|----------+----------+----------|
+| Coluna 1 | Coluna 2 | Coluna 3 |
+|----------+----------+----------|
+| $a_{11}$ | $a_{12}$ | $a_{13}$ |
+| $a_{21}$ | $a_{22}$ | $a_{23}$ |
+| Texto 1  | Texto 2  | Texto 3  |
+| dsda     | dsad     | dasdas   |
+|----------+----------+----------|
+
+**** Código
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+    \begin{center}
+      \begin{tabular}{lll}
+        \hline
+        Coluna 1 & Coluna 2 & Coluna 3\\
+        \hline
+        \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+        \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+        Texto 1 & Texto 2 & Texto 3\\
+        \hline
+      \end{tabular}
+    \end{center}
+#+end_example
+* Exemplos de documentos completos
+** Preâmbulo
+*** Preâmbulo mínimo
+- Onde fica as especificações da tipografia do documentos.
+- Ambiente mais genérico.
+- Onde os comportamentos padrões são especificados.
+  
+  # #+ATTR_LATEX: :environment verbatim
+  #+HEADER: :results output silent
+#+begin_src latex   :results output silent :tangle ./tangle/doc1.tex
+  %!Tex TS-program = xelatex
+  %!TEX encoding = UTF-8 Unicode
+
+    \documentclass[
+    12pt,				% tamanho da fonte
+    openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+    oneside,			% para impressão em recto e verso. Oposto a oneside
+    a4paper,			% tamanho do papel.
+    brazil,				% o último idioma é o principal do documento
+    english,			% idioma adicional para hifenização
+    ]{abntex2}
+    \RequireXeTeX %Force XeTeX check
+#+end_src
+
+**** Definindo a classe do documento
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+
+#+begin_example
+%!Tex TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+  \documentclass[
+  12pt,				% tamanho da fonte
+  openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+  oneside,			% para impressão em recto e verso. Oposto a oneside
+  a4paper,			% tamanho do papel.
+  brazil,				% o último idioma é o principal do documento
+  english,			% idioma adicional para hifenização
+  ]{abntex2}
+  \RequireXeTeX %Force XeTeX check
+#+end_example
+
+*** Os pacotes a serem utilizados
+**** Alguns que definem fonte, indentação, etc.
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+HEADER: :results output silent
+#+begin_src latex  :eval never :results output silent  :tangle ./tangle/doc1.tex
+  % --- (tudo que vem depois de '%' é um comentário em latex)
+  % PACKAGES
+  % ---
+
+  % ---
+  % Fundamental Packages
+  % ---
+  \usepackage{lmodern}			% Usa a fonte Latin Modern
+  \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+  \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+  \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+  \usepackage{color}				% Controle das cores
+  \usepackage{graphicx}			% Inclusão de gráficos
+  \usepackage{microtype} 			% para melhorias de
+  % justificação
+  \usepackage{xltxtra}
+  \usepackage{lipsum}
+  \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+  \usepackage{amsmath}
+#+end_src
+
+#+begin_example
+% --- (tudo que vem depois de '%' é um comentário em latex)
+% PACKAGES
+% ---
+
+% ---
+% Fundamental Packages
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de
+% justificação
+\usepackage{lipsum}
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{amsmath}            % Ambientes matemáticos
+#+end_example
+*** Corpo do documento
+**** Um texto dentro do ambiente =document=
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+HEADER: :results output silent
+#+begin_src latex  :eval never :results output silent  :tangle ./tangle/doc1.tex
+  \begin{document} %% Iniciar o documento
+
+  \chapter{Capítulo 1}
+    \section{Secção número 1.1}
+
+    \textbf{De acordo com \cite{knuth1984literate}, Literate programming é o paradigma mais formal e divertido de todos.}
+  
+    \lipsum[1-2] % Texto enche linguíça
+
+  \bibliography{arquivo-com-bibliografias} % Usar bibliografias
+
+  \end{document}
+#+end_src
+
+#+begin_example
+  \begin{document} %% Iniciar o documento
+
+  \chapter{Capítulo 1}
+    \section{Secção número 1.1}
+
+      \textbf{De acordo com \cite{knuth1984literate}, Literate programming é
+      o paradigma mais formal e divertido de todos.}
+
+    \lipsum[1-2] % Gerador de texto enche linguíça
+
+  \bibliography{arquivo-com-bibliografias} % Usar bibliografias
+
+  \end{document}
+#+end_example
+* Tabela
+
+#+begin_src python
+3+2
+#+end_src
+
+#+RESULTS:
+: None
+
+#+NAME: 880940d5-cc16-44a1-8644-0d92f7a6dcaf
+#+begin_src ein-python :session localhost :results output
+3+2
+#+end_src
+
+#+RESULTS: 880940d5-cc16-44a1-8644-0d92f7a6dcaf
+: 5
+
+#+NAME: 1579135c-0a10-439f-8f10-76814898702b
+#+begin_src ein-python :session localhost :results output
+  import numpy as np
+#+end_src
+
+#+RESULTS: 1579135c-0a10-439f-8f10-76814898702b
+
+#+NAME: 281eeab5-bf37-4ca2-8ba8-bc0606cb643c
+#+begin_src ein-python :session localhost :results output
+np.sin(2)
+#+end_src
+
+#+RESULTS: 281eeab5-bf37-4ca2-8ba8-bc0606cb643c
+: 0.9092974268256817
+
+#+NAME: c5b59397-2fd5-478c-8442-90890dd8f7c7
+#+begin_src ein-python :session localhost :results output
+np.ones(2)
+#+end_src
+
+#+RESULTS: c5b59397-2fd5-478c-8442-90890dd8f7c7
+: array([1., 1.])

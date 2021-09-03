@@ -1,0 +1,14 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Knuth 1984]{foo}
+\abntrefinfo{Knuth}{KNUTH}{1984}
+{KNUTH, D.~E. Literate programming.
+\emph{The computer journal}, Oxford University Press, v.~27, n.~2, p. 97--111,
+  1984.}
+
+\end{thebibliography}

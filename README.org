@@ -1,4 +1,4 @@
-* Título
+* Título (versão Dev)
 *Elementos de $\LaTeX$ e aplicações modernas.*
 
 * Explicação do minicurso SEMEF

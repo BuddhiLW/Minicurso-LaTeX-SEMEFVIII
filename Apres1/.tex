@@ -1,6 +1,6 @@
-% Created 2021-09-03 Fri 18:17
+% Created 2021-09-10 Fri 23:27
 % Intended LaTeX compiler: pdflatex
-\documentclass[11pt]{article}
+\documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -14,8 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{minted}
-\usemintedstyle{emacs}
+\usetheme{default}
 \date{\today}
 \title{}
 \hypersetup{
@@ -27,15 +26,8 @@
  pdflang={English}}
 \begin{document}
 
+\begin{frame}{Outline}
 \tableofcontents
+\end{frame}
 
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
-x = str(y)
-\end{minted}
-
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{julia}
-function f(x,y):
-  exp(x^2+y^2)
-end
-\end{minted}
 \end{document}

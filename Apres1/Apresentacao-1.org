@@ -16,7 +16,7 @@
 #+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
 #+DATE: @@beamer:  Universidade de São Paulo - DEMAR@@
 
-#+LaTeX_HEADER: \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+# #+LaTeX_HEADER: \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 #+LANGUAGE:  pt
 #+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:niltags:not-in-toc
@@ -26,8 +26,10 @@
 #+LATEX_HEADER:\makeatletter
 #+LATEX_HEADER:\def\verbatim@font{\scriptsize\ttfamily}
 #+LATEX_HEADER:\makeatother
+#+LATEX_HEADER:\logo{\includegraphics[height=0.5cm]{./img/usp-logo-1}}
+#+LATEX_HEADER:\AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection,currentsubsection]\end{frame}}
 
-* Sumário de tópicos
+# * Sumário de tópicos
 ** Pioneiros e Fundadores
 *** Origem de TeX - Knuth (1978)
 **** Imagem do Knuth
@@ -400,3 +402,5 @@ np.ones(2)
 
 #+RESULTS: c5b59397-2fd5-478c-8442-90890dd8f7c7
 : array([1., 1.])
+* Referências
+  https://latexdraw.com/

@@ -1,0 +1,62 @@
+\documentclass[
+% -- opções da classe memoir --
+12pt,				% tamanho da fonte
+oneside,			% para impressão em recto e verso. Oposto a oneside
+a4paper,			% tamanho do papel.
+brazil,				% o último idioma é o principal do documento
+twocolumn,
+]{abntex2}
+
+\usepackage{sectsty}        %% Modificar comportamentos cap.sec. etc.
+\usepackage{lipsum}         %% Encher linguíça
+\usepackage[utf8]{inputenc} %% Acentos
+% \usepackage[portuguese]{babel} %PORTUGUES!
+% \usepackage[utf8]{inputenc}
+\usepackage{hyperref,times}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{cuted}
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{\MakeUppercase{<Título>}\\
+  <Estudantes>\\
+  <Outros estudantes>\\
+  <Orientador>}
+\instituicao{%
+  {\large Universidade de São Paulo - USP}\\
+  \par
+  <e-mail>
+}%
+
+
+%%%%%%%%%%%% Configuração de centralização de capítulos etc.
+% \chapterfont{\centering}
+% \sectionfont{\centering}
+% \subsectionfont{\centering}
+
+\renewcommand{\chapnamefont}{\centering\normalfont} 
+\renewcommand{\chapnumfont}{\centering\normalfont} 
+\renewcommand\chaptitlefont{\bfseries\centering\LARGE}
+\renewcommand\secheadstyle{\bfseries\centering\Large}
+\renewcommand\subsecheadstyle{\bfseries\centering\Large}
+
+
+\begin{document}
+\begin{strip}
+  \vspace*{\dimexpr-\baselineskip-\stripsep\relax}
+  \centering
+  \imprimirfolhaderosto*
+  \vskip\baselineskip
+\noindent\makebox[\textwidth]{\rule{1.1\paperwidth}{0.4pt}}
+  \vskip\baselineskip
+\end{strip}
+\clearpage
+\clearpage
+
+% \chapter{Test Chapter}
+\section*{Test Section} % Secção não-numerada
+\lipsum[1]
+\subsection*{Test Subsection} % Subsecção não-numerada etc.
+\lipsum[3]
+\end{document}

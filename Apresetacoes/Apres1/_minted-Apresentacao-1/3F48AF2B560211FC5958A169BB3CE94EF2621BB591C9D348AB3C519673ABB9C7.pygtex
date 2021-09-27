@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{n+nb}{defalias} \PYG{l+s+ss}{\PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:python}
+\PYG{l+s+ss}{\PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:ein\PYGZhy{}python}\PYG{p}{)}
+\end{Verbatim}

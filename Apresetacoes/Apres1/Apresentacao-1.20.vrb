@@ -1,0 +1,28 @@
+\frametitle{Tabela Simples}
+\begin{block}<1->{\small{Exemplo}}
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Coluna 1 & Coluna 2 & Coluna 3\\
+\hline
+\(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+\(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+Texto 1 & Texto 2 & Texto 3\\
+\hline
+\end{tabular}
+\end{center}
+\end{block}
+
+\begin{block}<2->{\small{Código}}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{tabular}{lll}
+  \hline
+  Coluna 1 & Coluna 2 & Coluna 3\\
+  \hline
+  \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+  \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+  Texto 1 & Texto 2 & Texto 3\\
+  \hline
+\end{tabular}
+\end{minted}
+\end{block}

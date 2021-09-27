@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{k}{setq} \PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}listings} \PYG{l+s+ss}{\PYGZsq{}minted}\PYG{p}{)}
+\PYG{p}{(}\PYG{k}{setq} \PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}minted\PYGZhy{}options}
+   \PYG{o}{\PYGZsq{}}\PYG{p}{((}\PYG{l+s}{\PYGZdq{}fontsize\PYGZdq{}} \PYG{l+s}{\PYGZdq{}\PYGZbs{}\PYGZbs{}scriptsize\PYGZdq{}}\PYG{p}{)} \PYG{p}{(}\PYG{l+s}{\PYGZdq{}autogobble\PYGZdq{}} \PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{p}{)} \PYG{p}{(}\PYG{l+s}{\PYGZdq{}frame\PYGZdq{}} \PYG{l+s}{\PYGZdq{}lines\PYGZdq{}}\PYG{p}{)} \PYG{p}{(}\PYG{l+s}{\PYGZdq{}framesep\PYGZdq{}} \PYG{l+s}{\PYGZdq{}1mm\PYGZdq{}}\PYG{p}{)} \PYG{p}{(}\PYG{l+s}{\PYGZdq{}linenos\PYGZdq{}} \PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{p}{)))}
+\end{Verbatim}

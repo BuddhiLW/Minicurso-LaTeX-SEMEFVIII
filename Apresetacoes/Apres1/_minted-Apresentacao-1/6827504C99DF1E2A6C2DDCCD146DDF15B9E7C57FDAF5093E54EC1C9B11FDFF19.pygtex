@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[bigger]}\PYG{n+nb}{\PYGZob{}}beamer\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usetheme}\PYG{n+na}{[height=20pt]}\PYG{n+nb}{\PYGZob{}}Hannover\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}itemize item\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}ding}\PYG{n+nb}{\PYGZob{}}166\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}item projected\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=magenta!90!black,fg=white\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}enumerate item\PYG{n+nb}{\PYGZcb{}}[circle]
+\PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}block title\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=red!30!white,fg=black\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

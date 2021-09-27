@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{;;  (defalias \PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:latex \PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:tex)}
+\PYG{p}{(}\PYG{n+nb}{defalias} \PYG{l+s+ss}{\PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:python} \PYG{l+s+ss}{\PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:ein\PYGZhy{}python}\PYG{p}{)}
+\PYG{c+c1}{;; (defalias \PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:emacs lisp \PYGZsq{}org\PYGZhy{}babel\PYGZhy{}execute:emacs\PYGZhy{}lisp)}
+\end{Verbatim}

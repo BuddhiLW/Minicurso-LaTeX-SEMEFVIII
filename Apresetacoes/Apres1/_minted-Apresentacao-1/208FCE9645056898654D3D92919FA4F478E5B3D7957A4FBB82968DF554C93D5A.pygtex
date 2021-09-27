@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{\PYGZbs{}begin\PYGZob{}minted\PYGZcb{}[fontsize=\PYGZbs{}scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]\PYGZob{}python\PYGZcb{}}
+\PYG{x}{np.sin(43)}
+\end{Verbatim}

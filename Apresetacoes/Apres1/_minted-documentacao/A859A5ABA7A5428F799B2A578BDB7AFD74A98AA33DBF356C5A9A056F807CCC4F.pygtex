@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}block\PYG{n+nb}{\PYGZcb{}}\PYGZlt{}1\PYGZhy{}\PYGZgt{}\PYG{n+nb}{\PYGZob{}}Imagem Lamport\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=1.02\PYGZbs{}textwidth]}\PYG{n+nb}{\PYGZob{}}./img/Leslie\PYG{n+nb}{\PYGZus{}}Lamport.jpg\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}block\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

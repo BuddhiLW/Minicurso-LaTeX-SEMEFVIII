@@ -1,0 +1,115 @@
+% Created 2021-09-26 Sun 16:22
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage[draft]{hyperref}
+\usepackage{minted}
+\usemintedstyle{lovelace}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+
+\section{Distribuições existentes (com vasto suporte)}
+\label{sec:org5361ea1}
+Essas são algumas das distribuições, além da proposta pelo autor, que podem ser adotadas.
+\subsection{Spacemacs}
+\label{sec:org2474e8e}
+\begin{itemize}
+\item \url{https://www.spacemacs.org/}
+\end{itemize}
+\subsection{DOOM Emacs}
+\label{sec:org0bee1b7}
+\begin{itemize}
+\item \url{https://github.com/hlissner/doom-emacs}
+\end{itemize}
+\subsection{Prelude Emacs}
+\label{sec:orgb51cd62}
+\begin{itemize}
+\item \url{https://github.com/bbatsov/prelude}
+\end{itemize}
+
+\section{Como instalar a versão utilizada na SEMEF?}
+\label{sec:org9b300e2}
+\subsection{Git}
+\label{sec:org93fb830}
+\subsubsection{Instale o Git}
+\label{sec:orgddc796b}
+\url{https://git-scm.com/downloads}
+\subsubsection{Clone o repositório SEMEF (Frank-init)}
+\label{sec:org7a03ef5}
+Abra um \texttt{terminal Git}, na pasta \texttt{C:\textbackslash{}<Usuários>\textbackslash{}<Seu-Usuário>}. Isso
+pode ser feito entrando na pasta e clicando com o botão direito do
+mouse, e selecionando a opção do \texttt{terminal Git}.
+
+Escreva o comando:
+
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{shell}
+git clone https://github.com/BuddhiLW/Frank-init/tree/SEMEF .emacs.d
+\end{minted}
+
+Se ja tiver uma pasta chamada \texttt{.emacs.d} no diretório, a delete, ou a
+renomeia para outro nome, e.g., \texttt{.emacs.d.backup}. Em seguida, dê o
+comando acima.
+
+\subsubsection{Clone o \texttt{ob-julia}}
+\label{sec:orgbc51835}
+\begin{enumerate}
+\item Clonando \texttt{ob-julia}
+\label{sec:org7854ad0}
+Navegue ao diretório .emacs.d, pelo terminal,
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{shell}
+cd .emacs.d
+\end{minted}
+
+obs: \texttt{cd} := \texttt{change directory}.
+
+Dentro de \texttt{.emacs.d},
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{shell}
+git clone https://github.com/shg/ob-julia-vterm.el
+\end{minted}
+\end{enumerate}
+
+\subsubsection{Assistir como utilizar o Emacs}
+\label{sec:orgd7f1b7a}
+
+Teoricamente, você deveria ter assistido o tutorial de como instalar o
+Emacs, com esse vídeo (onde alguns comandos do Emacs são comentados):
+\begin{itemize}
+\item \url{https://www.youtube.com/watch?v=TEqhxzfYXKA}
+\end{itemize}
+
+Agora, é hora de assistir como utilizar o Emacs, propriamente:
+\begin{itemize}
+\item \url{https://www.youtube.com/watch?v=ub3T-y6\_u-4}
+\end{itemize}
+
+Recomendação, após o vídeo dedicado ao emacs:
+
+\begin{itemize}
+\item \textbf{O que é e como utilizar o básico de org-mode}
+\begin{itemize}
+\item \url{https://www.youtube.com/watch?v=ffBDQauDAgQ}
+\end{itemize}
+\end{itemize}
+\end{document}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[!ht]
+  \PYG{k}{\PYGZbs{}centering}
+  \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}linewidth]}
+  \PYG{n+nb}{\PYGZob{}}./img/Lamport.png\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,21 @@
+\frametitle{Roupagem moderna, \LaTeX {} - Leslie Lamport (1985)}
+\begin{columns}
+\begin{column}{0.48\columnwidth}
+\begin{block}<1->{Imagem Lamport}
+\href{img/Leslie\_Lamport.jpg}{\includegraphics[width=1.02\textwidth]{./img/Leslie_Lamport.jpg}}
+\pause
+\transblindshorizontal[duration=0.8]
+\end{block}
+\end{column}
+\begin{column}{0.48\columnwidth}
+\begin{block}<1->{Código da Imagem}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]
+  {./img/Lamport.png}
+\end{figure}
+\end{minted}
+\end{block}
+\end{column}
+\end{columns}

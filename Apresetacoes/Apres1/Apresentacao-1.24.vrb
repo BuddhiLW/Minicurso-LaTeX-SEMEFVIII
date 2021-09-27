@@ -1,0 +1,25 @@
+\frametitle{Corpo do documento}
+\begin{block}<1->{Um texto dentro do ambiente \texttt{document}}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{document} %% Iniciar o documento
+
+\chapter{Capítulo 1}
+\section{Secção número 1.1}
+
+\textbf{De acordo com \cite{knuth1984literate}, Literate programming
+  é o paradigma mais formal e divertido de todos.}
+
+\begin{figure}[ht]
+  \centering
+  \caption{\label{fig:lt1} Exemplo de literate programming.}
+  \includegraphics[width=\linewidth]{./img/literate-programming.jpeg}
+  \legend{Reference: The internet}
+\end{figure}
+
+\lipsum[1-2] % Texto enche linguíça
+
+\bibliography{arquivo-com-bibliografias} % Usar bibliografias
+
+\end{document}
+\end{minted}
+\end{block}

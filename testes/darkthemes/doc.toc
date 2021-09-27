@@ -1,0 +1,5 @@
+\selectlanguage *{latex}
+\beamer@sectionintoc {1}{Du dahut}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{SpÃ©cificitÃ©}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Environnement}{3}{0}{1}
+\beamer@sectionintoc {2}{TraitÃ© de chasse}{4}{0}{2}

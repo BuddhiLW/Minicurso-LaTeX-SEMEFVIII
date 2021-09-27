@@ -1,0 +1,402 @@
+#+STARTUP: latexpreview
+#+STARTUP: imagepreview
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt]
+
+# #+TITLE:  O LaTeX, documentação da apresentação
+# #+LaTeX_HEADER: \author[Branquinho]{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}
+# #+EMAIL: pedro.branquinho@usp.br
+# #+LaTeX_HEADER: \date[EEL-USP]{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}
+
+#+LATEX_HEADER: \usepackage[hidelinks]{hyperref}
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle{lovelace}
+
+* Comandos utilizados
+** Classe do documento (comando)
+#+begin_src latex :results output :exports both :eval no
+\documentclass[bigger]{beamer}
+#+end_src
+
+** Importação de pacotes (comando)
+
+Para qualquer pacote listado no https://www.ctan.org/, basta chamarmos
+o seguinte comando para incorporá-lo no documento em mãos.
+
+#+begin_src latex :results output :exports both :eval no
+\usepackage{<nome-do-pacote>}
+#+end_src
+
+*** Estilizações de um pacote
+
+**** Exemplo =tcolorbox=
+Alguns pacotes possuem estilização interna ao pacote. Por exemplo,
+=tcolorbox=, um pacote utilizado para estilizar blocos e tabelas, pode
+requerir a chamada de um "subpacote" adicional.
+
+Exemplo:
+Na documentação, é dito, para importação de bibliotecas extras, dentro
+de tcolorbox,
+http://mirrors.ctan.org/macros/latex/contrib/tcolorbox/tcolorbox.pdf
+É dito, utilize essa sintaxe.
+
+#+begin_src latex :results output :exports both :eval no
+\tcbuselibrary{⟨key list⟩}
+#+end_src
+
+Todas as opções:
+
+#+ATTR_HTML: :width 500px
+#+ATTR_LATEX: :width 0.5\textwidth
+[[file:img/libraries-tcolobox.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/libraries-tcolobox.png]]
+
+**** Caso de uso, na apresentação:
+
+No =preâmbulo=, chamei o pacote e biblioteca
+#+begin_src latex :results output :exports both :eval no
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+#+end_src
+
+Adaptei um exemplo da documentação,
+#+begin_src latex :results output :exports both :eval no
+  \newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+  \tcolorboxenvironment{modern-quote}{blanker,
+    before skip=6pt,
+    after skip=6pt,
+    borderline west={3mm}{0pt}{red}}
+#+end_src
+
+Por fim, para chamar o novo ambiente no documento, temos,
+#+begin_src latex :results output :exports both :eval no
+\begin{modern-quote}
+"Don't give up on your dreams, keep on sleeping."
+\end{modern-quote}
+#+end_src
+
+***** Renderização:
+
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 0.4\textwidth
+[[file:img/modern-quote.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/modern-quote.png]]
+
+*** Todos pacotes utilizados na apresentação, com suas opções e bibliotecas.
+#+begin_src latex :results output :exports code :eval no
+      \usepackage[utf8]{inputenc}
+      \usepackage[T1]{fontenc}
+      \usepackage{graphicx}
+      \usepackage{grffile}
+      \usepackage{longtable}
+      \usepackage{wrapfig}
+      \usepackage{rotating}
+      \usepackage[normalem]{ulem}
+      \usepackage{amsmath}
+      \usepackage{textcomp}
+      \usepackage{amssymb}
+      \usepackage{capt-of}
+      \usepackage{hyperref}
+      \author[Branquinho]{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}
+      \date[EEL-USP]{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}
+      \usepackage{pifont}
+      \usepackage{verbatim}
+      \makeatletter
+      \def\verbatim@font{\scriptsize\ttfamily}
+      \makeatother
+      \logo{\includegraphics[height=0.5cm]{./img/usp-logo-1}}
+      \AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}
+          \tableofcontents[currentsection,currentsubsection]
+        \end{frame}}
+      \usepackage{tikz}
+      \usetikzlibrary{arrows.meta}
+      \usetikzlibrary{positioning}
+      \usepackage{tcolorbox}
+      \tcbuselibrary{skins}
+      \usepackage{minted}
+      \usemintedstyle{lovelace}
+      \newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+      \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{red}}
+      {\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./img/TP-opacity-50.jpg}}
+        \usetheme[height=20pt]{Hannover}
+        \usecolortheme{seahorse}
+        \date{  Universidade de São Paulo - DEMAR}
+        \title{O \LaTeX{} e suas funcionalidades}
+        \setbeamertemplate{itemize item}{\ding{166}}
+        \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+        \setbeamertemplate{enumerate item}[circle]
+        \setbeamercolor{block title}{bg=red!30!white,fg=black}
+        \hypersetup{
+          pdfauthor={},
+          pdftitle={O \LaTeX{} e suas funcionalidades},
+          pdfkeywords={},
+          pdfsubject={},
+          pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+          pdflang={Portuguese}}
+#+end_src
+
+** Inicialização de slides (ambiente)
+*** Uso
+#+begin_src latex :results output :exports both :eval no
+  \begin{frame}[label={sec:org03cdf3a},fragile]{Origem de \TeX{} - Knuth (1978)}
+    (...)
+  \end{frame}
+#+end_src
+
+*** Renderização
+#+ATTR_HTML: :width 500px
+#+ATTR_LATEX: :width 0.3\textwidth
+[[file:img/frame.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/frame.png]]
+
+** Compartição de slides em colunas (ambientes)
+*** Uso
+
+Dentro do ambiente =frame=, teremos um ambiente =columns=, o qual pode
+ser dividido em diversas colunas unitárias, com  =column=. Nesse caso,
+cada uma ocupou 48% do espaço disponível para a coluna
+
+#+begin_src latex :results output :exports both :eval no
+  \begin{frame}[label={sec:org03cdf3a},fragile]{Origem de \TeX{} - Knuth (1978)}
+    %%%%%% Ambiente interior a um frame
+    \begin{columns}
+    
+      %%% * Coluna 1
+      \begin{column}{0.48\columnwidth}
+        (...) % Imagem
+      \end{column}
+
+      %%% * Coluna 2
+      \begin{column}{0.48\columnwidth} 
+        (...) % Código tipografado
+      \end{column}
+    
+    \end{columns}
+    %%%%%% 
+  \end{frame}
+#+end_src
+*** Renderização
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :width 0.5\textwidth
+[[file:img/colunas.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/colunas.png]]
+
+** Blocos de texto (ambiente)
+No preâmbulo, especificação de fonte preta e fundo rosa claro.
+#+begin_src latex :results output :exports both :eval no
+\setbeamercolor{block title}{bg=red!30!white,fg=black}
+#+end_src
+
+*** Exemplo e renderização
+No corpo do documento
+#+begin_src latex :results output :exports both :eval no
+  \begin{block}{\small{~Ille eruditus et sapiens~}}
+  (...)
+  \end{block}
+#+end_src
+
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 0.3\textwidth
+[[file:img/titulo-bloco.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/titulo-bloco.png]]
+** Itemização (ambiente)
+*** Customização da itemização
+No preâmbulo, itens de símbolo ding 166.
+#+begin_src latex :results output :exports both :eval no
+  \usepackage{pifont} %Alguns símbolos unicode (dingbats)
+  \setbeamertemplate{itemize item}{\ding{166}} % Todo itemize será renderizado com esse símbolo 166.
+#+end_src
+**** Uso e renderização
+Nota: as opções =[<+->]=, fazem com que os itens apareçam
+gradualmente, a cada slide consecutivo.
+
+#+begin_src latex :results output :exports both :eval no
+  \begin{itemize}[<+->]
+  \item Preview em tempo real.
+  (...)
+  \end{itemize}
+#+end_src
+
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 0.4\textwidth
+[[file:img/ding.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/ding.png]]
+
+*** Customização do enumerate
+No preâmbulo, elementos redondos e rosas.
+#+begin_src latex :results output :exports both :eval no :eval no
+  \setbeamercolor{item projected}{bg=magenta!90!black,fg=white} % elementos enumerados estilizados (magenta escura)
+  \setbeamertemplate{enumerate item}[circle] %enumeração com fundo redondo
+#+end_src
+
+**** Uso e renderização
+#+begin_src latex :results output :exports both :eval no :eval no
+  \begin{enumerate}
+  \item Primeiro item
+  \item Segundo item
+  \end{enumerate}
+#+end_src
+
+#+ATTR_HTML: :width 200px
+#+ATTR_LATEX: :width 0.2\textwidth
+[[file:img/enumerate.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/enumerate.png]]
+** Imagens
+*** Uso
+
+Dentro de uma =coluna=, em um =frame=, temos um =bloco= com uma
+=imagem=.
+
+#+begin_src latex :results output :exports both :eval no :eval no
+  \begin{block}<1->{Imagem Lamport}
+    \includegraphics[width=1.02\textwidth]{./img/Leslie_Lamport.jpg}
+  \end{block}
+#+end_src
+
+*** Renderização
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 0.3\textwidth
+[[file:img/bloco-image.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/bloco-image.png]]
+** Equações
+*** Uso
+Em ambientes =equation=, tipografamos uma equação,
+#+begin_src latex :results output :exports both  :eval no
+  \begin{equation}
+    \begin{aligned}
+      \dfrac{\partial{\vec{V}}}{\partial{t}}
+      + \vec{V}.\nabla{\vec{V}}
+      = - \dfrac{\nabla{p}}{\rho}
+      + \nu{}\nabla^2{\vec{V}}
+    \end{aligned}
+  \end{equation}
+#+end_src
+
+*** Renderização
+
+**** Por imagem
+
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/navier.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/navier.png]]
+
+**** Por código
+
+\begin{equation}
+  \begin{aligned}
+    \dfrac{\partial{\vec{V}}}{\partial{t}}
+    + \vec{V}.\nabla{\vec{V}}
+    = - \dfrac{\nabla{p}}{\rho}
+    + \nu{}\nabla^2{\vec{V}}
+  \end{aligned}
+\end{equation}
+** Tabelas (ambiente)
+*** Uso
+# (
+Notas:
++ O ambiente pode ser =tabular= or =table=
++ =\(x=y\)= é equivalente a =$x=y$=. Ou seja, =$= e =\(= ou =\)= são intercambiáveis. Porém, não deve os utilizar parcialmente. Isso é, o código =$x=y\)= não renderiza corretamente.
++ ={lll}= significa, três elementos por linha, cada um alinhado à esquerda (left).
++ =&= são separadores de elementos, por coluna.
++ =\\= quebram linhas
++ =\hline= significa uma linha horizontal ``(h[orizontal]line)''
+
+#+begin_src latex :results output :exports both  :eval no
+  \begin{tabular}{lll}
+    \hline
+    Coluna 1 & Coluna 2 & Coluna 3\\
+    \hline
+    \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+    \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+    Texto 1 & Texto 2 & Texto 3\\
+    \hline
+  \end{tabular}
+#+end_src
+
+Outro exemplo, mas de acordo com as normas ABNT
+
+#+begin_src latex :results output :exports both :eval no
+  \begin{table}[htb]
+    \begin{center}
+
+      \ABNTEXfontereduzida
+
+      \caption[<como aparece na lista de tabelas>]{\label{tab:formal} Formatação Tipográfica, modelo de
+        tabela genérica}
+
+      \begin{tabular}{m{2.6cm}|m{4.0cm}|m{2.25cm}|m{3.40cm}}
+        % \hline
+        \textbf{Pretendemos} & \textbf{Temos} & \textbf{Em \LaTeX{}es} & \textbf{Alternativamente}\\
+        \hline
+        Serif & {\rmfamily\textbf{R}o\textbf{m}ana} & \verb+{\rmfamily}+  & \verb+\textrm{}+ \\
+        \hline
+        Sans Serif & {\sffamily{\textbf{S}ans Serif\textbf{f}} & \verb+{\sffamily}+  & \verb+\textsf{}+\\
+        \hline
+        Type Writer & {\ttfamily{\textbf{T}ype Wri\textbf{t}er}}  & \verb+{\ttfamily}+ & \verb+\texttt{}+\\
+        \hline
+      \end{tabular}
+      \legend{Fonte: o autor}
+
+    \end{center}
+  \end{table}
+#+end_src
+
+Note que temos a estrutura,
+
+#+begin_src latex :results output :exports both :eval no
+  \begin{table}[opções-de-disposição-espacial]
+    (texto)
+    \begin{tabular}[partições]
+      (...)
+    \end{tabular}
+    (texto)
+  \end{table}
+#+end_src
+
+*** Renderiza
+**** Por imagem
+
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 0.5\textwidth
+[[file:img/tabela-img.png][file:~/PP/LaTeX/SEMEF-minicurso/Apres1/img/tabela-img.png]]
+
+**** Por código
+***** Exemplo 1
+
+  \begin{tabular}{lll}
+    \hline
+    Coluna 1 & Coluna 2 & Coluna 3\\
+    \hline
+    \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+    \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+    Texto 1 & Texto 2 & Texto 3\\
+    \hline
+  \end{tabular}
+***** Exemplo 2
+
+  \begin{table}[htb]
+    \begin{center}
+
+      \ABNTEXfontereduzida
+
+      \caption[<como aparece na lista de tabelas>]{\label{tab:formal} Formatação Tipográfica, modelo de
+        tabela genérica}
+
+      \begin{tabular}{|m{2.6cm}|m{4.0cm}|m{2.25cm}|m{3.40cm}}
+        \hline
+        \textbf{Pretendemos} & \textbf{Temos} & \textbf{Em \LaTeX{}es} & \textbf{Alternativamente}\\
+        \hline
+        Serif & {\rmfamily\textbf{R}o\textbf{m}ana} & \verb+{\rmfamily}+  & \verb+\textrm{}+ \\
+        \hline
+        Sans Serif & {\sffamily{\textbf{S}ans Serif\textbf{f}} & \verb+{\sffamily}+  & \verb+\textsf{}+\\
+        \hline
+        Type Writer & {\ttfamily{\textbf{T}ype Wri\textbf{t}er}}  & \verb+{\ttfamily}+ & \verb+\texttt{}+\\
+        \hline
+      \end{tabular}
+      \legend{Fonte: o autor}
+
+    \end{center}
+  \end{table}
+
+* Vocábulos e notações
+
+|------------+-------------|
+| Abreviação | Significado |
+|------------+-------------|
+| =bg=       | background. |
+| =fg=       | foreground. |
+|------------+-------------|
+

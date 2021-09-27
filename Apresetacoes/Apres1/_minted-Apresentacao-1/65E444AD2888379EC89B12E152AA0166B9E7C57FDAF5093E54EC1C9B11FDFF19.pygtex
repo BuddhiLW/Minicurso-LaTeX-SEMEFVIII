@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}\PYGZpc{} Iniciar o documento}
+
+  \PYG{k}{\PYGZbs{}chapter}\PYG{n+nb}{\PYGZob{}}Capítulo 1\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Secção número 1.1\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}De acordo com \PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}knuth1984literate\PYG{n+nb}{\PYGZcb{}}, Literate programming
+    é o paradigma mais formal e divertido de todos.\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[ht]
+    \PYG{k}{\PYGZbs{}centering}
+    \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:lt1\PYG{n+nb}{\PYGZcb{}} Exemplo de literate programming.\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}./img/literate\PYGZhy{}programming.jpeg\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}legend}\PYG{n+nb}{\PYGZob{}}Reference: \PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}youtube\PYGZhy{}friend\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}lipsum}\PYG{n+na}{[1\PYGZhy{}2]} \PYG{c}{\PYGZpc{} Texto enche linguíça}
+
+  \PYG{k}{\PYGZbs{}bibliography}\PYG{n+nb}{\PYGZob{}}arquivo\PYGZhy{}com\PYGZhy{}bibliografias\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Usar bibliografias}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

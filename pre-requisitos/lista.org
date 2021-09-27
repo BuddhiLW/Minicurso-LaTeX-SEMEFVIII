@@ -1,0 +1,41 @@
+#+TITLE:     Instalando Requerimentos
+#+AUTHOR:    Pedro Gomes Branquinho
+#+EMAIL:     pedro.branquinho@usp.br
+#+DATE:      25-09-2021
+
+# #+LATEX_CMD: xelatex
+#+LATEX_COMPILER: xelatex
+#+STARTUP: %!Tex TS-program = xelatex
+#+STARTUP: %!TEX encoding = UTF-8 Unicode
+
+#+LANGUAGE:  pt
+# #+OPTIONS:   H:2 num:t toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc <:t
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   d:nil todo:t pri:nil
+#+STARTUP: beamer
+#+LATEX_HEADER: \RequireXeTeX %Force XeTeX check
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usetheme{metropolis}
+#+LATEX_HEADER: \metroset{block=fill}
+#+LATEX_HEADER:\usepackage{xunicode}
+#+LATEX_HEADER:\setmainfont[Mapping=tex-text]{Hack Nerd Font}
+#+LATEX_HEADER:\setsansfont[Mapping=tex-text]{Iosevka}
+
+# % \setmonofont{Quivira}
+#+LATEX_HEADER: \newfontfamily\uni[Mapping=tex-text]{Source Han Serif C}
+
+# % \newenvironment{uni}{\uni}{\par}
+#+LATEX_HEADER:\DeclareTextFontCommand{\unifont}{\uni}
+
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}Branquinho - SEMEF \uni{VⅢ}}
+
+
+* Requesitos para reprodutibilidade
+** Git
+** Terminal de programação
+** Linguagens de programação
+*** Julia
+*** Python
+*** R
+** Fontes instaladas
+- 

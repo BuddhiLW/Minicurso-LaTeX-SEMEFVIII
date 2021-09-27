@@ -1,0 +1,3 @@
+[submodule "metropolis-theme-git"]
+	path = template-beamer-metropolis-from-orgmode
+	url = https://github.com/fangohr/template-beamer-metropolis-from-orgmode.git

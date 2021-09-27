@@ -1,0 +1,18 @@
+\frametitle{Preâmbulo org-mode}
+\begin{columns}
+\begin{column}{0.92\columnwidth}
+\begin{block}{Opções do Beamer}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\documentclass[bigger]{beamer} % espécide do documento
+\useoutertheme[height=30pt]{sidebar} % disposição de itens
+\setbeamertemplate{frametitle}[sidebar theme]
+\usecolortheme{magpie} % Cor temática
+\setbeamertemplate{itemize item}{\ding{166}} %Simb. item
+\setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+\setbeamertemplate{enumerate item}[circle] % Simb. enum.
+\setbeamerfont{block title}{size={\centering}} % Tit. blocos
+\setbeamercolor{block title}{bg=black!30!white,fg=white}
+\end{minted}
+\end{block}
+\end{column}
+\end{columns}

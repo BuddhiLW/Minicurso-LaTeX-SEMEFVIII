@@ -1,0 +1,519 @@
+#+STARTUP: latexpreview
+#+STARTUP: imagepreview
+
+#+LATEX_COMPILER: xelatex
+
+#+title: O LaTeX, uma roupagem moderna
+# #+BEAMER_HEADER: \title{O \LaTeX{}, uma roupagem moderna}
+# #+AUTHOR:  Pedro G. Branquinho 
+#+EMAIL: pedro.branquinho@usp.br
+#+DATE: @@beamer:  Universidade de São Paulo - DEMAR@@
+#+BEAMER_HEADER: \author[Branquinho]{\textbf{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}}
+#+BEAMER_HEADER: \date[EEL-USP]{\textbf{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}}
+
+
+#+BEAMER_FRAME_LEVEL: 3
+#+LATEX_CLASS: beamer
+# seahorse
+#+BEAMER_COLOR_THEME: magpie
+#+LATEX_CLASS_OPTIONS: [bigger]
+#+BEAMER_HEADER: \useoutertheme[height=30pt]{sidebar}
+#+BEAMER_HEADER: \setbeamertemplate{frametitle}[sidebar theme]
+#+BEAMER_HEADER: \setbeamertemplate{itemize item}{\ding{166}}
+#+BEAMER_HEADER: \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+#+BEAMER_HEADER: \setbeamertemplate{enumerate item}[circle]
+#+BEAMER_HEADER: \setbeamerfont{block title}{size={\centering}}
+#+BEAMER_HEADER: \setbeamercolor{block title}{bg=black!30!white,fg=white}
+#+BEAMER_THEME:
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+# #+LaTeX_HEADER: \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+#+LANGUAGE:  pt
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:niltags:not-in-toc
+
+#+latex_header: \usepackage{pifont}
+#+LATEX_HEADER:\usepackage{verbatim}
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER:\def\verbatim@font{\scriptsize\ttfamily}
+#+LATEX_HEADER:\makeatother
+#+LATEX_HEADER:\logo{\includegraphics[height=0.5cm]{./img/usp-logo-1}}
+#+LATEX_HEADER:\AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection,currentsubsection]\end{frame}}
+
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows.meta}
+#+LATEX_HEADER: \usetikzlibrary{positioning}
+
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \tcbuselibrary{skins}
+
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle{lovelace}
+
+#+LATEX_HEADER:\newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER: \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!40!white}}
+#+LATEX_HEADER:{\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/TP-yellow-34.jpg}}
+
+
+# #+LATEX_HEADER: \usepackage{fontspec}
+# #+LATEX_HEADER: \defaultfontfeatures{Mapping=tex-text}
+
+# # % use main font for base text
+#  #+LATEX_HEADER:\usefonttheme{serif}
+
+# # % font for base text
+#  #+LATEX_HEADER:\setmainfont{Verdana}
+
+# # % font for title
+#  #+LATEX_HEADER:\setbeamerfont{title}{family=\fontspec{DejaVu Sans}}
+
+# # % for other elements on title page (author, date)
+#  #+LATEX_HEADER:\setbeamerfont{title page}{family=\fontspec{Linux Libertine O}}
+
+
+* Setup do documento
+#+LaTeX: {\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/yellow-30.jpg}}
+** Estilização Beamer
+*** Preâmbulo org-mode
+**** Opções do Beamer
+:PROPERTIES:
+:BEAMER_COL: 0.92
+:BEAMER_ENV: block
+:END:
+#+begin_src latex :results output :exports both :eval no
+  \documentclass[bigger]{beamer} % espécide do documento
+  \useoutertheme[height=30pt]{sidebar} % disposição de itens
+  \setbeamertemplate{frametitle}[sidebar theme]
+  \usecolortheme{magpie} % Cor temática
+  \setbeamertemplate{itemize item}{\ding{166}} %Simb. item
+  \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+  \setbeamertemplate{enumerate item}[circle] % Simb. enum.
+  \setbeamerfont{block title}{size={\centering}} % Tit. blocos
+  \setbeamercolor{block title}{bg=black!30!white,fg=white}
+#+end_src
+
+** Minted (código)
+*** Elisp
+**** Parâmetros =org-beamer-export=
+Dentro do Emacs, usando =emacs-lisp=
+#+begin_src elisp :results output export :exports code :eval no
+  (setq org-latex-listings 'minted)
+  (setq org-latex-minted-options
+        '(("fontsize" "\\scriptsize")
+          ("autogobble" "true")
+          ("frame" "lines")
+          ("framesep" "1mm")
+          ("linenos" "false")))
+#+end_src
+
+*** LaTeX
+**** Incluir =minted=
+Parte do preâmbulo,
+#+begin_src latex :results output export :exports code :eval no 
+ \usepackage{minted}
+ \usemintedstyle{lovelace}
+#+end_src
+* Sumário de tópicos
+# #+LATEX:{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./img/TP-opacity-30.png}}
+# #+LaTeX: \begin{raggedleft}
+
+** Pioneiros e Fundadores
+*** Origem de TeX - Knuth (1978)
+**** Imagem do Knuth
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+ATTR_HTML: :width 300px
+#+ATTR_LATEX: :width 1.02\textwidth
+[[file:img/KnuthAtOpenContentAlliance.jpg][file:./img/KnuthAtOpenContentAlliance.jpg]]
+**** Código Imagem
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <2>
+:BEAMER_ENV: block
+:END:
+
+#+begin_src latex :results output export :exports both :eval no
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]
+    {./img/Knuth.png}
+  \end{figure}
+#+end_src
+
+*** Origem de TeX - Knuth (1978)
+***** \small{~Ille eruditus et sapiens~}
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_env: block
+:BEAMER_opt: shrink=40
+:END:
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :width 1.02\textwidth
+[[file:img/KnuthAtOpenContentAlliance.jpg][file:./img/KnuthAtOpenContentAlliance.jpg]]
+
+***** Citação:
+:PROPERTIES:
+:BEAMER_COL: 0.52
+:BEAMER_LIN: 0.80
+:BEAMER_ENV: structureenv
+:END:
+******  *+#AGORAVAI+*
+#+ATTR_BEAMER: :environment nonindentlist
+:PROPERTIES:
+:BEAMER_ENV: quote
+:END:
+
+#+begin_quote
+\textbf{"Só sei que nada sei..."}
+#+end_quote
+#+LaTeX: \begin{raggedleft}
+\textbf{--- Albert Einstein}
+#+LaTeX: \par\end{raggedleft}
+
+\pause
+\vspace{3mm}
+\hline
+\vspace{3mm}
+\pause
+\transboxin
+
+\begin{modern-quote}
+ \textbf{"Don't give up on your dreams, keep on sleeping."}
+\end{modern-quote}
+#+LaTeX: \begin{center}
+--- Arthur 
+#+LaTeX: \par\end{center}
+#+LaTeX: \begin{raggedright}
+Schopenhauer \pause \tikz[remember picture] \node [] (a)
+#+LaTeX: \par\end{raggedright}
+
+\begin{tikzpicture}[remember picture, overlay,
+  every edge/.append style = {
+    ->,
+    thick,
+    >=stealth,DimGray,
+    dashed,
+    line width = 1pt},  
+  every node/.append style = {
+    align = center,
+    minimum height = 10pt,
+    font = \bfseries,
+    fill= green!20!white}]
+  \node [right = 0.50cm of a, text width = 2cm] %and -.75 cm 
+  (A) {Stonks};
+  \draw (A.west) edge (a.west);
+\end{tikzpicture}
+
+
+*** Roupagem moderna, LaTeX - Leslie Lamport (1985)
+**** Imagem Lamport
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :width 1.02\textwidth
+[[file:img/Leslie_Lamport.jpg][file:./img/Leslie_Lamport.jpg]]
+\pause
+\transblindshorizontal[duration=0.8]
+**** Código da Imagem
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+begin_src latex :results output export :exports both :eval no
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]
+    {./img/Lamport.png}
+  \end{figure}
+#+end_src
+
+** Aplicações que utilizam de LaTeX
+*** MathJax - LaTeX na Web
+\transdissolve
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width 1.02\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/mathjax.png][file:./img/mathjax.png]]
+
+*** Org-mode e AUCTeX (O código que usamos)
+**** Código da Equação de Navier-Stokes
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_src latex :results output export :exports both :eval no
+\begin{equation}
+          \begin{aligned}
+          \dfrac{\partial{\vec{V}}}{\partial{t}}
+          + \vec{V}.\nabla{\vec{V}}
+          = - \dfrac{\nabla{p}}{\rho}
+          + \nu{}\nabla^2{\vec{V}}
+          \end{aligned}
+  \end{equation}
+#+end_src
+
+\transdissolve
+\pause
+
+**** Renderização Equação de Navier-Stokes
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+\begin{equation}
+        \begin{aligned}
+        \dfrac{\partial{\vec{V}}}{\partial{t}} + \vec{V}.\nabla{\vec{V}} = - \dfrac{\nabla{p}}{\rho} + \nu{}\nabla^2{\vec{V}}
+        \end{aligned}
+\end{equation}
+
+#+begin_src latex
+  \begin{equation}
+    \begin{aligned}
+      \dfrac{\partial{\vec{V}}}{\partial{t}}
+      + \vec{V}.\nabla{\vec{V}}
+      = - \dfrac{\nabla{p}}{\rho}
+      + \nu{}\nabla^2{\vec{V}}
+    \end{aligned}
+  \end{equation}
+#+end_src
+
+*** Dentro do Org-mode, no Emacs
+#+ATTR_BEAMER: :overlay <+->
+- Preview em tempo real.
+- Aparência customizável.
+- Ecossistema para programação.
+  
+#+ATTR_HTML: :width 600px
+#+ATTR_LATEX: :width 0.8\textwidth
+#+ATTR_LATEX: :options center
+[[file:img/orgmode-auctex.png][file:./img/orgmode-auctex2.png]]
+
+** Sintaxe básica de listagem e enumeração
+*** Itemize
+#+BEAMER: 
+**** Como renderiza:                                             :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_export latex
+\begin{itemize}
+\item Primeiro item
+\item Segundo item
+\end{itemize}
+#+end_export
+
+**** O código:                                                   :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+#+begin_src latex :results output export :exports both :eval no
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_src
+
+*** Enumerate
+**** Como renderiza:                                             :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+#+begin_export latex
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_export
+**** O código:                                                   :B_block:
+:PROPERTIES:
+:BEAMER_COL: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+#+begin_example
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+#+end_example
+
+** Tabelas
+*** Tabela Simples
+**** \small{Exemplo}
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+|----------+----------+----------|
+| Coluna 1 | Coluna 2 | Coluna 3 |
+|----------+----------+----------|
+| $a_{11}$ | $a_{12}$ | $a_{13}$ |
+| $a_{21}$ | $a_{22}$ | $a_{23}$ |
+| Texto 1  | Texto 2  | Texto 3  |
+|----------+----------+----------|
+
+**** \small{Código}
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+
+# frame=lines,
+# framesep=2mm,
+# baselinestretch=1.2,
+# bgcolor=LightGray,
+#+attr_latex: frame=none
+#+begin_src latex :results output export :exports both :eval no
+      \begin{tabular}{lll}
+        \hline
+        Coluna 1 & Coluna 2 & Coluna 3\\
+        \hline
+        \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+        \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+        Texto 1 & Texto 2 & Texto 3\\
+        \hline
+      \end{tabular}
+#+end_src
+** Exemplo de um documento completo
+*** Preâmbulo
+**** Preâmbulo mínimo
+- Onde fica as especificações da tipografia do documentos.
+- Ambiente mais genérico.
+- Onde os comportamentos padrões são especificados.
+
+**** Definindo a classe do documento
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+
+#+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
+%!Tex TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+  \documentclass[
+  12pt, a4paper,		% tamanho da fonte e papel.
+  openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+  oneside,			% para impressão em recto somente. Oposto a twoside.
+  brazil, english		% o último idioma é o principal do documento, ademais são hifenizados corretamente.
+  ]{abntex2}
+  \RequireXeTeX %Force XeTeX check
+#+end_src
+
+*** Os pacotes pertinentes
+**** Alguns que definem fonte, indentação, etc.
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
+    % --- (tudo que vem depois de '%' é um comentário em latex)
+    % ---
+    % Pacotes fundamentais 
+    % ---
+    \usepackage{lmodern}	% Usa a fonte Latin Modern
+    \usepackage[T1]{fontenc}% Seleção de codigos de fonte.
+    \usepackage[utf8]{inputenc}% Codificacao do documento (acentos)
+    \usepackage{indentfirst}% Indenta o primeiro parágrafo da secção.
+    \usepackage{color}% Controle das cores
+    \usepackage{graphicx}	% Inclusão de gráficos
+    \usepackage{microtype}% para melhorias de
+    % justificação
+    \usepackage{xltxtra} %fontspec, metalogo e realscripts (XeLaTex)
+    \usepackage{fontspec}
+    \usepackage{lipsum} % Enche linguíça (preenche espaço)
+    \usepackage[alf]{abntex2cite}% Citações padrão ABNT
+    \usepackage{amsmath} % Diversas tipografias matemáticas
+#+end_src
+*** Corpo do documento
+***** Um texto dentro do ambiente =document=
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+#+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
+    \begin{document} %% Iniciar o documento
+
+    \chapter{Capítulo 1}
+    \section{Secção número 1.1}
+
+    \textbf{De acordo com \cite{knuth1984literate}, Literate programming
+      é o paradigma mais formal e divertido de todos.}
+
+    \begin{figure}[ht]
+      \centering
+      \caption{\label{fig:lt1} Exemplo de literate programming.}
+      \includegraphics[width=\linewidth]{./img/literate-programming.jpeg}
+      \legend{Reference: The internet}
+    \end{figure}
+
+    \lipsum[1-2] % Texto enche linguíça
+
+    \bibliography{arquivo-com-bibliografias} % Usar bibliografias
+
+    \end{document}
+#+end_src
+
+** Código Tipografado
+*** Python com =pygments=, usando =minted=
+**** Como renderiza
+#+NAME: bd1f28ba-f879-4cf6-a613-623f90f40524
+#+begin_src python :session localhost :results output :exports both :eval no
+  import numpy as np
+#+end_src
+
+#+NAME: 033be239-bf17-47f5-8717-395a1e688d34
+#+begin_src python :session localhost :results output :exports both :eval no
+np.sin(43)
+#+end_src
+
+#+RESULTS: 033be239-bf17-47f5-8717-395a1e688d34
+: -0.8317747426285983
+
+**** Código em LaTeX (Minted e Pygments)
+
+#+ATTR_HTML: :width 800px
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:img/minted.png][file:./img/minted.png]]
+
+#+begin_src latex :results output export :exports both :eval no
+  \begin{verbatim}
+   -0.8317747426285983
+  \end{verbatim}
+#+end_src
+
+** Referências
+*** Documentação e modelos
++ *Gerais:*
+  + Tikz: https://latexdraw.com/
+  + Overleaf:
+    
++  *Minicursos*
+  
+  

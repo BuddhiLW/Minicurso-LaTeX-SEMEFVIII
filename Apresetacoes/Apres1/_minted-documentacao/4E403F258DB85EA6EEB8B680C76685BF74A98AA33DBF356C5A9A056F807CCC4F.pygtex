@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}pifont\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}Alguns símbolos unicode (dingbats)}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}itemize item\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}ding}\PYG{n+nb}{\PYGZob{}}166\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Todo itemize será renderizado com esse símbolo 166.}
+\end{Verbatim}

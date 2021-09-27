@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}newenvironment}\PYG{n+nb}{\PYGZob{}}modern\PYGZhy{}quote\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tcolorboxenvironment}\PYG{n+nb}{\PYGZob{}}modern\PYGZhy{}quote\PYG{n+nb}{\PYGZcb{}\PYGZob{}}blanker,
+  before skip=6pt,
+  after skip=6pt,
+  borderline west=\PYG{n+nb}{\PYGZob{}}3mm\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}red\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

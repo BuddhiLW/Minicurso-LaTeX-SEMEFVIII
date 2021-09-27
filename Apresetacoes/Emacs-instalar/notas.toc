@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Distribuições existentes (com vasto suporte)}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Spacemacs}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}DOOM Emacs}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Prelude Emacs}{1}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Como instalar a versão utilizada na SEMEF?}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Git}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Instale o Git}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Clone o repositório SEMEF (Frank-init)}{2}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Clone o \texttt {ob-julia}}{2}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Assistir como utilizar o Emacs}{2}{subsubsection.2.1.4}%

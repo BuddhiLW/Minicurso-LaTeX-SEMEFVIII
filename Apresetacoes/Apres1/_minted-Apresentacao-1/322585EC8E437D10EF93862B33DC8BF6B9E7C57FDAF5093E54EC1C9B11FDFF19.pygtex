@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{}!Tex TS\PYGZhy{}program = xelatex}
+\PYG{c}{\PYGZpc{}!TEX encoding = UTF\PYGZhy{}8 Unicode}
+
+  \PYG{k}{\PYGZbs{}documentclass}[
+  12pt,				\PYG{c}{\PYGZpc{} tamanho da fonte}
+  openright,			\PYG{c}{\PYGZpc{} capítulos começam em pág ímpar (insere página vazia caso preciso)}
+  oneside,			\PYG{c}{\PYGZpc{} para impressão em recto e verso. Oposto a oneside}
+  a4paper,			\PYG{c}{\PYGZpc{} tamanho do papel.}
+  brazil,				\PYG{c}{\PYGZpc{} o último idioma é o principal do documento}
+  english,			\PYG{c}{\PYGZpc{} idioma adicional para hifenização}
+  ]\PYG{n+nb}{\PYGZob{}}abntex2\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}RequireXeTeX} \PYG{c}{\PYGZpc{}Force XeTeX check}
+\end{Verbatim}

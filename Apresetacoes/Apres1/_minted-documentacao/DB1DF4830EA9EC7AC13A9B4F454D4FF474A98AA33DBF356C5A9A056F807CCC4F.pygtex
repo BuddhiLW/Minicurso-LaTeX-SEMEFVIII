@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}block title\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=red!30!white,fg=black\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,22 @@
+\frametitle{Os pacotes pertinentes}
+\begin{block}<1->{Alguns que definem fonte, indentação, etc.}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+% --- (tudo que vem depois de '%' é um comentário em latex)
+% ---
+% Pacotes fundamentais
+% ---
+\usepackage{lmodern}	% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}% Seleção de codigos de fonte.
+\usepackage[utf8]{inputenc}% Codificacao do documento (acentos)
+\usepackage{indentfirst}% Indenta o primeiro parágrafo da secção.
+\usepackage{color}% Controle das cores
+\usepackage{graphicx}	% Inclusão de gráficos
+\usepackage{microtype}% para melhorias de
+% justificação
+\usepackage{xltxtra} %fontspec, metalogo e realscripts (XeLaTex)
+\usepackage{fontspec}
+\usepackage{lipsum} % Enche linguíça (preenche espaço)
+\usepackage[alf]{abntex2cite}% Citações padrão ABNT
+\usepackage{amsmath} % Diversas tipografias matemáticas
+\end{minted}
+\end{block}

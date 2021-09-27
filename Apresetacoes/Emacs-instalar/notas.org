@@ -1,0 +1,66 @@
+#+STARTUP: latexpreview
+#+STARTUP: imagepreview
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt]
+
+#+LATEX_HEADER: \usepackage[hidelinks]{hyperref}
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle{lovelace}
+
+* Distribuições existentes (com vasto suporte)
+Essas são algumas das distribuições, além da proposta pelo autor, que podem ser adotadas.
+** Spacemacs
+  - https://www.spacemacs.org/
+** DOOM Emacs
+  - https://github.com/hlissner/doom-emacs
+** Prelude Emacs
+  - https://github.com/bbatsov/prelude
+
+* Como instalar a versão utilizada na SEMEF?
+** Git
+*** Instale o Git
+https://git-scm.com/downloads
+*** Clone o repositório SEMEF (Frank-init)
+Abra um =terminal Git=, na pasta =C:\<Usuários>\<Seu-Usuário>=. Isso
+pode ser feito entrando na pasta e clicando com o botão direito do
+mouse, e selecionando a opção do =terminal Git=.
+
+Escreva o comando:
+
+#+begin_src shell
+git clone https://github.com/BuddhiLW/Frank-init/tree/SEMEF .emacs.d
+#+end_src
+
+Se ja tiver uma pasta chamada =.emacs.d= no diretório, a delete, ou a
+renomeia para outro nome, e.g., =.emacs.d.backup=. Em seguida, dê o
+comando acima.
+
+*** Clone o =ob-julia=
+**** Clonando =ob-julia=
+Navegue ao diretório .emacs.d, pelo terminal,
+#+begin_src shell
+cd .emacs.d
+#+end_src
+
+obs: =cd= := =change directory=.
+
+Dentro de =.emacs.d=,
+#+begin_src shell
+git clone https://github.com/shg/ob-julia-vterm.el
+#+end_src
+
+*** Assistir como utilizar o Emacs
+
+Teoricamente, você deveria ter assistido o tutorial de como instalar o
+Emacs, com esse vídeo (onde alguns comandos do Emacs são comentados):
+- https://www.youtube.com/watch?v=TEqhxzfYXKA
+
+Agora, é hora de assistir como utilizar o Emacs, propriamente:
+- https://www.youtube.com/watch?v=ub3T-y6_u-4
+
+Recomendação, após o vídeo dedicado ao emacs:
+
+- *O que é e como utilizar o básico de org-mode*
+  - https://www.youtube.com/watch?v=ffBDQauDAgQ
+

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{\PYGZbs{}begin\PYGZob{}verbatim\PYGZcb{}}
+\PYG{x}{  \PYGZbs{}begin\PYGZob{}minted\PYGZcb{}[fontsize=\PYGZbs{}scriptsize,}
+\PYG{x}{    autogobble=true,}
+\PYG{x}{    frame=lines,}
+\PYG{x}{    framesep=1mm,}
+\PYG{x}{    linenos=false]\PYGZob{}python\PYGZcb{}}
+\PYG{x}{    np.sin(43)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}lll\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}hline}
+    Coluna 1 \PYG{n+nb}{\PYGZam{}} Coluna 2 \PYG{n+nb}{\PYGZam{}} Coluna 3\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{k}{\PYGZbs{}hline}
+    \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{11}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})} \PYG{n+nb}{\PYGZam{}} \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{12}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})} \PYG{n+nb}{\PYGZam{}} \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{13}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{21}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})} \PYG{n+nb}{\PYGZam{}} \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{22}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})} \PYG{n+nb}{\PYGZam{}} \PYG{l+s}{\PYGZbs{}(}\PYG{n+nb}{a\PYGZus{}\PYGZob{}}\PYG{l+m}{23}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZbs{})}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    Texto 1 \PYG{n+nb}{\PYGZam{}} Texto 2 \PYG{n+nb}{\PYGZam{}} Texto 3\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{k}{\PYGZbs{}hline}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

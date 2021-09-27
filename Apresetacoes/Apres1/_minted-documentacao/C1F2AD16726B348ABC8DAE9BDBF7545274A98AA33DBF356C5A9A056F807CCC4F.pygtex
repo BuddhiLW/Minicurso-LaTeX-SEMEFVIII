@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[utf8]}\PYG{n+nb}{\PYGZob{}}inputenc\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[T1]}\PYG{n+nb}{\PYGZob{}}fontenc\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}grffile\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}longtable\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}wrapfig\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}rotating\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+na}{[normalem]}\PYG{n+nb}{\PYGZob{}}ulem\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}amsmath\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}textcomp\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}amssymb\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}capt\PYGZhy{}of\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}hyperref\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+na}{[Branquinho]}\PYG{n+nb}{\PYGZob{}}Pedro Gomes Branquinho \PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}text}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}scriptsize}\PYG{n+nb}{\PYGZob{}}pedro.branquinho@usp.br\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}date}\PYG{n+na}{[EEL\PYGZhy{}USP]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}scriptsize}\PYG{n+nb}{\PYGZob{}}Mini\PYGZhy{}curso de \PYG{k}{\PYGZbs{}LaTeX}\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} Universidade de São Paulo \PYGZhy{} DEMAR\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}pifont\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}verbatim\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeatletter}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}verbatim}@font\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}scriptsize\PYGZbs{}ttfamily}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeatother}
+\PYG{k}{\PYGZbs{}logo}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[height=0.5cm]}\PYG{n+nb}{\PYGZob{}}./img/usp\PYGZhy{}logo\PYGZhy{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}AtBeginSubsection}\PYG{n+na}{[]}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}frametitle}\PYG{n+nb}{\PYGZob{}}Table of Contents\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}tableofcontents}\PYG{n+na}{[currentsection,currentsubsection]}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}tikz\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usetikzlibrary}\PYG{n+nb}{\PYGZob{}}arrows.meta\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usetikzlibrary}\PYG{n+nb}{\PYGZob{}}positioning\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tcbuselibrary}\PYG{n+nb}{\PYGZob{}}skins\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}minted\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usemintedstyle}\PYG{n+nb}{\PYGZob{}}lovelace\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newenvironment}\PYG{n+nb}{\PYGZob{}}modern\PYGZhy{}quote\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}tcolorboxenvironment}\PYG{n+nb}{\PYGZob{}}modern\PYGZhy{}quote\PYG{n+nb}{\PYGZcb{}\PYGZob{}}blanker,before skip=6pt,after skip=6pt, borderline west=\PYG{n+nb}{\PYGZob{}}3mm\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}red\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}usebackgroundtemplate}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=\PYGZbs{}paperwidth]}\PYG{n+nb}{\PYGZob{}}./img/TP\PYGZhy{}opacity\PYGZhy{}50.jpg\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}usetheme}\PYG{n+na}{[height=20pt]}\PYG{n+nb}{\PYGZob{}}Hannover\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}usecolortheme}\PYG{n+nb}{\PYGZob{}}seahorse\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}date}\PYG{n+nb}{\PYGZob{}}  Universidade de São Paulo \PYGZhy{} DEMAR\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}O \PYG{k}{\PYGZbs{}LaTeX}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} e suas funcionalidades\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}itemize item\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}ding}\PYG{n+nb}{\PYGZob{}}166\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}item projected\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=magenta!90!black,fg=white\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}enumerate item\PYG{n+nb}{\PYGZcb{}}[circle]
+  \PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}block title\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=red!30!white,fg=black\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}hypersetup}\PYG{n+nb}{\PYGZob{}}
+    pdfauthor=\PYG{n+nb}{\PYGZob{}\PYGZcb{}},
+    pdftitle=\PYG{n+nb}{\PYGZob{}}O \PYG{k}{\PYGZbs{}LaTeX}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} e suas funcionalidades\PYG{n+nb}{\PYGZcb{}},
+    pdfkeywords=\PYG{n+nb}{\PYGZob{}\PYGZcb{}},
+    pdfsubject=\PYG{n+nb}{\PYGZob{}\PYGZcb{}},
+    pdfcreator=\PYG{n+nb}{\PYGZob{}}Emacs 27.2 (Org mode 9.4.4)\PYG{n+nb}{\PYGZcb{}},
+    pdflang=\PYG{n+nb}{\PYGZob{}}Portuguese\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

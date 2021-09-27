@@ -1,0 +1,19 @@
+\frametitle{Origem de \TeX {} - Knuth (1978)}
+\begin{columns}
+\begin{column}{0.48\columnwidth}
+\begin{block}<1->{Imagem do Knuth}
+\href{img/KnuthAtOpenContentAlliance.jpg}{\includegraphics[width=1.02\textwidth]{./img/KnuthAtOpenContentAlliance.jpg}}
+\end{block}
+\end{column}
+\begin{column}{0.48\columnwidth}
+\begin{block}<2>{Código Imagem}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]
+  {./img/Knuth.png}
+\end{figure}
+\end{minted}
+\end{block}
+\end{column}
+\end{columns}

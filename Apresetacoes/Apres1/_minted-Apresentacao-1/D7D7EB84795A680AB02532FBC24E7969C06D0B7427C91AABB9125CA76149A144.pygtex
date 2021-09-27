@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}aligned\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}dfrac}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}partial}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}}V\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}partial}\PYG{n+nb}{\PYGZob{}}t\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+    + \PYG{k}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}}V\PYG{n+nb}{\PYGZcb{}}.\PYG{k}{\PYGZbs{}nabla}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}}V\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+    = \PYGZhy{} \PYG{k}{\PYGZbs{}dfrac}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nabla}\PYG{n+nb}{\PYGZob{}}p\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}rho}\PYG{n+nb}{\PYGZcb{}}
+    + \PYG{k}{\PYGZbs{}nu}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}\PYG{k}{\PYGZbs{}nabla}\PYG{n+nb}{\PYGZca{}}2\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}vec}\PYG{n+nb}{\PYGZob{}}V\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}aligned\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

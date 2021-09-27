@@ -1,0 +1,13 @@
+\frametitle{Elisp}
+\begin{block}{Parâmetros \texttt{org-beamer-export}}
+Dentro do Emacs, usando \texttt{emacs-lisp}
+\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{elisp}
+(setq org-latex-listings 'minted)
+(setq org-latex-minted-options
+      '(("fontsize" "\\scriptsize")
+	("autogobble" "true")
+	("frame" "lines")
+	("framesep" "1mm")
+	("linenos" "false")))
+\end{minted}
+\end{block}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+make sty \PYG{o}{\PYGZam{}\PYGZam{}} make install
+
+texhash
+\end{Verbatim}

@@ -1,0 +1,23 @@
+\frametitle{Compile o .sty localmente}
+\begin{block}{Passos para compilar o \alert{estilo} localmente}
+\fvset{listparameters=\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}
+\begin{enumerate}[<1->]
+\item \small{Clone o repositorio}
+\item \small{Entre no diretorio}
+\end{enumerate}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+git clone https://github.com/matze/mtheme
+
+cd mtheme
+\end{minted}
+
+\begin{enumerate}[<2->]
+\item \small Compile, e instale, com \alert{make}, os arquivos sty;
+\item \small{Faça o ecossistema do LaTeX reconhecer o tema.}
+\end{enumerate}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+make sty && make install
+
+texhash
+\end{minted}
+\end{block}

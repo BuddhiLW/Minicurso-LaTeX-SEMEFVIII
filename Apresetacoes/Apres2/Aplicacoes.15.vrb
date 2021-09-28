@@ -1,0 +1,21 @@
+\frametitle{Importante para automação!}
+\begin{block}{Criação de variáveis globais}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\graphicspath{{../../img/} {../img/}}
+
+%% Usar \minhadata, para expressar a data no formato ISO yyyymmdd
+
+%% Alguns termos comuns
+\newcommand{\rua}{RODOVIA WASHINGTON LUIS S/Nº, }
+\newcommand{\numero}{KM 276,5}
+\newcommand{\bairro}{RECREIO CAMPESTRE IDANORMA}
+\newcommand{\cidade}{Araraquara}
+\newcommand{\estado}{Sp}
+\newcommand{\pais}{Brasil}
+\newcommand{\empresa}{Lupo}
+\newcommand{\nomeempresa}{Lupo S.A.}
+\newcommand{\cep}{14.803-900}
+\newcommand{\cnpj}{43.948.405/0001-69}
+\newcommand{\setor}{<<Preencher Setor>>}
+\end{minted}
+\end{block}

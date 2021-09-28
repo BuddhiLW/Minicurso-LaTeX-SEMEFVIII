@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}def\PYGZbs{}couleur}\PYG{n+nb}{\PYGZob{}}alerted text.bg\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}path}\PYG{n+na}{[coordinate]} (0,0)  coordinate(A)
+  ++( 90:5cm) coordinate(B)
+  ++(0:5cm) coordinate(C)
+  ++(\PYGZhy{}90:5cm) coordinate(D);
+  \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=\PYGZbs{}couleur!\PYGZbs{}thedensity]} (A) \PYGZhy{}\PYGZhy{} (B) \PYGZhy{}\PYGZhy{} (C) \PYGZhy{}\PYGZhy{}(D) \PYGZhy{}\PYGZhy{} cycle;
+  \PYG{k}{\PYGZbs{}foreach} \PYG{k}{\PYGZbs{}x} in \PYG{n+nb}{\PYGZob{}}1,...,40\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}pgfmathsetcounter}\PYG{n+nb}{\PYGZob{}}density\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}thedensity}+20\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}setcounter}\PYG{n+nb}{\PYGZob{}}density\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}thedensity}\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}path}\PYG{n+na}{[coordinate]} coordinate(X) at (A)\PYG{n+nb}{\PYGZob{}\PYGZcb{}};
+    \PYG{k}{\PYGZbs{}path}\PYG{n+na}{[coordinate]} (A) \PYGZhy{}\PYGZhy{} (B) coordinate[pos=.10](A)
+    \PYGZhy{}\PYGZhy{} (C) coordinate[pos=.10](B)
+    \PYGZhy{}\PYGZhy{} (D) coordinate[pos=.10](C)
+    \PYGZhy{}\PYGZhy{} (X) coordinate[pos=.10](D);
+    \PYG{k}{\PYGZbs{}draw}\PYG{n+na}{[fill=\PYGZbs{}couleur!\PYGZbs{}thedensity]} (A)\PYGZhy{}\PYGZhy{}(B)\PYGZhy{}\PYGZhy{}(C)\PYGZhy{}\PYGZhy{} (D) \PYGZhy{}\PYGZhy{} cycle;
+  \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

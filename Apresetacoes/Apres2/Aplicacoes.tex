@@ -1,0 +1,314 @@
+% Created 2021-09-28 Tue 19:03
+% Intended LaTeX compiler: xelatex
+\documentclass[bigger]{beamer}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{verbatim}
+\makeatletter
+\def\verbatim@font{\scriptsize\ttfamily}
+\makeatother
+\logo{\includegraphics[height=0.5cm]{./img/usp-logo-1}}
+\AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection,currentsubsection]\end{frame}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{minted}
+\usemintedstyle{emacs}
+\usepackage{lipsum}
+\newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+\tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!40!white}}
+{\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/TP-30-cyan.jpg}}
+\newenvironment{modern-quote-env}{\begin{itemize}}{\end{itemize}}
+\tcolorboxenvironment{modern-quote-env}{before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!10!white}, colframe=black!50!white}
+\usetheme{}
+\usecolortheme{magpie}
+\date{  Universidade de São Paulo - DEMAR}
+\title{O \LaTeX{}, facetas documentadoras}
+\author[Branquinho]{\textbf{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}}
+\date[EEL-USP]{\textbf{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}}
+\useoutertheme[height=30pt]{sidebar}
+\setbeamertemplate{frametitle}[sidebar theme]
+\setbeamertemplate{itemize item}{\ding{166}}
+\setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+\setbeamertemplate{enumerate item}[circle]
+\setbeamerfont{block title}{size={\centering}}
+\setbeamercolor{block title}{bg=black!30!white,fg=white}
+\setbeamerfont{section in toc}{size=\normalsize,series=\bfseries}
+\setbeamercolor{section in toc}{bg=white, fg=white!60!cyan}
+\setbeamerfont{subsection in toc}{size=\normalsize,series=\bfseries}
+\setbeamercolor{subsection in toc}{bg=white, fg=white!80!cyan}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={O \LaTeX{}, facetas documentadoras},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdflang={Portuguese}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+
+
+\section{Automação de Relatórios Técnicos (Case Lupo)}
+\label{sec:org6a20b9d}
+{\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/17-30-cyan.png}}
+
+\setbeamercolor{section in toc}{bg=white, fg=blue!80!white}
+\setbeamercolor{subsection in toc}{bg=white, fg=blue!70!white}
+
+\subsection{Eu na Lupo (Araraquara)}
+\label{sec:org316cd4d}
+\begin{frame}[label={sec:orgaee2454}]{Não posso ver uma vergonha\ldots{}}
+\begin{block}{Galpão}
+\href{img/galpao-lupo.jpeg}{\includegraphics[width=\textwidth]{./img/galpao-lupo.jpeg}}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org8137463}]{\ldots{} Que eu já quero passar}
+\begin{block}{Zoom na sofrência}
+\centering
+\href{img/lupo-sem-mascara.jpeg}{\includegraphics[height=0.6\textheight,angle=90]{./img/lupo-sem-mascara.jpeg}}
+\end{block}
+\end{frame}
+
+\subsection{Bash, Clojure e \LaTeX{}!}
+\label{sec:orgd59a1c9}
+\begin{frame}[label={sec:orgf2975cb},fragile]{Bash}
+ \begin{block}{Crear a estrutura do documento, por sector}
+\begin{itemize}
+\item \href{file:///home/buddhilw/PP/LaTeX/Wagner/Lupo/create-dir.sh}{Bash creador de diretórios} (Excerto)
+\end{itemize}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+mkdir ICE-Envase{36..46}
+mkdir ICE-Envase
+
+for i in {36..46}
+do
+    cp -r template-base/* ./ICE-Envase"$i"
+    mv ./ICE-Envase"$i"/pagina.tex \\
+	    ./ICE-Envase"$i"/ICE-Envase"$i".tex
+    mv ./ICE-Envase"$i" ./ICE-Envase/
+done
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org84901e3},fragile]{Clojure}
+ \begin{block}{Partição das fotos em pastas}
+\begin{itemize}
+\item \href{file:///home/buddhilw/PP/Scripts/devibrary/src/devibrary/partitioning.clj}{Excerto do arquivo \alert{partition.clj}}
+\end{itemize}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{clojure}
+(defn populate-key-map
+  [coll-map coll-file-id start]
+  (loop [dir-map []
+	 nth-dir start
+	 subset coll-map
+	 id-list coll-file-id]
+    (if (empty? subset)
+      dir-map
+      (recur
+       (conj dir-map (vec (list
+			   nth-dir
+			   (which-ids-subset-contains?
+			    id-list subset))))
+       (inc nth-dir)
+       (drop 1 subset)
+       (identity id-list)))))
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orgd74e980},fragile,shrink = 30]{\LaTeX{} - Capa}
+ \begin{block}{Template Capa}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{center}
+  \includegraphics[width=0.3\linewidth]{logo.png}\\
+  \vspace{.5cm}
+  \begin{bfseries}
+    \Large{ {\expandafter\MakeUppercase\expandafter{\nomeempresa}} \\ CNPJ – \cnpj}\\
+    {\small{{\expandafter\MakeUppercase\expandafter{\rua{} \numero}}\\
+	{\expandafter\MakeUppercase\expandafter{\bairro}},
+	\\CEP:- \cep –
+	{\expandafter\MakeUppercase\expandafter{\cidade/\estado}} -
+	{\expandafter\MakeUppercase\expandafter{\pais}} \\}}
+    \vspace{1.5cm}
+    {\large\textsc{“APRECIAÇÃO DE RISCOS DE MÁQUINAS”}}\\
+    {\small {NR-12 – SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS}}\\[1\baselineskip]
+    {\large\textsc{“INVENTÁRIO DE RISCOS DE MÁQUINAS”}}\\
+    {\small {NR-1 – DISPOSIÇÕES GERAIS E GERENCIAMENTO DE RISCOS}}\\[1\baselineskip]
+    \vspace{1.5cm}
+    \large{N\textordmasculine \minhadata{} {
+	\expandafter\MakeUppercase
+	\expandafter{\empresa} 01}\\[1\baselineskip]
+    \vspace{1.5cm}
+    {\large\textsc{“{\expandafter\MakeUppercase\expandafter{\setor}}”}}\\
+    % O comando \setor está definido ao início da pag.
+    \vspace{3.5cm}
+    \large{FRANCA - SP\\ \today \\}
+  \end{bfseries}
+\end{center}
+\end{minted}
+\end{block}
+\end{frame}
+\begin{frame}[label={sec:org3684232}]{\LaTeX{} - Capa}
+\begin{block}{Resultado}
+\centering
+\href{img/capa.png}{\includegraphics[height=0.8\textheight]{./img/capa.png}}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orga4d3b47},fragile]{\LaTeX{} - Cabeçalho e Roda pé}
+ \begin{block}{Template no preâmbulo}
+Incluí-lo em todas as páginas
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\fancypagestyle{firstpagestyle}{% to use only in the first page
+  % \fancyhf{}% Clear default headers and footers
+  \fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+  \fancyfoot[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+  \input{imports/header-footer.tex}
+}%%%%%% firstpagestyle ends
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org4d7e068},fragile,shrink = 30]{\LaTeX{} - Cabeçalho e Roda pé}
+ \begin{block}{Como é o código (\texttt{header-footer.tex})}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+% \renewcommand{\empresa}{LUPO S.A.}
+
+%% Minhadata invertida, ano, mês, dia.
+\def\minhadata{\leavevmode\hbox{\todigits\the\year\twodigits\month\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% see tabularx
+
+\fancyhead[C]{%
+  \begin{NiceTabular}{cp{12cm}c}[hvlines, cell-space-top-limit=6pt,cell-space-bottom-limit=3pt]
+    \Block{}{\includegraphics[scale=0.15]{logo.png}}&
+    \Block[X]{}<\bfseries\fontsize{8}{9}\selectfont>{
+      APRECIAÇÃO DE RISCO - INVENTÁRIO DE MÁQUINAS \\
+      NR-12 - Segurança no Trabalho em Máquinas e Equipamentos \\
+      NR-01 - Disposições Gerais - Gerenciamento de Riscos}&  
+    \Block{}<\fontsize{8}{9}> {
+      {\fontsize{11}{4}}{\bfseries \textrm{N}\textordmasculine \minhadata{}
+	{\expandafter\MakeUppercase\expandafter{\nomeempresa}}}
+      \\
+      \hline
+      {\fontsize{8}{9}\selectfont Pág. \thepage\ de \pageref{LastPage}}}  
+  \end{NiceTabular}%  
+} % end fancy head
+\fancyfoot[C]{%     
+  \begin{NiceTabular}{cp{10cm}c}[hvlines, cell-space-top-limit=6pt,cell-space-bottom-limit=1pt]
+    \Block{}{\fontsize{8}{9}\selectfont{Data: \DTMToday}}&
+    \Block[X]{}<\bfseries\fontsize{8}{9}\selectfont>{
+      Elaborado por: Wagner José Branquinho,  \\
+      Engenheiro Mecânico e de Segurança do Trabalho.  \\
+      \hspace*{\fill} CREA 0601546708\hspace*{\fill}} & 
+    \Block[l]{}<\fontsize{8}{8}\selectfont> {{\bfseries Aprovação}:\\
+      {\expandafter\MakeUppercase\expandafter{\nomeempresa}}\\CNPJ:\cnpj}  \\ 
+  \end{NiceTabular}%   end fancy foot
+} 
+\end{minted}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org755078d}]{\LaTeX{} - Cabeçalho e Roda pé}
+\begin{block}{Renderizações}
+\href{img/header.png}{\includegraphics[width=\textwidth]{./img/header.png}}
+\vspace{1mm}
+
+\small\lipsum[2]
+
+\vspace{1mm}
+
+\href{img/header.png}{\includegraphics[width=\textwidth]{./img/footer.png}}
+\end{block}
+\end{frame}
+
+\subsection{Inputs genéricos}
+\label{sec:org71ee761}
+\begin{frame}[label={sec:org9982e82},fragile]{Importante para automação!}
+ \begin{block}{Criação de variáveis globais}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\graphicspath{{../../img/} {../img/}}
+
+%% Usar \minhadata, para expressar a data no formato ISO yyyymmdd 
+
+%% Alguns termos comuns
+\newcommand{\rua}{RODOVIA WASHINGTON LUIS S/Nº, }
+\newcommand{\numero}{KM 276,5}
+\newcommand{\bairro}{RECREIO CAMPESTRE IDANORMA}
+\newcommand{\cidade}{Araraquara}
+\newcommand{\estado}{Sp}
+\newcommand{\pais}{Brasil}
+\newcommand{\empresa}{Lupo}
+\newcommand{\nomeempresa}{Lupo S.A.}
+\newcommand{\cep}{14.803-900}
+\newcommand{\cnpj}{43.948.405/0001-69}
+\newcommand{\setor}{<<Preencher Setor>>}
+\end{minted}
+\end{block}
+\end{frame}
+
+\subsection{Tabelas Clássicas}
+\label{sec:orgd1be42a}
+\begin{frame}[label={sec:orgc1ab39d},fragile]{\LaTeX{}}
+ \begin{block}{}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{tcolorbox}[tabularx={p{0.5cm}|p{2cm}|X|c|c|c|c|}]
+  %%%%%%%%%%%%%% Primeira linha
+  \hline
+  \cellcolor{orange!30} &
+  \cellcolor[HTML]{DBD7D2}  &
+  \cellcolor{white} &
+  \cellcolor[HTML]{DBD7D2} &
+  \texttt{Setor}  &   \texttt{Planta} & \texttt{Patrimônio} \\
+  \cline{5-7} %%%%%% Tracejado entre a coluna 5 e 7.
+  %%%%%%%%%%%%%%%% Segunda linha
+  \multirow{-2}{*}{\cellcolor{orange!30}\textbf{N.}} &
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Máquina}}&
+  \multirow{-2}{*}{\cellcolor{white} \textbf{<<Nome da máquina>>}}&
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Localização}}&
+  <<Setor>>&
+  <<Planta>>&
+  <<Patrimônio>>
+\end{tcolorbox}
+\end{minted}
+
+
+\href{img/tabela-ex.png}{\includegraphics[width=\textwidth]{./img/tabela-ex.png}}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orgefeed89}]{Outras tabelas complexas}
+\href{img/tabelas.png}{\includegraphics[width=\textwidth]{./img/tabelas.png}}
+\end{frame}
+
+\begin{frame}[label={sec:orgc582729},standout]{}
+\begin{modern-quote-env}
+\begin{modern-quote}
+\color{red} \textbf{Perguntas?} \rule{\linewidth}{0.5mm}
+\end{modern-quote}
+\end{modern-quote-env}
+\end{frame}
+\end{document}

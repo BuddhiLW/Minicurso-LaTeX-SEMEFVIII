@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}[tabularx=\PYG{n+nb}{\PYGZob{}}p\PYG{n+nb}{\PYGZob{}}0.5cm\PYG{n+nb}{\PYGZcb{}}|p\PYG{n+nb}{\PYGZob{}}2cm\PYG{n+nb}{\PYGZcb{}}|X|c|c|c|c|\PYG{n+nb}{\PYGZcb{}}]
+  \PYG{c}{\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{} Primeira linha}
+  \PYG{k}{\PYGZbs{}hline}
+  \PYG{k}{\PYGZbs{}cellcolor}\PYG{n+nb}{\PYGZob{}}orange!30\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}}
+  \PYG{k}{\PYGZbs{}cellcolor}\PYG{n+na}{[HTML]}\PYG{n+nb}{\PYGZob{}}DBD7D2\PYG{n+nb}{\PYGZcb{}}  \PYG{n+nb}{\PYGZam{}}
+  \PYG{k}{\PYGZbs{}cellcolor}\PYG{n+nb}{\PYGZob{}}white\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}}
+  \PYG{k}{\PYGZbs{}cellcolor}\PYG{n+na}{[HTML]}\PYG{n+nb}{\PYGZob{}}DBD7D2\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}}
+  \PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}Setor\PYG{n+nb}{\PYGZcb{}}  \PYG{n+nb}{\PYGZam{}}   \PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}Planta\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}texttt}\PYG{n+nb}{\PYGZob{}}Patrimônio\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}}
+  \PYG{k}{\PYGZbs{}cline}\PYG{n+nb}{\PYGZob{}}5\PYGZhy{}7\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{} Tracejado entre a coluna 5 e 7.}
+  \PYG{c}{\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{} Segunda linha}
+  \PYG{k}{\PYGZbs{}multirow}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}*\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cellcolor}\PYG{n+nb}{\PYGZob{}}orange!30\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}N.\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}}
+  \PYG{k}{\PYGZbs{}multirow}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}*\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cellcolor}\PYG{n+na}{[HTML]}\PYG{n+nb}{\PYGZob{}}DBD7D2\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Máquina\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZam{}}
+  \PYG{k}{\PYGZbs{}multirow}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}*\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cellcolor}\PYG{n+nb}{\PYGZob{}}white\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}\PYGZlt{}\PYGZlt{}Nome da máquina\PYGZgt{}\PYGZgt{}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZam{}}
+  \PYG{k}{\PYGZbs{}multirow}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}2\PYG{n+nb}{\PYGZcb{}\PYGZob{}}*\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}cellcolor}\PYG{n+na}{[HTML]}\PYG{n+nb}{\PYGZob{}}DBD7D2\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZob{}}Localização\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZam{}}
+  \PYGZlt{}\PYGZlt{}Setor\PYGZgt{}\PYGZgt{}\PYG{n+nb}{\PYGZam{}}
+  \PYGZlt{}\PYGZlt{}Planta\PYGZgt{}\PYGZgt{}\PYG{n+nb}{\PYGZam{}}
+  \PYGZlt{}\PYGZlt{}Patrimônio\PYGZgt{}\PYGZgt{}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tcolorbox\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

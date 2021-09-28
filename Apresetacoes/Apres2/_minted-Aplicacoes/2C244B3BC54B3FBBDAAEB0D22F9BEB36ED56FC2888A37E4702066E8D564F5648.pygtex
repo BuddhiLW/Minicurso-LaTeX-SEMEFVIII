@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{populate\PYGZhy{}key\PYGZhy{}map}
+  \PYG{p}{[}\PYG{n+nv}{coll\PYGZhy{}map} \PYG{n+nv}{coll\PYGZhy{}file\PYGZhy{}id} \PYG{n+nv}{start}\PYG{p}{]}
+  \PYG{p}{(}\PYG{k}{loop }\PYG{p}{[}\PYG{n+nv}{dir\PYGZhy{}map} \PYG{p}{[]}
+	 \PYG{n+nv}{nth\PYGZhy{}dir} \PYG{n+nv}{start}
+	 \PYG{n+nv}{subset} \PYG{n+nv}{coll\PYGZhy{}map}
+	 \PYG{n+nv}{id\PYGZhy{}list} \PYG{n+nv}{coll\PYGZhy{}file\PYGZhy{}id}\PYG{p}{]}
+    \PYG{p}{(}\PYG{k}{if }\PYG{p}{(}\PYG{n+nf}{empty?} \PYG{n+nv}{subset}\PYG{p}{)}
+      \PYG{n+nv}{dir\PYGZhy{}map}
+      \PYG{p}{(}\PYG{n+nf}{recur}
+       \PYG{p}{(}\PYG{n+nb}{conj }\PYG{n+nv}{dir\PYGZhy{}map} \PYG{p}{(}\PYG{n+nf}{vec} \PYG{p}{(}\PYG{n+nf}{list}
+			   \PYG{n+nv}{nth\PYGZhy{}dir}
+			   \PYG{p}{(}\PYG{n+nf}{which\PYGZhy{}ids\PYGZhy{}subset\PYGZhy{}contains?}
+			    \PYG{n+nv}{id\PYGZhy{}list} \PYG{n+nv}{subset}\PYG{p}{))))}
+       \PYG{p}{(}\PYG{n+nb}{inc }\PYG{n+nv}{nth\PYGZhy{}dir}\PYG{p}{)}
+       \PYG{p}{(}\PYG{n+nb}{drop }\PYG{l+m+mi}{1} \PYG{n+nv}{subset}\PYG{p}{)}
+       \PYG{p}{(}\PYG{n+nb}{identity }\PYG{n+nv}{id\PYGZhy{}list}\PYG{p}{)))))}
+\end{Verbatim}

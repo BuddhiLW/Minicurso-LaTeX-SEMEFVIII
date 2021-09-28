@@ -1,0 +1,13 @@
+\frametitle{\LaTeX {} - Cabeçalho e Roda pé}
+\begin{block}{Template no preâmbulo}
+Incluí-lo em todas as páginas
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\fancypagestyle{firstpagestyle}{% to use only in the first page
+  % \fancyhf{}% Clear default headers and footers
+  \fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+  \fancyfoot[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+  \input{imports/header-footer.tex}
+}%%%%%% firstpagestyle ends
+\end{minted}
+\end{block}

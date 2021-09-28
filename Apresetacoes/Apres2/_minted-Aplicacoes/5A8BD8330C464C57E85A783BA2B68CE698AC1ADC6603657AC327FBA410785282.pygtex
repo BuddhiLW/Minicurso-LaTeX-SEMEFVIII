@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} \PYGZbs{}renewcommand\PYGZob{}\PYGZbs{}empresa\PYGZcb{}\PYGZob{}LUPO S.A.\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Minhadata invertida, ano, mês, dia.}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}minhadata}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}leavevmode\PYGZbs{}hbox}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}todigits\PYGZbs{}the\PYGZbs{}year\PYGZbs{}twodigits\PYGZbs{}month\PYGZbs{}twodigits\PYGZbs{}day}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}def\PYGZbs{}twodigits}\PYGZsh{}1\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}ifnum}\PYGZsh{}1\PYGZlt{}10 0\PYG{k}{\PYGZbs{}fi\PYGZbs{}the}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}newcolumntype}\PYG{n+nb}{\PYGZob{}}Y\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZgt{}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}raggedleft\PYGZbs{}arraybackslash}\PYG{n+nb}{\PYGZcb{}}X\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{} see tabularx}
+
+\PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[C]}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}NiceTabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}cp\PYG{n+nb}{\PYGZob{}}12cm\PYG{n+nb}{\PYGZcb{}}c\PYG{n+nb}{\PYGZcb{}}[hvlines, cell\PYGZhy{}space\PYGZhy{}top\PYGZhy{}limit=6pt,cell\PYGZhy{}space\PYGZhy{}bottom\PYGZhy{}limit=3pt]
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+nb}{\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[scale=0.15]}\PYG{n+nb}{\PYGZob{}}logo.png\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZam{}}
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+na}{[X]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}\PYGZlt{}\PYG{k}{\PYGZbs{}bfseries\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}\PYGZgt{}\PYG{n+nb}{\PYGZob{}}
+      APRECIAÇÃO DE RISCO \PYGZhy{} INVENTÁRIO DE MÁQUINAS \PYG{k}{\PYGZbs{}\PYGZbs{}}
+      NR\PYGZhy{}12 \PYGZhy{} Segurança no Trabalho em Máquinas e Equipamentos \PYG{k}{\PYGZbs{}\PYGZbs{}}
+      NR\PYGZhy{}01 \PYGZhy{} Disposições Gerais \PYGZhy{} Gerenciamento de Riscos\PYG{n+nb}{\PYGZcb{}\PYGZam{}}
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}\PYGZlt{}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}}\PYGZgt{} \PYG{n+nb}{\PYGZob{}}
+      \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}11\PYG{n+nb}{\PYGZcb{}\PYGZob{}}4\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}bfseries} \PYG{k}{\PYGZbs{}textrm}\PYG{n+nb}{\PYGZob{}}N\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}textordmasculine} \PYG{k}{\PYGZbs{}minhadata}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}
+	\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nomeempresa}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}\PYGZbs{}}
+      \PYG{k}{\PYGZbs{}hline}
+      \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont} Pág. \PYG{k}{\PYGZbs{}thepage\PYGZbs{} }de \PYG{k}{\PYGZbs{}pageref}\PYG{n+nb}{\PYGZob{}}LastPage\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}NiceTabular\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} end fancy head}
+\PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[C]}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}NiceTabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}cp\PYG{n+nb}{\PYGZob{}}10cm\PYG{n+nb}{\PYGZcb{}}c\PYG{n+nb}{\PYGZcb{}}[hvlines, cell\PYGZhy{}space\PYGZhy{}top\PYGZhy{}limit=6pt,cell\PYGZhy{}space\PYGZhy{}bottom\PYGZhy{}limit=1pt]
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+nb}{\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}\PYG{n+nb}{\PYGZob{}}Data: \PYG{k}{\PYGZbs{}DTMToday}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZam{}}
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+na}{[X]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}\PYGZlt{}\PYG{k}{\PYGZbs{}bfseries\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}9\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}\PYGZgt{}\PYG{n+nb}{\PYGZob{}}
+      Elaborado por: Wagner José Branquinho,  \PYG{k}{\PYGZbs{}\PYGZbs{}}
+      Engenheiro Mecânico e de Segurança do Trabalho.  \PYG{k}{\PYGZbs{}\PYGZbs{}}
+      \PYG{k}{\PYGZbs{}hspace*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fill}\PYG{n+nb}{\PYGZcb{}} CREA 0601546708\PYG{k}{\PYGZbs{}hspace*}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}fill}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{n+nb}{\PYGZam{}}
+    \PYG{k}{\PYGZbs{}Block}\PYG{n+na}{[l]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}}\PYGZlt{}\PYG{k}{\PYGZbs{}fontsize}\PYG{n+nb}{\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}\PYGZob{}}8\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}selectfont}\PYGZgt{} \PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}bfseries} Aprovação\PYG{n+nb}{\PYGZcb{}}:\PYG{k}{\PYGZbs{}\PYGZbs{}}
+      \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nomeempresa}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}CNPJ:\PYG{k}{\PYGZbs{}cnpj}\PYG{n+nb}{\PYGZcb{}}  \PYG{k}{\PYGZbs{}\PYGZbs{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}NiceTabular\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}   end fancy foot}
+\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

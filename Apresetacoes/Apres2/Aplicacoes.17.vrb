@@ -1,0 +1,26 @@
+\frametitle{\LaTeX {}}
+\begin{block}{}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{tcolorbox}[tabularx={p{0.5cm}|p{2cm}|X|c|c|c|c|}]
+  %%%%%%%%%%%%%% Primeira linha
+  \hline
+  \cellcolor{orange!30} &
+  \cellcolor[HTML]{DBD7D2}  &
+  \cellcolor{white} &
+  \cellcolor[HTML]{DBD7D2} &
+  \texttt{Setor}  &   \texttt{Planta} & \texttt{Patrimônio} \\
+  \cline{5-7} %%%%%% Tracejado entre a coluna 5 e 7.
+  %%%%%%%%%%%%%%%% Segunda linha
+  \multirow{-2}{*}{\cellcolor{orange!30}\textbf{N.}} &
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Máquina}}&
+  \multirow{-2}{*}{\cellcolor{white} \textbf{<<Nome da máquina>>}}&
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Localização}}&
+  <<Setor>>&
+  <<Planta>>&
+  <<Patrimônio>>
+\end{tcolorbox}
+\end{minted}
+
+
+\href{img/tabela-ex.png}{\includegraphics[width=\textwidth]{./img/tabela-ex.png}}
+\end{block}

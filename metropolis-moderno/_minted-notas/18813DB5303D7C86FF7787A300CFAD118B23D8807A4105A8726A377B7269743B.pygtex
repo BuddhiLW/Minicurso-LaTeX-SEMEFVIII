@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Fonte:
+    \PYG{k}{\PYGZbs{}href}\PYG{n+nb}{\PYGZob{}}http://www.texample.net/tikz/examples/rotated\PYGZhy{}polygons/\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}texample.net\PYG{n+nb}{\PYGZcb{}}.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,3 +1,9 @@
 [submodule "metropolis-theme-git"]
 	path = template-beamer-metropolis-from-orgmode
 	url = https://github.com/fangohr/template-beamer-metropolis-from-orgmode.git
+[submodule "refcard-org-beamer"]
+	path = refcard-org-beamer
+	url = https://github.com/fniessen/refcard-org-beamer.git
+[submodule "metropolis-moderno/mtheme"]
+	path = metropolis-moderno/mtheme
+	url = https://github.com/matze/mtheme

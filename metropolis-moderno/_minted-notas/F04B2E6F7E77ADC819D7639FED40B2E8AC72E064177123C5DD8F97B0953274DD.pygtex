@@ -1,0 +1,139 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{}\PYGZpc{}}
+\PYG{c}{\PYGZpc{}\PYGZpc{} This is file `beamerouterthememetropolis.sty\PYGZsq{},}
+\PYG{c}{\PYGZpc{}\PYGZpc{} generated with the docstrip utility.}
+\PYG{c}{\PYGZpc{}\PYGZpc{}}
+\PYG{c}{\PYGZpc{}\PYGZpc{} The original source files were:}
+\PYG{c}{\PYGZpc{}\PYGZpc{}}
+\PYG{c}{\PYGZpc{}\PYGZpc{} beamerouterthememetropolis.dtx  (with options: `package\PYGZsq{})}
+\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c}{\PYGZpc{}\PYGZpc{} Copyright 2015 Matthias Vogelgesang and the LaTeX community. A full list of}
+\PYG{c}{\PYGZpc{}\PYGZpc{} contributors can be found at}
+\PYG{c}{\PYGZpc{}\PYGZpc{} }
+\PYG{c}{\PYGZpc{}\PYGZpc{}     https://github.com/matze/mtheme/graphs/contributors}
+\PYG{c}{\PYGZpc{}\PYGZpc{} }
+\PYG{c}{\PYGZpc{}\PYGZpc{} and the original template was based on the HSRM theme by Benjamin Weiss.}
+\PYG{c}{\PYGZpc{}\PYGZpc{} }
+\PYG{c}{\PYGZpc{}\PYGZpc{} This work is licensed under a Creative Commons Attribution\PYGZhy{}ShareAlike 4.0}
+\PYG{c}{\PYGZpc{}\PYGZpc{} International License (https://creativecommons.org/licenses/by\PYGZhy{}sa/4.0/).}
+\PYG{c}{\PYGZpc{}\PYGZpc{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{k}{\PYGZbs{}NeedsTeXFormat}\PYG{n+nb}{\PYGZob{}}LaTeX2e\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}ProvidesPackage}\PYG{n+nb}{\PYGZob{}}beamerouterthememetropolis\PYG{n+nb}{\PYGZcb{}}[2017/01/23 Metropolis outer theme]
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}etoolbox\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}calc\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}RequirePackage}\PYG{n+nb}{\PYGZob{}}pgfopts\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}
+  /metropolis/outer/numbering/.cd,
+    .is choice,
+    none/.code=\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}}[none],
+    counter/.code=\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}}[counter],
+    fraction/.code=\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}}[fraction],
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}
+  /metropolis/outer/progressbar/.cd,
+    .is choice,
+    none/.code=\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+      \PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}headline\PYG{n+nb}{\PYGZcb{}}[plain]
+      \PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}}[plain]
+      \PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}footline\PYG{n+nb}{\PYGZcb{}}[plain]
+    \PYG{n+nb}{\PYGZcb{}},
+    head/.code=\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}/metropolis/outer/progressbar=none\PYG{n+nb}{\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}addtobeamertemplate}\PYG{n+nb}{\PYGZob{}}headline\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+        \PYG{k}{\PYGZbs{}usebeamertemplate*}\PYG{n+nb}{\PYGZob{}}progress bar in head/foot\PYG{n+nb}{\PYGZcb{}}
+      \PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}},
+    frametitle/.code=\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}/metropolis/outer/progressbar=none\PYG{n+nb}{\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}addtobeamertemplate}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+        \PYG{k}{\PYGZbs{}usebeamertemplate*}\PYG{n+nb}{\PYGZob{}}progress bar in head/foot\PYG{n+nb}{\PYGZcb{}}
+      \PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}},
+    foot/.code=\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}/metropolis/outer/progressbar=none\PYG{n+nb}{\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}addtobeamertemplate}\PYG{n+nb}{\PYGZob{}}footline\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+        \PYG{k}{\PYGZbs{}usebeamertemplate*}\PYG{n+nb}{\PYGZob{}}progress bar in head/foot\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+      \PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}},
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@outer@setdefaults\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}/metropolis/outer/.cd,
+    numbering=counter,
+    progressbar=none,
+  \PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}navigation symbols\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame footer\PYG{n+nb}{\PYGZcb{}\PYGZob{}}none\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame footer\PYG{n+nb}{\PYGZcb{}\PYGZob{}}custom\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}} \PYGZsh{}1 \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}\PYGZob{}}none\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}\PYGZob{}}counter\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}insertframenumber}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}\PYGZob{}}fraction\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}insertframenumber}/\PYG{k}{\PYGZbs{}inserttotalframenumber}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}headline\PYG{n+nb}{\PYGZcb{}\PYGZob{}}plain\PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}footline\PYG{n+nb}{\PYGZcb{}\PYGZob{}}plain\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}[wd=\PYG{k}{\PYGZbs{}textwidth}, sep=3ex]\PYG{n+nb}{\PYGZob{}}footline\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}usebeamerfont}\PYG{n+nb}{\PYGZob{}}page number in head/foot\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}usebeamertemplate*}\PYG{n+nb}{\PYGZob{}}frame footer\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}hfill}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}usebeamertemplate*}\PYG{n+nb}{\PYGZob{}}frame numbering\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding\PYG{n+nb}{\PYGZcb{}\PYGZob{}}2.2ex\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitlestrut@start\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding +\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}totalheightof}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+      \PYG{k}{\PYGZbs{}ifcsdef}\PYG{n+nb}{\PYGZob{}}metropolis@frametitleformat\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitleformat X\PYG{n+nb}{\PYGZcb{}\PYGZob{}}X\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+  \PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitlestrut@end\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}rule}\PYG{n+na}{[\PYGZhy{}\PYGZbs{}metropolis@frametitle@padding]}\PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}defbeamertemplate}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}plain\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}nointerlineskip}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}[\PYG{c}{\PYGZpc{}}
+      wd=\PYG{k}{\PYGZbs{}paperwidth},\PYG{c}{\PYGZpc{}}
+      sep=0pt,\PYG{c}{\PYGZpc{}}
+      leftskip=\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding,\PYG{c}{\PYGZpc{}}
+      rightskip=\PYG{k}{\PYGZbs{}metropolis}@frametitle@padding,\PYG{c}{\PYGZpc{}}
+    ]\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}metropolis}@frametitlestrut@start\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}insertframetitle}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}nolinebreak}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}metropolis}@frametitlestrut@end\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frametitle continuation\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}usebeamerfont}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}romannumeral} \PYG{k}{\PYGZbs{}insertcontinuationcount}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot@linewidth\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot@linewidth\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.4pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}progress bar in head/foot\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  \PYG{k}{\PYGZbs{}nointerlineskip}
+  \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}paperwidth} * \PYG{k}{\PYGZbs{}ratio}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}insertframenumber} pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}inserttotalframenumber} pt\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+  \PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}[wd=\PYG{k}{\PYGZbs{}paperwidth}]\PYG{n+nb}{\PYGZob{}}progress bar in head/foot\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}tikzexternaldisable}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}
+      \PYG{k}{\PYGZbs{}fill}\PYG{n+na}{[bg]} (0,0) rectangle (\PYG{k}{\PYGZbs{}paperwidth}, \PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot@linewidth);
+      \PYG{k}{\PYGZbs{}fill}\PYG{n+na}{[fg]} (0,0) rectangle (\PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot, \PYG{k}{\PYGZbs{}metropolis}@progressinheadfoot@linewidth);
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tikzpicture\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}tikzexternalenable}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}beamercolorbox\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}AtBeginDocument}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+  \PYG{k}{\PYGZbs{}apptocmd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}appendix}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{}}
+    \PYG{k}{\PYGZbs{}pgfkeys}\PYG{n+nb}{\PYGZob{}}\PYG{c}{\PYGZpc{}}
+      /metropolis/outer/.cd,
+      numbering=none,
+      progressbar=none\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}metropolis}@outer@setdefaults
+\PYG{k}{\PYGZbs{}ProcessPgfPackageOptions}\PYG{n+nb}{\PYGZob{}}/metropolis/outer\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}endinput}
+\PYG{c}{\PYGZpc{}\PYGZpc{}}
+\PYG{c}{\PYGZpc{}\PYGZpc{} End of file `beamerouterthememetropolis.sty\PYGZsq{}.}
+\end{Verbatim}

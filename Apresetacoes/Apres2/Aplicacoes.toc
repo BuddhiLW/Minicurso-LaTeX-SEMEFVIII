@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Automação de Relatórios Técnicos (Case Lupo)}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Eu na Lupo (Araraquara)}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Bash, Clojure e \LaTeX {}!}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Inputs genéricos}{14}{0}{1}
+\beamer@subsectionintoc {1}{4}{Tabelas Clássicas}{16}{0}{1}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}graphicspath}\PYG{n+nb}{\PYGZob{}\PYGZob{}}../../img/\PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZob{}}../img/\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Usar \PYGZbs{}minhadata, para expressar a data no formato ISO yyyymmdd}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Alguns termos comuns}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rua}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}RODOVIA WASHINGTON LUIS S/Nº, \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}numero}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}KM 276,5\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bairro}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}RECREIO CAMPESTRE IDANORMA\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cidade}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Araraquara\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}estado}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Sp\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pais}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Brasil\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}empresa}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Lupo\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nomeempresa}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}Lupo S.A.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cep}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}14.803\PYGZhy{}900\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cnpj}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}43.948.405/0001\PYGZhy{}69\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}setor}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYGZlt{}\PYGZlt{}Preencher Setor\PYGZgt{}\PYGZgt{}\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

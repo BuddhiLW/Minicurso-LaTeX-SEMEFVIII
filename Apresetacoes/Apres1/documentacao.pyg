@@ -1,0 +1,7 @@
+\begin{table}[opções-de-disposição-espacial]
+  (texto)
+  \begin{tabular}[partições]
+    (...)
+  \end{tabular}
+  (texto)
+\end{table}

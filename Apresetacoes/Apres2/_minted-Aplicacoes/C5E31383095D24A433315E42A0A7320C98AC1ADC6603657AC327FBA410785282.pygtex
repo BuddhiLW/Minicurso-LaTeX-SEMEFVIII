@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=0.3\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}logo.png\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+  \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}.5cm\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}bfseries\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}Large}\PYG{n+nb}{\PYGZob{}} \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}nomeempresa}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}} CNPJ – \PYG{k}{\PYGZbs{}cnpj}\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}small}\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}rua}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{k}{\PYGZbs{}numero}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+	\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bairro}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}},
+	\PYG{k}{\PYGZbs{}\PYGZbs{}}CEP:\PYGZhy{} \PYG{k}{\PYGZbs{}cep} –
+	\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cidade}/\PYG{k}{\PYGZbs{}estado}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYGZhy{}
+	\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}pais}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1.5cm\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large\PYGZbs{}textsc}\PYG{n+nb}{\PYGZob{}}“APRECIAÇÃO DE RISCOS DE MÁQUINAS”\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}small} \PYG{n+nb}{\PYGZob{}}NR\PYGZhy{}12 – SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+na}{[1\PYGZbs{}baselineskip]}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large\PYGZbs{}textsc}\PYG{n+nb}{\PYGZob{}}“INVENTÁRIO DE RISCOS DE MÁQUINAS”\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}small} \PYG{n+nb}{\PYGZob{}}NR\PYGZhy{}1 – DISPOSIÇÕES GERAIS E GERENCIAMENTO DE RISCOS\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+na}{[1\PYGZbs{}baselineskip]}
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1.5cm\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}large}\PYG{n+nb}{\PYGZob{}}N\PYG{k}{\PYGZbs{}textordmasculine} \PYG{k}{\PYGZbs{}minhadata}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{n+nb}{\PYGZob{}}
+	\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase}
+	\PYG{k}{\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}empresa}\PYG{n+nb}{\PYGZcb{}} 01\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+na}{[1\PYGZbs{}baselineskip]}
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}1.5cm\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}large\PYGZbs{}textsc}\PYG{n+nb}{\PYGZob{}}“\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}expandafter\PYGZbs{}MakeUppercase\PYGZbs{}expandafter}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}setor}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}”\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}\PYG{k}{\PYGZbs{}\PYGZbs{}}
+    \PYG{c}{\PYGZpc{} O comando \PYGZbs{}setor está definido ao início da pag.}
+    \PYG{k}{\PYGZbs{}vspace}\PYG{n+nb}{\PYGZob{}}3.5cm\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}large}\PYG{n+nb}{\PYGZob{}}FRANCA \PYGZhy{} SP\PYG{k}{\PYGZbs{}\PYGZbs{}} \PYG{k}{\PYGZbs{}today} \PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}bfseries\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}center\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

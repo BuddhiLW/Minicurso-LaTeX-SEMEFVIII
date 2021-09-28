@@ -1,0 +1,25 @@
+\frametitle{Clojure}
+\begin{block}{Partição das fotos em pastas}
+\begin{itemize}
+\item \href{file:///home/buddhilw/PP/Scripts/devibrary/src/devibrary/partitioning.clj}{Excerto do arquivo \alert{partition.clj}}
+\end{itemize}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{clojure}
+(defn populate-key-map
+  [coll-map coll-file-id start]
+  (loop [dir-map []
+	 nth-dir start
+	 subset coll-map
+	 id-list coll-file-id]
+    (if (empty? subset)
+      dir-map
+      (recur
+       (conj dir-map (vec (list
+			   nth-dir
+			   (which-ids-subset-contains?
+			    id-list subset))))
+       (inc nth-dir)
+       (drop 1 subset)
+       (identity id-list)))))
+\end{minted}
+\end{block}

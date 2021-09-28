@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+mkdir ICE\PYGZhy{}Envase\PYG{o}{\PYGZob{}}\PYG{l+m}{36}..46\PYG{o}{\PYGZcb{}}
+mkdir ICE\PYGZhy{}Envase
+
+\PYG{k}{for} i \PYG{k}{in} \PYG{o}{\PYGZob{}}\PYG{l+m}{36}..46\PYG{o}{\PYGZcb{}}
+\PYG{k}{do}
+    cp \PYGZhy{}r template\PYGZhy{}base/* ./ICE\PYGZhy{}Envase\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZdq{}}
+    mv ./ICE\PYGZhy{}Envase\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZdq{}}/pagina.tex \PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}
+	    ./ICE\PYGZhy{}Envase\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZdq{}}/ICE\PYGZhy{}Envase\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZdq{}}.tex
+    mv ./ICE\PYGZhy{}Envase\PYG{l+s+s2}{\PYGZdq{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZdq{}} ./ICE\PYGZhy{}Envase/
+\PYG{k}{done}
+\end{Verbatim}

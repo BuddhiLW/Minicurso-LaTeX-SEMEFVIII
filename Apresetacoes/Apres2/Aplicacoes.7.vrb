@@ -1,0 +1,19 @@
+\frametitle{Bash}
+\begin{block}{Crear a estrutura do documento, por sector}
+\begin{itemize}
+\item \href{file:///home/buddhilw/PP/LaTeX/Wagner/Lupo/create-dir.sh}{Bash creador de diretórios} (Excerto)
+\end{itemize}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+mkdir ICE-Envase{36..46}
+mkdir ICE-Envase
+
+for i in {36..46}
+do
+    cp -r template-base/* ./ICE-Envase"$i"
+    mv ./ICE-Envase"$i"/pagina.tex \\
+	    ./ICE-Envase"$i"/ICE-Envase"$i".tex
+    mv ./ICE-Envase"$i" ./ICE-Envase/
+done
+\end{minted}
+\end{block}

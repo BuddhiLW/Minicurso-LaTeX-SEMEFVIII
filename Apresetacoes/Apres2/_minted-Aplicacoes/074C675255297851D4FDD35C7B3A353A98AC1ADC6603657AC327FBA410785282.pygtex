@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}fancypagestyle}\PYG{n+nb}{\PYGZob{}}firstpagestyle\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{c}{\PYGZpc{} to use only in the first page}
+  \PYG{c}{\PYGZpc{} \PYGZbs{}fancyhf\PYGZob{}\PYGZcb{}\PYGZpc{} Clear default headers and footers}
+  \PYG{k}{\PYGZbs{}fancyhead}\PYG{n+na}{[CE,CO,LE,LO,RE,RO]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{c}{\PYGZpc{}\PYGZpc{} clear out all headers}
+  \PYG{k}{\PYGZbs{}fancyfoot}\PYG{n+na}{[CE,CO,LE,LO,RE,RO]}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} \PYG{c}{\PYGZpc{}\PYGZpc{} clear out all headers}
+  \PYG{k}{\PYGZbs{}input}\PYG{n+nb}{\PYGZob{}}imports/header\PYGZhy{}footer.tex\PYG{n+nb}{\PYGZcb{}}
+\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{}\PYGZpc{} firstpagestyle ends}
+\end{Verbatim}

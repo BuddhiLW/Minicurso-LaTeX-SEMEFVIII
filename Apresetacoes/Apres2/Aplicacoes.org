@@ -1,0 +1,311 @@
+#+STARTUP: latexpreview
+#+STARTUP: imagepreview
+
+#+LATEX_COMPILER: xelatex
+
+#+title: O LaTeX, facetas documentadoras
+# #+BEAMER_HEADER: \title{O \LaTeX{}, uma roupagem moderna}
+# #+AUTHOR:  Pedro G. Branquinho 
+#+EMAIL: pedro.branquinho@usp.br
+#+DATE: @@beamer:  Universidade de São Paulo - DEMAR@@
+#+BEAMER_HEADER: \author[Branquinho]{\textbf{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}}
+#+BEAMER_HEADER: \date[EEL-USP]{\textbf{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}}
+
+
+#+BEAMER_FRAME_LEVEL: 3
+#+LATEX_CLASS: beamer
+# seahorse
+#+BEAMER_COLOR_THEME: magpie
+#+LATEX_CLASS_OPTIONS: [bigger]
+#+BEAMER_HEADER: \useoutertheme[height=30pt]{sidebar}
+#+BEAMER_HEADER: \setbeamertemplate{frametitle}[sidebar theme]
+#+BEAMER_HEADER: \setbeamertemplate{itemize item}{\ding{166}}
+#+BEAMER_HEADER: \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+#+BEAMER_HEADER: \setbeamertemplate{enumerate item}[circle]
+#+BEAMER_HEADER: \setbeamerfont{block title}{size={\centering}}
+#+BEAMER_HEADER: \setbeamercolor{block title}{bg=black!30!white,fg=white}
+#+BEAMER_THEME:
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+# #+LaTeX_HEADER: \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+#+LANGUAGE:  pt
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:niltags:not-in-toc
+
+#+latex_header: \usepackage{pifont}
+#+LATEX_HEADER:\usepackage{verbatim}
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER:\def\verbatim@font{\scriptsize\ttfamily}
+#+LATEX_HEADER:\makeatother
+#+LATEX_HEADER:\logo{\includegraphics[height=0.5cm]{./img/usp-logo-1}}
+#+LATEX_HEADER:\AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection,currentsubsection]\end{frame}}
+
+#+BEAMER_HEADER: \setbeamerfont{section in toc}{size=\normalsize,series=\bfseries}
+#+BEAMER_HEADER: \setbeamercolor{section in toc}{bg=white, fg=white!60!cyan}
+#+BEAMER_HEADER: \setbeamerfont{subsection in toc}{size=\normalsize,series=\bfseries}
+#+BEAMER_HEADER: \setbeamercolor{subsection in toc}{bg=white, fg=white!80!cyan}
+
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows.meta}
+#+LATEX_HEADER: \usetikzlibrary{positioning}
+
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \tcbuselibrary{skins}
+
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle{emacs}
+
+#+LATEX_HEADER: \usepackage{lipsum}
+
+#+LATEX_HEADER:\newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER: \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!40!white}}
+#+LATEX_HEADER:{\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/TP-30-cyan.jpg}}
+
+#+LATEX_HEADER:\newenvironment{modern-quote-env}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER: \tcolorboxenvironment{modern-quote-env}{before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!10!white}, colframe=black!50!white}
+
+
+* Automação de Relatórios Técnicos (Case Lupo)
+#+LaTeX: {\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/17-30-cyan.png}}
+
+#+LaTeX: \setbeamercolor{section in toc}{bg=white, fg=blue!80!white}
+#+LaTeX: \setbeamercolor{subsection in toc}{bg=white, fg=blue!70!white}
+
+** Eu na Lupo (Araraquara)
+*** Não posso ver uma vergonha...
+**** Galpão
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/galpao-lupo.jpeg][file:./img/galpao-lupo.jpeg]]
+
+*** ... Que eu já quero passar
+**** Zoom na sofrência
+
+\centering
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :height 0.6\textheight,angle=90
+[[file:img/lupo-sem-mascara.jpeg][file:./img/lupo-sem-mascara.jpeg]]
+
+** Bash, Clojure e LaTeX!
+*** Bash
+**** Crear a estrutura do documento, por sector
+-  [[file:~/PP/LaTeX/Wagner/Lupo/create-dir.sh][Bash creador de diretórios]] (Excerto)
+
+#+begin_src shell :export both :eval no
+  mkdir ICE-Envase{36..46}
+  mkdir ICE-Envase
+
+  for i in {36..46}
+  do
+      cp -r template-base/* ./ICE-Envase"$i"
+      mv ./ICE-Envase"$i"/pagina.tex \\
+              ./ICE-Envase"$i"/ICE-Envase"$i".tex
+      mv ./ICE-Envase"$i" ./ICE-Envase/
+  done
+#+end_src
+  
+*** Clojure
+**** Partição das fotos em pastas
+- [[file:~/PP/Scripts/devibrary/src/devibrary/partitioning.clj][Excerto do arquivo *partition.clj*]] 
+
+#+begin_src clojure :eval no
+    (defn populate-key-map
+      [coll-map coll-file-id start]
+      (loop [dir-map []
+             nth-dir start
+             subset coll-map
+             id-list coll-file-id]
+        (if (empty? subset)
+          dir-map
+          (recur
+           (conj dir-map (vec (list
+                               nth-dir
+                               (which-ids-subset-contains?
+                                id-list subset))))
+           (inc nth-dir)
+           (drop 1 subset)
+           (identity id-list)))))
+#+end_src
+
+*** LaTeX - Capa
+:PROPERTIES:
+:beamer_opt: shrink = 30
+:END:
+**** Template Capa
+#+begin_src latex :results output :exports both :eval no
+     \begin{center}
+       \includegraphics[width=0.3\linewidth]{logo.png}\\
+       \vspace{.5cm}
+       \begin{bfseries}
+         \Large{ {\expandafter\MakeUppercase\expandafter{\nomeempresa}} \\ CNPJ – \cnpj}\\
+         {\small{{\expandafter\MakeUppercase\expandafter{\rua{} \numero}}\\
+             {\expandafter\MakeUppercase\expandafter{\bairro}},
+             \\CEP:- \cep –
+             {\expandafter\MakeUppercase\expandafter{\cidade/\estado}} -
+             {\expandafter\MakeUppercase\expandafter{\pais}} \\}}
+         \vspace{1.5cm}
+         {\large\textsc{“APRECIAÇÃO DE RISCOS DE MÁQUINAS”}}\\
+         {\small {NR-12 – SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS}}\\[1\baselineskip]
+         {\large\textsc{“INVENTÁRIO DE RISCOS DE MÁQUINAS”}}\\
+         {\small {NR-1 – DISPOSIÇÕES GERAIS E GERENCIAMENTO DE RISCOS}}\\[1\baselineskip]
+         \vspace{1.5cm}
+         \large{N\textordmasculine \minhadata{} {
+             \expandafter\MakeUppercase
+             \expandafter{\empresa} 01}\\[1\baselineskip]
+         \vspace{1.5cm}
+         {\large\textsc{“{\expandafter\MakeUppercase\expandafter{\setor}}”}}\\
+         % O comando \setor está definido ao início da pag.
+         \vspace{3.5cm}
+         \large{FRANCA - SP\\ \today \\}
+       \end{bfseries}
+     \end{center}
+#+end_src
+*** LaTeX - Capa
+**** Resultado
+\centering
+#+ATTR_HTML: :width 400px
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:img/capa.png][file:./img/capa.png]]
+
+*** LaTeX - Cabeçalho e Roda pé 
+# **** Renderizações
+**** Template no preâmbulo
+
+Incluí-lo em todas as páginas
+
+#+begin_src latex :results output :exports both :eval no
+  \fancypagestyle{firstpagestyle}{% to use only in the first page
+    % \fancyhf{}% Clear default headers and footers
+    \fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+    \fancyfoot[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
+    \input{imports/header-footer.tex}
+  }%%%%%% firstpagestyle ends
+#+end_src
+
+*** LaTeX - Cabeçalho e Roda pé
+:PROPERTIES:
+:beamer_opt: shrink = 30
+:END:
+**** Como é o código (=header-footer.tex=)
+
+#+begin_src latex :results output :exports both :eval no
+    % \renewcommand{\empresa}{LUPO S.A.}
+
+    %% Minhadata invertida, ano, mês, dia.
+    \def\minhadata{\leavevmode\hbox{\todigits\the\year\twodigits\month\twodigits\day}}
+    \def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+    \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% see tabularx
+
+    \fancyhead[C]{%
+      \begin{NiceTabular}{cp{12cm}c}[hvlines, cell-space-top-limit=6pt,cell-space-bottom-limit=3pt]
+        \Block{}{\includegraphics[scale=0.15]{logo.png}}&
+        \Block[X]{}<\bfseries\fontsize{8}{9}\selectfont>{
+          APRECIAÇÃO DE RISCO - INVENTÁRIO DE MÁQUINAS \\
+          NR-12 - Segurança no Trabalho em Máquinas e Equipamentos \\
+          NR-01 - Disposições Gerais - Gerenciamento de Riscos}&  
+        \Block{}<\fontsize{8}{9}> {
+          {\fontsize{11}{4}}{\bfseries \textrm{N}\textordmasculine \minhadata{}
+            {\expandafter\MakeUppercase\expandafter{\nomeempresa}}}
+          \\
+          \hline
+          {\fontsize{8}{9}\selectfont Pág. \thepage\ de \pageref{LastPage}}}  
+      \end{NiceTabular}%  
+    } % end fancy head
+    \fancyfoot[C]{%     
+      \begin{NiceTabular}{cp{10cm}c}[hvlines, cell-space-top-limit=6pt,cell-space-bottom-limit=1pt]
+        \Block{}{\fontsize{8}{9}\selectfont{Data: \DTMToday}}&
+        \Block[X]{}<\bfseries\fontsize{8}{9}\selectfont>{
+          Elaborado por: Wagner José Branquinho,  \\
+          Engenheiro Mecânico e de Segurança do Trabalho.  \\
+          \hspace*{\fill} CREA 0601546708\hspace*{\fill}} & 
+        \Block[l]{}<\fontsize{8}{8}\selectfont> {{\bfseries Aprovação}:\\
+          {\expandafter\MakeUppercase\expandafter{\nomeempresa}}\\CNPJ:\cnpj}  \\ 
+      \end{NiceTabular}%   end fancy foot
+    } 
+#+end_src
+
+*** LaTeX - Cabeçalho e Roda pé
+**** Renderizações
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/header.png][file:./img/header.png]]
+\vspace{1mm}
+
+\small\lipsum[2]
+
+\vspace{1mm}
+
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/header.png][file:./img/footer.png]]
+
+** Inputs genéricos
+*** Importante para automação!
+**** Criação de variáveis globais
+#+begin_src latex :results output :exports both :eval no
+  \graphicspath{{../../img/} {../img/}}
+
+  %% Usar \minhadata, para expressar a data no formato ISO yyyymmdd 
+
+  %% Alguns termos comuns
+  \newcommand{\rua}{RODOVIA WASHINGTON LUIS S/Nº, }
+  \newcommand{\numero}{KM 276,5}
+  \newcommand{\bairro}{RECREIO CAMPESTRE IDANORMA}
+  \newcommand{\cidade}{Araraquara}
+  \newcommand{\estado}{Sp}
+  \newcommand{\pais}{Brasil}
+  \newcommand{\empresa}{Lupo}
+  \newcommand{\nomeempresa}{Lupo S.A.}
+  \newcommand{\cep}{14.803-900}
+  \newcommand{\cnpj}{43.948.405/0001-69}
+  \newcommand{\setor}{<<Preencher Setor>>}
+#+end_src
+
+** Tabelas Clássicas
+*** LaTeX
+**** 
+#+begin_src latex :results output :exports both :eval no
+\begin{tcolorbox}[tabularx={p{0.5cm}|p{2cm}|X|c|c|c|c|}]
+  %%%%%%%%%%%%%% Primeira linha
+  \hline
+  \cellcolor{orange!30} &
+  \cellcolor[HTML]{DBD7D2}  &
+  \cellcolor{white} &
+  \cellcolor[HTML]{DBD7D2} &
+  \texttt{Setor}  &   \texttt{Planta} & \texttt{Patrimônio} \\
+  \cline{5-7} %%%%%% Tracejado entre a coluna 5 e 7.
+  %%%%%%%%%%%%%%%% Segunda linha
+  \multirow{-2}{*}{\cellcolor{orange!30}\textbf{N.}} &
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Máquina}}&
+  \multirow{-2}{*}{\cellcolor{white} \textbf{<<Nome da máquina>>}}&
+  \multirow{-2}{*}{\cellcolor[HTML]{DBD7D2} \textbf{Localização}}&
+  <<Setor>>&
+  <<Planta>>&
+  <<Patrimônio>>
+\end{tcolorbox}
+#+end_src
+
+
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/tabela-ex.png][file:./img/tabela-ex.png]]
+
+*** Outras tabelas complexas
+
+#+ATTR_HTML: :width 700px
+#+ATTR_LATEX: :width \textwidth
+[[file:img/tabelas.png][file:./img/tabelas.png]]
+
+* 
+:PROPERTIES:
+:BEAMER_opt: standout
+:BEAMER_ENV: fullframe
+:END:
+
+\begin{modern-quote-env}
+\begin{modern-quote}
+\color{red} \textbf{Perguntas?} \rule{\linewidth}{0.5mm}
+\end{modern-quote}
+\end{modern-quote-env}
+

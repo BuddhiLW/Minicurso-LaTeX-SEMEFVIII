@@ -11,7 +11,7 @@
 
 \begin{column}{0.48\columnwidth}
 \begin{block}<2->{O código:}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 \begin{enumerate}
 \item Primeiro item
 \item Segundo item

@@ -14,7 +14,7 @@ Texto 1 & Texto 2 & Texto 3\\
 \end{block}
 
 \begin{block}<2->{\small{Código}}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 \begin{tabular}{lll}
   \hline
   Coluna 1 & Coluna 2 & Coluna 3\\

@@ -9,7 +9,7 @@
 \end{column}
 \begin{column}{0.48\columnwidth}
 \begin{block}<1->{Código da Imagem}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]

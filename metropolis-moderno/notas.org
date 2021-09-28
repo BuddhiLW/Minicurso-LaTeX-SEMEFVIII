@@ -1,2 +1,193 @@
+#+LATEX_COMPILER: xelatex
+
+#+title: O LaTeX, uma roupagem metropolitana
+# #+BEAMER_HEADER: \title{O \LaTeX{}, uma roupagem metropolitana}
+# #+AUTHOR:  Pedro G. Branquinho 
+#+EMAIL: pedro.branquinho@usp.br
+#+DATE: @@beamer:  Universidade de São Paulo - DEMAR@@
+#+BEAMER_HEADER: \author[Branquinho]{\textbf{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}}
+#+BEAMER_HEADER: \date[EEL-USP]{\textbf{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}}
+
+
+#+BEAMER_FRAME_LEVEL: 3
+#+LATEX_CLASS: beamer
+# seahorse
+#+BEAMER_THEME: metropolis
+#+BEAMER_COLOR_THEME: magpie
+#+BEAMER_HEADER: \metroset{block=fill, background=dark}
+#+LATEX_CLASS_OPTIONS: [bigger]
+# #+BEAMER_HEADER: \useoutertheme[height=30pt]{sidebar}
+# #+BEAMER_HEADER: \setbeamertemplate{frametitle}[sidebar theme]
+#+BEAMER_HEADER: \setbeamertemplate{itemize item}{\ding{166}}
+#+BEAMER_HEADER: \setbeamercolor{item projected}{bg=magenta!90!black,fg=white}
+#+BEAMER_HEADER: \setbeamertemplate{enumerate item}[circle]
+#+BEAMER_HEADER: \setbeamerfont{block title}{size={\centering}}
+#+BEAMER_HEADER: \setbeamercolor{block title}{bg=black!30!white,fg=white}
+#+BEAMER_THEME:
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+#+LANGUAGE:  pt
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:niltags:not-in-toc
+
+#+latex_header: \usepackage{pifont}
+#+LATEX_HEADER:\usepackage{verbatim}
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER:\def\verbatim@font{\scriptsize\ttfamily}
+#+LATEX_HEADER:\makeatother
+#+LATEX_HEADER:\logo{\includegraphics[height=0.5cm]{../Apresetacoes/Apres1/img/usp-logo-1}}
+
+#+BEAMER_HEADER: \setbeamertemplate{sections/subsections in toc}[square]
+#+LATEX_HEADER:\AtBeginSubsection[]{\begin{frame}\frametitle{Table of Contents}\tableofcontents[currentsection,currentsubsection]\end{frame}}
+
+#+BEAMER_HEADER: \setbeamerfont{section in toc}{size=\large,series=\bfseries}
+#+BEAMER_HEADER: \setbeamercolor{section in toc}{bg=black, fg=white!80!yellow}
+
+# #+LATEX_HEADER: \usepackage[LGR,OT1]{fontenc}
+
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows.meta}
+#+LATEX_HEADER: \usetikzlibrary{positioning}
+
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \tcbuselibrary{skins}
+
+#+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle{vim}
+
+#+LATEX_HEADER: \usepackage{listings}
+
+#+LATEX_HEADER:\newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER: \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!90!white}, colframe=black!90!white}
+#+LATEX_HEADER:\newenvironment{modern-quote-env}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER: \tcolorboxenvironment{modern-quote-env}{before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!10!white}, colframe=black!50!white}
+
+#+LATEX_HEADER:{\usebackgroundtemplate{\includegraphics[height=\paperheight]{../Apresetacoes/Apres1/img/TP-yellow-34.jpg}}
+
+#+LATEX_HEADER:\setbeamertemplate{frame footer}{SEMEF VIII}
+
+
+#+LaTeX: {\usebackgroundtemplate{\includegraphics[height=\paperheight]{../Apresetacoes/Apres1/img/yellow-30.jpg}}
+
 * Codigo fonte
-https://github.com/matze/mtheme/tree/master/source
+*** Repositorio
+Podemos acessar o codigo fonte da instalaçao por esse link:
+\textbf{https://github.com/matze/mtheme/tree/master/source}
+
+\transdissolve
+*** Compile o .sty localmente
+**** Passos para compilar o *estilo* localmente
+
+#+LATEX:\fvset{listparameters=\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}
+#+ATTR_BEAMER: :overlay <1->
+1. \small{Clone o repositorio}
+2. \small{Entre no diretorio}
+#+begin_src shell
+  git clone https://github.com/matze/mtheme
+
+  cd mtheme
+#+end_src
+
+#+ATTR_BEAMER: :overlay <2->
+1. \small Compile, e instale, com \alert{make}, os arquivos sty;
+2. \small{Faça o ecossistema do LaTeX reconhecer o tema.}
+#+begin_src shell
+  make sty && make install
+
+  texhash
+#+end_src
+
+* No que consiste os arquivos .sty?
+
+Os *estilos* em latex, donde vem a abreviaçao ".sty", nao sao nada
+mais, nada menos, do que arquivos onde comandos de estilizaçao sao
+chamados.
+
+\inputminted[firstline=90,lastline=103, frame=lines,framesep=2mm,baselinestretch=1.2,bgcolor=black,fontsize=\scriptsize]{latex}{./mtheme/beamerouterthememetropolis.sty}
+
+
+* Imagens
+** Codigo tikz gerando uma imagem
+*** Codigo 1
+:PROPERTIES:
+:BEAMER_opt: shrink=0
+:BEAMER_ENV: fullframe
+:END:
+# \fontsize{30}{20} \fontfamily{pag} \selectfont \alert{Alguns comentários}
+\vspace{5mm}
+
+**** LaTeX
+:PROPERTIES:
+:BEAMER_ENV: block
+:BEAMER_lin: 85
+:END:
+
+#+begin_src latex :results output :exports both :eval no
+  \begin{tikzpicture}
+    \def\couleur{alerted text.bg}
+    \path[coordinate] (0,0)  coordinate(A)
+    ++( 90:5cm) coordinate(B)
+    ++(0:5cm) coordinate(C)
+    ++(-90:5cm) coordinate(D);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
+    \foreach \x in {1,...,40}{%
+      \pgfmathsetcounter{density}{\thedensity+20}
+      \setcounter{density}{\thedensity}
+      \path[coordinate] coordinate(X) at (A){};
+      \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
+      -- (C) coordinate[pos=.10](B)
+      -- (D) coordinate[pos=.10](C)
+      -- (X) coordinate[pos=.10](D);
+      \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
+    }
+  \end{tikzpicture}
+  #+end_src
+*** Quadrado  rotativo
+:PROPERTIES:
+:BEAMER_COL: 1
+
+# :BEAMER_ENV: block
+:END:
+
+  #+begin_export latex
+  \begin{figure}
+     \newcounter{density}
+     \setcounter{density}{20}
+     \begin{tikzpicture}
+       \def\couleur{alerted text.bg}
+       \path[coordinate] (0,0)  coordinate(A)
+                   ++( 90:5cm) coordinate(B)
+                   ++(0:5cm) coordinate(C)
+                   ++(-90:5cm) coordinate(D);
+       \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
+       \foreach \x in {1,...,40}{%
+           \pgfmathsetcounter{density}{\thedensity+20}
+           \setcounter{density}{\thedensity}
+           \path[coordinate] coordinate(X) at (A){};
+           \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
+                               -- (C) coordinate[pos=.10](B)
+                               -- (D) coordinate[pos=.10](C)
+                               -- (X) coordinate[pos=.10](D);
+           \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
+       }
+     \end{tikzpicture}
+     \caption{Rotated square from
+     \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
+   \end{figure}
+  #+end_export
+  
+# #+beamer: \framebreak
+# #+beamer: \usebackgroundtemplate{\includegraphics[height=\paperheight]{../Apresetacoes/Apres1/img/5.png}}
+
+* 
+:PROPERTIES:
+:BEAMER_opt: standout
+:BEAMER_ENV: fullframe
+:END:
+
+\begin{modern-quote-env}
+\begin{modern-quote}
+\color{red} \textbf{Perguntas?} \rule{\linewidth}{0.5mm}
+\end{modern-quote}
+\end{modern-quote-env}

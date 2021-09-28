@@ -1,6 +1,6 @@
 \frametitle{Corpo do documento}
 \begin{block}<1->{Um texto dentro do ambiente \texttt{document}}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 \begin{document} %% Iniciar o documento
 
 \chapter{Capítulo 1}

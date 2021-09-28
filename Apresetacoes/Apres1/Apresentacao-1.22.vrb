@@ -8,15 +8,15 @@
 \end{block}
 
 \begin{block}<2->{Definindo a classe do documento}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 %!Tex TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
   \documentclass[
-  12pt, a4paper,		% tamanho da fonte e papel.
-  openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-  oneside,			% para impressão em recto somente. Oposto a twoside.
-  brazil, english		% o último idioma é o principal do documento, ademais são hifenizados corretamente.
+  12pt, a4paper,^^I^^I% tamanho da fonte e papel.
+  openright,^^I^^I^^I% capítulos começam em pág ímpar (insere página vazia caso preciso)
+  oneside,^^I^^I^^I% para impressão em recto somente. Oposto a twoside.
+  brazil, english^^I^^I% o último idioma é o principal do documento, ademais são hifenizados corretamente.
   ]{abntex2}
   \RequireXeTeX %Force XeTeX check
 \end{minted}

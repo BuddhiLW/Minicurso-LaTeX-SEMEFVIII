@@ -2,7 +2,7 @@
 \begin{columns}
 \begin{column}{0.92\columnwidth}
 \begin{block}{Opções do Beamer}
-\begin{minted}[fontsize=\scriptsize,autogobble=true,frame=lines,framesep=1mm,linenos=false]{latex}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
 \documentclass[bigger]{beamer} % espécide do documento
 \useoutertheme[height=30pt]{sidebar} % disposição de itens
 \setbeamertemplate{frametitle}[sidebar theme]

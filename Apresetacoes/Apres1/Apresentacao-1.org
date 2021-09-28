@@ -100,9 +100,9 @@ Dentro do Emacs, usando =emacs-lisp=
   (setq org-latex-listings 'minted)
   (setq org-latex-minted-options
         '(("fontsize" "\\scriptsize")
-          ("autogobble" "true")
+          ("autogobble" "false")
           ("frame" "lines")
-          ("framesep" "1mm")
+          ("framesep" "4pt")
           ("linenos" "false")))
 #+end_src
 

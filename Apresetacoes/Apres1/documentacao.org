@@ -400,3 +400,55 @@ Note que temos a estrutura,
 | =fg=       | foreground. |
 |------------+-------------|
 
+* Beamer opçoes estilizaveis
+** Fonte e cor
+
+Todas os =*elementos*= do =Beamer= que podem ser estilizado, em
+relaçao a fonte e cor sao: https://pastebin.com/nK3BWG5v
+
+*** Como estilizar:
+
+No preambulo,
+#+begin_src latex :results output :exports both :eval no
+\setbeamerfont{block title}{size={\centering}}
+\setbeamercolor{block title}{bg=black!30!white,fg=white}
+#+end_src
+
+** Transiçoes de slides
+Fonte: https://tex.stackexchange.com/questions/22412/beamer-transition-effect
+
+       - Show the slide as if horizontal blinds were pulled away.
+=\transblindshorizontal=
+        - Show the slide as if vertical blinds were pulled away.
+=\transblindsvertical=
+        - Show the slide by moving to the center from all four sides.
+=\transboxin=
+        - Show the slide by showing more and more of a rectangular area that is centered on the slide center
+=\transboxout=
+        - Slowly dissolve what was shown before
+=\transdissolve=
+                - Glitter sweeps in specified direction
+=\transglitter=
+                - Show the slide by sweeping two vertical lines from the sides inward.
+=\transsplitverticalin=
+                - Show the slide by sweeping two vertical lines from the center outward.
+=\transsplitverticalout=
+                - Show the slide by sweeping two horizontal lines from the sides inward.
+=\transsplithorizontalin=
+                - Show the slide by sweeping two horizontal lines from the center outward.
+=\transsplithorizontalout=
+                - Sweeps single line in specified direction
+=\transwipe=
+                - Show slide specified number of seconds
+=\transduration{2}=
+                - Show the slide by pushing what was shown before off the screen using the new content.
+=\transpush=
+                - Replace the previous slide directly (default behaviour).
+=\transreplace=
+                - Show the slide by covering the content that was shown before
+=\transcover=
+
+* Outros materiais autorais
+
+- [[https://github.com/BuddhiLW/MC-LaTeX/tree/master/LabEELw/LabEELw/MaterialMC][Materiais Minicurso LabEEL (Livros I, II e III)]]
+- [[https://www.youtube.com/watch?v=spYCKElN-v0&list=PLweBgessvalf9eGUknfHQZ6_q2Nz7t8df][Videos no YouTube do Minicurso LabEEL]]

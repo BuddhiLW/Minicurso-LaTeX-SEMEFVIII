@@ -19,67 +19,75 @@
 \headcommand {\beamer@framepages {6}{6}}
 \headcommand {\slideentry {1}{2}{3}{7/7}{Minted (código)}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@sectionpages {3}{7}}
-\headcommand {\beamer@subsectionpages {5}{7}}
-\headcommand {\sectionentry {2}{Sumário de tópicos}{8}{Sumário de tópicos}{0}}
-\headcommand {\beamer@subsectionpages {8}{7}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{8}{Pioneiros e Fundadores}}
-\headcommand {\slideentry {2}{1}{1}{8/8}{Pioneiros e Fundadores}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {2}{1}{2}{9/10}{Pioneiros e Fundadores}{0}}
-\headcommand {\beamer@framepages {9}{10}}
-\headcommand {\slideentry {2}{1}{3}{11/14}{Pioneiros e Fundadores}{0}}
-\headcommand {\beamer@framepages {11}{14}}
-\headcommand {\slideentry {2}{1}{4}{15/16}{Pioneiros e Fundadores}{0}}
-\headcommand {\beamer@framepages {15}{16}}
-\headcommand {\beamer@subsectionpages {8}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{17}{Aplicações que utilizam de \LaTeX {}}}
-\headcommand {\slideentry {2}{2}{1}{17/17}{Aplicações que utilizam de \LaTeX {}}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{2}{2}{18/18}{Aplicações que utilizam de \LaTeX {}}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{2}{3}{19/20}{Aplicações que utilizam de \LaTeX {}}{0}}
-\headcommand {\beamer@framepages {19}{20}}
-\headcommand {\slideentry {2}{2}{4}{21/23}{Aplicações que utilizam de \LaTeX {}}{0}}
-\headcommand {\beamer@framepages {21}{23}}
-\headcommand {\beamer@subsectionpages {17}{23}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{24}{Sintaxe básica de listagem e enumeração}}
-\headcommand {\slideentry {2}{3}{1}{24/24}{Sintaxe básica de listagem e enumeração}{0}}
-\headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {2}{3}{2}{25/26}{Sintaxe básica de listagem e enumeração}{0}}
-\headcommand {\beamer@framepages {25}{26}}
-\headcommand {\slideentry {2}{3}{3}{27/28}{Sintaxe básica de listagem e enumeração}{0}}
+\headcommand {\slideentry {1}{2}{4}{8/9}{Minted (código)}{0}}
+\headcommand {\beamer@framepages {8}{9}}
+\headcommand {\beamer@sectionpages {3}{9}}
+\headcommand {\beamer@subsectionpages {5}{9}}
+\headcommand {\sectionentry {2}{Sumário de tópicos}{10}{Sumário de tópicos}{0}}
+\headcommand {\beamer@subsectionpages {10}{9}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{10}{Pioneiros e Fundadores}}
+\headcommand {\slideentry {2}{1}{1}{10/10}{Pioneiros e Fundadores}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {2}{1}{2}{11/12}{Pioneiros e Fundadores}{0}}
+\headcommand {\beamer@framepages {11}{12}}
+\headcommand {\slideentry {2}{1}{3}{13/16}{Pioneiros e Fundadores}{0}}
+\headcommand {\beamer@framepages {13}{16}}
+\headcommand {\slideentry {2}{1}{4}{17/18}{Pioneiros e Fundadores}{0}}
+\headcommand {\beamer@framepages {17}{18}}
+\headcommand {\beamer@subsectionpages {10}{18}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{19}{Aplicações que utilizam de \LaTeX {}}}
+\headcommand {\slideentry {2}{2}{1}{19/19}{Aplicações que utilizam de \LaTeX {}}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {2}{2}{2}{20/20}{Aplicações que utilizam de \LaTeX {}}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {2}{2}{3}{21/22}{Aplicações que utilizam de \LaTeX {}}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\slideentry {2}{2}{4}{23/25}{Aplicações que utilizam de \LaTeX {}}{0}}
+\headcommand {\beamer@framepages {23}{25}}
+\headcommand {\beamer@subsectionpages {19}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{26}{Sintaxe básica de listagem e enumeração}}
+\headcommand {\slideentry {2}{3}{1}{26/26}{Sintaxe básica de listagem e enumeração}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {2}{3}{2}{27/28}{Sintaxe básica de listagem e enumeração}{0}}
 \headcommand {\beamer@framepages {27}{28}}
-\headcommand {\beamer@subsectionpages {24}{28}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{29}{Tabelas}}
-\headcommand {\slideentry {2}{4}{1}{29/29}{Tabelas}{0}}
-\headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {2}{4}{2}{30/31}{Tabelas}{0}}
-\headcommand {\beamer@framepages {30}{31}}
-\headcommand {\beamer@subsectionpages {29}{31}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{32}{Exemplo de um documento completo}}
-\headcommand {\slideentry {2}{5}{1}{32/32}{Exemplo de um documento completo}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {2}{5}{2}{33/34}{Exemplo de um documento completo}{0}}
-\headcommand {\beamer@framepages {33}{34}}
-\headcommand {\slideentry {2}{5}{3}{35/35}{Exemplo de um documento completo}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {2}{5}{4}{36/36}{Exemplo de um documento completo}{0}}
-\headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@subsectionpages {32}{36}}
-\headcommand {\beamer@subsectionentry {0}{2}{6}{37}{Código Tipografado}}
-\headcommand {\slideentry {2}{6}{1}{37/37}{Código Tipografado}{0}}
+\headcommand {\slideentry {2}{3}{3}{29/30}{Sintaxe básica de listagem e enumeração}{0}}
+\headcommand {\beamer@framepages {29}{30}}
+\headcommand {\beamer@subsectionpages {26}{30}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{31}{Tabelas}}
+\headcommand {\slideentry {2}{4}{1}{31/31}{Tabelas}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{4}{2}{32/33}{Tabelas}{0}}
+\headcommand {\beamer@framepages {32}{33}}
+\headcommand {\beamer@subsectionpages {31}{33}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{34}{Exemplo de um documento completo}}
+\headcommand {\slideentry {2}{5}{1}{34/34}{Exemplo de um documento completo}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {2}{5}{2}{35/36}{Exemplo de um documento completo}{0}}
+\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\slideentry {2}{5}{3}{37/37}{Exemplo de um documento completo}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {2}{6}{2}{38/38}{Código Tipografado}{0}}
+\headcommand {\slideentry {2}{5}{4}{38/38}{Exemplo de um documento completo}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@subsectionpages {37}{38}}
-\headcommand {\beamer@subsectionentry {0}{2}{7}{39}{Referências}}
-\headcommand {\slideentry {2}{7}{1}{39/39}{Referências}{0}}
+\headcommand {\beamer@subsectionpages {34}{38}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{39}{Código Tipografado}}
+\headcommand {\slideentry {2}{6}{1}{39/39}{Código Tipografado}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {2}{7}{2}{40/40}{Referências}{0}}
+\headcommand {\slideentry {2}{6}{2}{40/40}{Código Tipografado}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@partpages {1}{40}}
 \headcommand {\beamer@subsectionpages {39}{40}}
-\headcommand {\beamer@sectionpages {8}{40}}
-\headcommand {\beamer@documentpages {40}}
-\headcommand {\gdef \inserttotalframenumber {28}}
+\headcommand {\beamer@subsectionentry {0}{2}{7}{41}{Referências}}
+\headcommand {\slideentry {2}{7}{1}{41/41}{Referências}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {2}{7}{2}{42/42}{Referências}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {2}{7}{3}{43/43}{Referências}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {2}{7}{4}{44/44}{Referências}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {2}{7}{5}{45/45}{Referências}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@partpages {1}{45}}
+\headcommand {\beamer@subsectionpages {41}{45}}
+\headcommand {\beamer@sectionpages {10}{45}}
+\headcommand {\beamer@documentpages {45}}
+\headcommand {\gdef \inserttotalframenumber {32}}

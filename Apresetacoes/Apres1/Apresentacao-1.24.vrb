@@ -1,25 +1,22 @@
-\frametitle{Corpo do documento}
-\begin{block}<1->{Um texto dentro do ambiente \texttt{document}}
+\frametitle{Os pacotes pertinentes}
+\begin{block}<1->{Alguns que definem fonte, indentação, etc.}
 \begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
-\begin{document} %% Iniciar o documento
-
-\chapter{Capítulo 1}
-\section{Secção número 1.1}
-
-\textbf{De acordo com \cite{knuth1984literate}, Literate programming
-  é o paradigma mais formal e divertido de todos.}
-
-\begin{figure}[ht]
-  \centering
-  \caption{\label{fig:lt1} Exemplo de literate programming.}
-  \includegraphics[width=\linewidth]{./img/literate-programming.jpeg}
-  \legend{Reference: The internet}
-\end{figure}
-
-\lipsum[1-2] % Texto enche linguíça
-
-\bibliography{arquivo-com-bibliografias} % Usar bibliografias
-
-\end{document}
+% --- (tudo que vem depois de '%' é um comentário em latex)
+% ---
+% Pacotes fundamentais
+% ---
+\usepackage{lmodern}% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}% Seleção de codigos de fonte.
+\usepackage[utf8]{inputenc}% Codificacao do documento (acentos)
+\usepackage{indentfirst}% Indenta o primeiro parágrafo da secção.
+\usepackage{color}% Controle das cores
+\usepackage{graphicx}% Inclusão de gráficos
+\usepackage{microtype}% para melhorias de
+% justificação
+\usepackage{xltxtra} %fontspec, metalogo e realscripts (XeLaTex)
+\usepackage{fontspec}
+\usepackage{lipsum} % Enche linguíça (preenche espaço)
+\usepackage[alf]{abntex2cite}% Citações padrão ABNT
+\usepackage{amsmath} % Diversas tipografias matemáticas
 \end{minted}
 \end{block}

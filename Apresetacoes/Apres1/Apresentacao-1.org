@@ -11,7 +11,6 @@
 #+BEAMER_HEADER: \author[Branquinho]{\textbf{Pedro Gomes Branquinho \\ \text{\scriptsize{pedro.branquinho@usp.br}}}}
 #+BEAMER_HEADER: \date[EEL-USP]{\textbf{\scriptsize{Mini-curso de \LaTeX} \\ Universidade de São Paulo - DEMAR}}
 
-
 #+BEAMER_FRAME_LEVEL: 3
 #+LATEX_CLASS: beamer
 # seahorse
@@ -50,10 +49,11 @@
 #+LATEX_HEADER: \usepackage{minted}
 #+LATEX_HEADER: \usemintedstyle{lovelace}
 
-#+LATEX_HEADER:\newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
+#+LATEX_HEADER:\newenvironment{modern-quote}{\begin{quote}}{\end{quote}}
 #+LATEX_HEADER: \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!40!white}}
 #+LATEX_HEADER:{\usebackgroundtemplate{\includegraphics[height=\paperheight]{./img/TP-yellow-34.jpg}}
 
+#+LATEX_HEADER: \hypersetup{colorlinks, allcolors=., urlcolor=blue!70!white}
 
 # #+LATEX_HEADER: \usepackage{fontspec}
 # #+LATEX_HEADER: \defaultfontfeatures{Mapping=tex-text}
@@ -110,9 +110,41 @@ Dentro do Emacs, usando =emacs-lisp=
 **** Incluir =minted=
 Parte do preâmbulo,
 #+begin_src latex :results output export :exports code :eval no 
- \usepackage{minted}
- \usemintedstyle{lovelace}
+  \usepackage{minted}
+  \usemintedstyle{lovelace}
 #+end_src
+\transdissolve
+
+*** E, uma consideração
+**** \alert{\#Motiva!}
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <1->
+:BEAMER_ENV: block
+:END:
+
+\begin{modern-quote}
+Comece fazendo o que é necessário; então, faça o que é possível; e, de repente, está fazendo o impossível.
+\end{modern-quote}
+#+LaTeX: \begin{raggedleft}
+\textbf{--- Francisco de Assis}
+#+LaTeX: \par\end{raggedleft}
+\transdissolve
+
+**** \alert{A direção é mais importante que a intensidade}
+:PROPERTIES:
+:BEAMER_LIN: 0.48
+:BEAMER_ACT: <2->
+:BEAMER_ENV: block
+:END:
+
+\begin{modern-quote}
+Para cara milhares podando os frutos do mal, há um atacando a raíz.
+\end{modern-quote}
+#+LaTeX: \begin{raggedleft}
+\textbf{--- Henry Thoreau}
+#+LaTeX: \par\end{raggedleft}
+
 * Sumário de tópicos
 # #+LATEX:{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{./img/TP-opacity-30.png}}
 # #+LaTeX: \begin{raggedleft}
@@ -161,17 +193,17 @@ Parte do preâmbulo,
 :BEAMER_LIN: 0.80
 :BEAMER_ENV: structureenv
 :END:
-******  *+#AGORAVAI+*
+******  *\textbf{Frases de efeito}*
 #+ATTR_BEAMER: :environment nonindentlist
 :PROPERTIES:
 :BEAMER_ENV: quote
 :END:
 
 #+begin_quote
-\textbf{"Só sei que nada sei..."}
+\textbf{"An algorithm must be seen to be believed."}
 #+end_quote
 #+LaTeX: \begin{raggedleft}
-\textbf{--- Albert Einstein}
+\textbf{--- Donal Knuth}
 #+LaTeX: \par\end{raggedleft}
 
 \pause
@@ -182,13 +214,14 @@ Parte do preâmbulo,
 \transboxin
 
 \begin{modern-quote}
- \textbf{"Don't give up on your dreams, keep on sleeping."}
+\textbf{"There's ways to amuse yourself while doing things and thats how I look at efficency."}
+# \textbf{"In fact, what I would love to see is thousands of computer scientis let loose to do whatever they want. That's what really advances de field"}
 \end{modern-quote}
 #+LaTeX: \begin{center}
---- Arthur 
+--- Donald
 #+LaTeX: \par\end{center}
 #+LaTeX: \begin{raggedright}
-Schopenhauer \pause \tikz[remember picture] \node [] (a)
+Knuth \pause \tikz[remember picture] \node [] (a)
 #+LaTeX: \par\end{raggedright}
 
 \begin{tikzpicture}[remember picture, overlay,
@@ -209,7 +242,7 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 \end{tikzpicture}
 
 
-*** Roupagem moderna, LaTeX - Leslie Lamport (1985)
+*** LaTeX - Leslie Lamport (1985)
 **** Imagem Lamport
 :PROPERTIES:
 :BEAMER_COL: 0.48
@@ -244,7 +277,7 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 #+ATTR_LATEX: :options center
 [[file:img/mathjax.png][file:./img/mathjax.png]]
 
-*** Org-mode e AUCTeX (O código que usamos)
+*** Org-mode e AUCTeX 
 **** Código da Equação de Navier-Stokes
 :PROPERTIES:
 :BEAMER_LIN: 0.48
@@ -252,13 +285,13 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :BEAMER_ENV: block
 :END:
 #+begin_src latex :results output export :exports both :eval no
-\begin{equation}
-          \begin{aligned}
-          \dfrac{\partial{\vec{V}}}{\partial{t}}
-          + \vec{V}.\nabla{\vec{V}}
-          = - \dfrac{\nabla{p}}{\rho}
-          + \nu{}\nabla^2{\vec{V}}
-          \end{aligned}
+  \begin{equation}
+    \begin{aligned}
+      \dfrac{\partial{\vec{V}}}{\partial{t}}
+      + \vec{V}.\nabla{\vec{V}}
+      = - \dfrac{\nabla{p}}{\rho}
+      + \nu{}\nabla^2{\vec{V}}
+    \end{aligned}
   \end{equation}
 #+end_src
 
@@ -323,10 +356,10 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :BEAMER_ENV: block
 :END:
 #+begin_src latex :results output export :exports both :eval no
-\begin{enumerate}
-\item Primeiro item
-\item Segundo item
-\end{enumerate}
+  \begin{itemize}
+  \item Primeiro item
+  \item Segundo item
+  \end{itemize}
 #+end_src
 
 *** Enumerate
@@ -348,12 +381,12 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :BEAMER_ACT: <2->
 :BEAMER_ENV: block
 :END:
-#+begin_example
-\begin{enumerate}
-\item Primeiro item
-\item Segundo item
-\end{enumerate}
-#+end_example
+#+begin_src latex :results output export :exports both :eval no
+  \begin{enumerate}
+  \item Primeiro item
+  \item Segundo item
+  \end{enumerate}
+#+end_src
 
 ** Tabelas
 *** Tabela Simples
@@ -385,15 +418,15 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 # bgcolor=LightGray,
 #+attr_latex: frame=none
 #+begin_src latex :results output export :exports both :eval no
-      \begin{tabular}{lll}
-        \hline
-        Coluna 1 & Coluna 2 & Coluna 3\\
-        \hline
-        \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
-        \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
-        Texto 1 & Texto 2 & Texto 3\\
-        \hline
-      \end{tabular}
+  \begin{tabular}{lll}
+    \hline
+    Coluna 1 & Coluna 2 & Coluna 3\\
+    \hline
+    \(a_{11}\) & \(a_{12}\) & \(a_{13}\)\\
+    \(a_{21}\) & \(a_{22}\) & \(a_{23}\)\\
+    Texto 1 & Texto 2 & Texto 3\\
+    \hline
+  \end{tabular}
 #+end_src
 ** Exemplo de um documento completo
 *** Preâmbulo
@@ -410,14 +443,14 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :END:
 
 #+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
-%!Tex TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+  % !Tex TS-program = xelatex
+  % !TEX encoding = UTF-8 Unicode
 
   \documentclass[
-  12pt, a4paper,		% tamanho da fonte e papel.
-  openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-  oneside,			% para impressão em recto somente. Oposto a twoside.
-  brazil, english		% o último idioma é o principal do documento, ademais são hifenizados corretamente.
+  12pt, a4paper,% tamanho da fonte e papel.
+  openright,% capítulos começam em pág ímpar (insere página vazia caso preciso)
+  oneside,% para impressão em recto somente. Oposto a twoside.
+  brazil, english	% o último idioma é o principal do documento, ademais são hifenizados corretamente.
   ]{abntex2}
   \RequireXeTeX %Force XeTeX check
 #+end_src
@@ -431,23 +464,23 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :END:
 
 #+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
-    % --- (tudo que vem depois de '%' é um comentário em latex)
-    % ---
-    % Pacotes fundamentais 
-    % ---
-    \usepackage{lmodern}	% Usa a fonte Latin Modern
-    \usepackage[T1]{fontenc}% Seleção de codigos de fonte.
-    \usepackage[utf8]{inputenc}% Codificacao do documento (acentos)
-    \usepackage{indentfirst}% Indenta o primeiro parágrafo da secção.
-    \usepackage{color}% Controle das cores
-    \usepackage{graphicx}	% Inclusão de gráficos
-    \usepackage{microtype}% para melhorias de
-    % justificação
-    \usepackage{xltxtra} %fontspec, metalogo e realscripts (XeLaTex)
-    \usepackage{fontspec}
-    \usepackage{lipsum} % Enche linguíça (preenche espaço)
-    \usepackage[alf]{abntex2cite}% Citações padrão ABNT
-    \usepackage{amsmath} % Diversas tipografias matemáticas
+  % --- (tudo que vem depois de '%' é um comentário em latex)
+  % ---
+  % Pacotes fundamentais 
+  % ---
+  \usepackage{lmodern}% Usa a fonte Latin Modern
+  \usepackage[T1]{fontenc}% Seleção de codigos de fonte.
+  \usepackage[utf8]{inputenc}% Codificacao do documento (acentos)
+  \usepackage{indentfirst}% Indenta o primeiro parágrafo da secção.
+  \usepackage{color}% Controle das cores
+  \usepackage{graphicx}% Inclusão de gráficos
+  \usepackage{microtype}% para melhorias de
+  % justificação
+  \usepackage{xltxtra} %fontspec, metalogo e realscripts (XeLaTex)
+  \usepackage{fontspec}
+  \usepackage{lipsum} % Enche linguíça (preenche espaço)
+  \usepackage[alf]{abntex2cite}% Citações padrão ABNT
+  \usepackage{amsmath} % Diversas tipografias matemáticas
 #+end_src
 *** Corpo do documento
 ***** Um texto dentro do ambiente =document=
@@ -458,26 +491,26 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 :END:
 
 #+begin_src latex :results output export :exports both :eval no :tangle ./tangle/doc1.tex
-    \begin{document} %% Iniciar o documento
+  \begin{document} %% Iniciar o documento
 
-    \chapter{Capítulo 1}
-    \section{Secção número 1.1}
+  \chapter{Capítulo 1}
+  \section{Secção número 1.1}
 
-    \textbf{De acordo com \cite{knuth1984literate}, Literate programming
-      é o paradigma mais formal e divertido de todos.}
+  \textbf{De acordo com \cite{knuth1984literate}, Literate programming
+    é o paradigma mais formal e divertido de todos.}
 
-    \begin{figure}[ht]
-      \centering
-      \caption{\label{fig:lt1} Exemplo de literate programming.}
-      \includegraphics[width=\linewidth]{./img/literate-programming.jpeg}
-      \legend{Reference: The internet}
-    \end{figure}
+  \begin{figure}[ht]
+    \centering
+    \caption{\label{fig:lt1} Exemplo de literate programming.}
+    \includegraphics[width=\linewidth]{../img/literate-programming.jpeg}
+    \legend{Reference: The internet}
+  \end{figure}
 
-    \lipsum[1-2] % Texto enche linguíça
+  \lipsum[1-2] % Texto enche linguíça
 
-    \bibliography{arquivo-com-bibliografias} % Usar bibliografias
+  \bibliography{arquivo-com-bibliografias} % Usar bibliografias
 
-    \end{document}
+  \end{document}
 #+end_src
 
 ** Código Tipografado
@@ -490,7 +523,7 @@ Schopenhauer \pause \tikz[remember picture] \node [] (a)
 
 #+NAME: 033be239-bf17-47f5-8717-395a1e688d34
 #+begin_src python :session localhost :results output :exports both :eval no
-np.sin(43)
+  np.sin(43)
 #+end_src
 
 #+RESULTS: 033be239-bf17-47f5-8717-395a1e688d34
@@ -512,8 +545,39 @@ np.sin(43)
 *** Documentação e modelos
 + *Gerais:*
   + Tikz: https://latexdraw.com/
-  + Overleaf:
-    
-+  *Minicursos*
-  
-  
+  + Overleaf: https://www.overleaf.com/latex/templates
+  + The Comprehensive TEX Archive Network (CTAN): https://www.ctan.org/
+*** Minicursos não autorais
+  - (Luiz Eleno) Material introdutório e exemplo de uso =Beamer=.
+    * LaTeX tutorial for newbies (2020):
+      https://github.com/luizeleno/LaTeX-tutorial-for-newbies
+  - (Rebeca Bacani) Material introdutório e motivacional do uso de LaTeX.
+    * A crash course LaTeX (2017):
+      https://edisciplinas.usp.br/mod/folder/view.php?id=3587478&lang=en
+*** Minicurso autoral
+  1. Material introdutório abordando diversos casos de uso e sintaxe:
+     * Minicurso de LaTeX, LabEEL:
+       https://github.com/BuddhiLW/MC-LaTeX
+
+  2. Introdução ao LaTeX:
+     [[https://www.youtube.com/watch?v=spYCKElN-v0][watch?v=spYCKElN-v0]]
+     - [[https://github.com/BuddhiLW/MC-LaTeX/tree/master/LabEELw/LabEELw/MaterialMC/Livro_PT1][Livro 1 - Github]]
+  3. Produção de Relatórios, Artigos e Teses: [[https://www.youtube.com/watch?v=eYltXjJ9glc][watch?v=eYltXjJ9glc]]
+     - [[https://github.com/BuddhiLW/MC-LaTeX/tree/master/LabEELw/LabEELw/MaterialMC/Livro_PT2][Livro 2 - Github]]
+  4. Referências e Apresentações com a Classe Beamer: [[https://www.youtube.com/watch?v=OiB3oLoE4pQ][watch?v=OiB3oLoE4pQ]]
+     - [[https://github.com/BuddhiLW/MC-LaTeX/tree/master/LabEELw/LabEELw/MaterialMC/Livro_PT3][Livro 3 - Github]]
+
+* 
+:PROPERTIES:
+:BEAMER_opt: standout
+:BEAMER_ENV: fullframe
+:END:
+**** 
+\begin{modern-quote-env}
+\begin{modern-quote}
+\color{red} \huge\textbf{Perguntas?} \\
+\rule{\linewidth}{0.5mm}
+\end{modern-quote}
+\end{modern-quote-env}
+
+# srmuniz@ifsc.usp.br

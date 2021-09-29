@@ -5,4 +5,5 @@ Parte do preâmbulo,
 \usepackage{minted}
 \usemintedstyle{lovelace}
 \end{minted}
+\transdissolve
 \end{block}

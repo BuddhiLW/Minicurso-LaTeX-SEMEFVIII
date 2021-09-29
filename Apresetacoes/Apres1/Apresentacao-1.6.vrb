@@ -5,9 +5,9 @@ Dentro do Emacs, usando \texttt{emacs-lisp}
 (setq org-latex-listings 'minted)
 (setq org-latex-minted-options
       '(("fontsize" "\\scriptsize")
-^^I("autogobble" "false")
-^^I("frame" "lines")
-^^I("framesep" "4pt")
-^^I("linenos" "false")))
+	("autogobble" "false")
+	("frame" "lines")
+	("framesep" "4pt")
+	("linenos" "false")))
 \end{minted}
 \end{block}

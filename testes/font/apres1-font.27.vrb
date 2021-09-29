@@ -1,0 +1,24 @@
+\frametitle{Python com \texttt {pygments}, usando \texttt {minted}}
+\begin{block}{Como renderiza}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{python}
+import numpy as np
+\end{minted}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{python}
+np.sin(43)
+\end{minted}
+
+\begin{verbatim}
+-0.8317747426285983
+\end{verbatim}
+\end{block}
+
+\begin{block}{Código em \LaTeX{} (Minted e Pygments)}
+\href{img/minted.png}{\includegraphics[width=0.8\textwidth]{./img/minted.png}}
+
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{verbatim}
+ -0.8317747426285983
+\end{verbatim}
+\end{minted}
+\end{block}

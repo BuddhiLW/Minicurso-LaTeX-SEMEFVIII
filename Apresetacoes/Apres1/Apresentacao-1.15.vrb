@@ -1,0 +1,24 @@
+\frametitle{Org-mode e AUCTeX}
+\begin{block}<1->{Código da Equação de Navier-Stokes}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{equation}
+  \begin{aligned}
+    \dfrac{\partial{\vec{V}}}{\partial{t}}
+    + \vec{V}.\nabla{\vec{V}}
+    = - \dfrac{\nabla{p}}{\rho}
+    + \nu{}\nabla^2{\vec{V}}
+  \end{aligned}
+\end{equation}
+\end{minted}
+
+\transdissolve
+\pause
+\end{block}
+
+\begin{block}<1->{Renderização Equação de Navier-Stokes}
+\begin{equation}
+        \begin{aligned}
+        \dfrac{\partial{\vec{V}}}{\partial{t}} + \vec{V}.\nabla{\vec{V}} = - \dfrac{\nabla{p}}{\rho} + \nu{}\nabla^2{\vec{V}}
+        \end{aligned}
+\end{equation}
+\end{block}

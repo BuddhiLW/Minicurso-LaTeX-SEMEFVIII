@@ -1,0 +1,9 @@
+\frametitle{\LaTeX {}}
+\begin{block}{Incluir \texttt{minted}}
+Parte do preâmbulo,
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\usepackage{minted}
+\usemintedstyle{lovelace}
+\end{minted}
+\transdissolve
+\end{block}

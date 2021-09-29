@@ -1,0 +1,21 @@
+\frametitle{Enumerate}
+\begin{columns}
+\begin{column}{0.48\columnwidth}
+\begin{block}<1->{Como renderiza:}
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+\end{block}
+\end{column}
+\begin{column}{0.48\columnwidth}
+\begin{block}<2->{O código:}
+\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
+\end{minted}
+\end{block}
+\end{column}
+\end{columns}

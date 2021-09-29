@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[bigger]}\PYG{n+nb}{\PYGZob{}}beamer\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} espécide do documento}
+\PYG{k}{\PYGZbs{}useoutertheme}\PYG{n+na}{[height=30pt]}\PYG{n+nb}{\PYGZob{}}sidebar\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} disposição de itens}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}}[sidebar theme]
+\PYG{k}{\PYGZbs{}usecolortheme}\PYG{n+nb}{\PYGZob{}}magpie\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Cor temática}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}itemize item\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}ding}\PYG{n+nb}{\PYGZob{}}166\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{}Simb. item}
+\PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}item projected\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=magenta!90!black,fg=white\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}setbeamertemplate}\PYG{n+nb}{\PYGZob{}}enumerate item\PYG{n+nb}{\PYGZcb{}}[circle] \PYG{c}{\PYGZpc{} Simb. enum.}
+\PYG{k}{\PYGZbs{}setbeamerfont}\PYG{n+nb}{\PYGZob{}}block title\PYG{n+nb}{\PYGZcb{}\PYGZob{}}size=\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}centering}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}} \PYG{c}{\PYGZpc{} Tit. blocos}
+\PYG{k}{\PYGZbs{}setbeamercolor}\PYG{n+nb}{\PYGZob{}}block title\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bg=black!30!white,fg=white\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

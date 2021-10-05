@@ -1,0 +1,123 @@
+#+latex_class: abntex2
+#+LaTex_header: \usepackage{esint}
+#+LATEX_HEADER: \usepackage{pifont}
+#+LATEX_HEADER: \setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+* Exercícios 1, 2 e 3 - Lista 1.
+abc \textrm{abc}
+** Exercício 1 (comentar)
+\begin{equation}
+\begin{aligned}
+\iiint_{texto}^{texto2}{(\mathbf{\nabla \cdot F}) \: \text{d} V} = \oiint_s{(\mathbf{F})}
+\end{aligned}
+\end{equation}
+** Exercício 2
+Por exemplo, caso $x=y^2$
+\begin{equation}
+\begin{aligned}
+\int_{-\infty}^{\infty}{e^{-x^2} \mathrm{d}x} = 1
+\end{aligned}
+\end{equation}
+** Exercício 3
+
+\begin{enumerate}
+  \item<1->[👐]{Programação Unificada}
+  \item<5->[\ding{83}]{Flexibilidade Computacional}
+  \item<2->[\ding{88}]{Open Source}
+  \item<3->[\ding{93}]{Estruturas Reutilizáveis -- Bottom-up}
+  \item<4->[\ding{100}]{Fácil Compartilhamento}
+\end{enumerate}
+
+* Exercício 1, (a), (b); 2; 3. - Lista 2
+** Exercício 1
+*** Item a
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+\vspace{2mm}
+\dfrac{\partial{}x}{\partial{}t} &= \sigma{}(y-x) \\
+
+\vspace{2mm}
+\dfrac{\partial{y}}{\partial{t}} &= x(\rho{} - z) -y\\
+
+\vspace{2mm}
+
+\dfrac{\partial{z}}{\partial{t}} &= xy-\beta{}z
+\end{cases}
+\end{aligned}
+\end{equation}
+*** Item b
+
+\begin{equation}
+\begin{aligned}
+F(k) = \frac{1}{2\pi}\int_{-\infty}^{\infty}{s(x)e^{-ikx}dx}
+\end{aligned}
+\end{equation}
+
+** Exercício 2
+
+\begin{table}[htb]
+\ABNTEXfontereduzida
+\caption[Níveis de investigação]{Níveis de investigação.}
+\label{tab-nivinv}
+\begin{tabular}{p{2.6cm}|p{6.0cm}|p{2.25cm}|p{3.40cm}}
+  %\hline
+   \textbf{Nível de Investigação} & \textbf{Insumos}  & \textbf{Sistemas de Investigação}  & \textbf{Produtos}  \\
+    \hline
+    Meta-nível & Filosofia\index{filosofia} da Ciência  & Epistemologia &
+    Paradigma  \\
+    \hline
+    Nível do objeto & Paradigmas do metanível e evidências do nível inferior &
+    Ciência  & Teorias e modelos \\
+    \hline
+    Nível inferior & Modelos e métodos do nível do objeto e problemas do nível inferior & Prática & Solução de problemas  \\
+   % \hline
+\end{tabular}
+\legend{Fonte: \citeonline{van86}}
+\end{table}
+
+
+\begin{table}[htb]
+\IBGEtab{%
+  \caption{Um Exemplo de tabela alinhada que pode ser longa
+  ou curta, conforme padrão IBGE.}%
+  \label{tabela-ibge}
+}{%
+  \begin{tabular}{ccc}
+  \toprule
+   Nome & Nascimento & Documento \\
+  \midrule \midrule
+   Maria da Silva & 11/11/1111 & 111.111.111-11 \\
+  \midrule
+   João Souza & 11/11/2111 & 211.111.111-11 \\
+  \midrule
+   Laura Vicuña & 05/04/1891 & 3111.111.111-11 \\
+  \bottomrule
+\end{tabular}%
+}{%
+  \fonte{Produzido pelos autores.}%
+  \nota{Esta é uma nota, que diz que os dados são baseados na
+  regressão linear.}%
+  \nota[Anotações]{Uma anotação adicional, que pode ser seguida de várias
+  outras.}%
+  }
+\end{table}
+
+
+** Exercício 3
+
+C-c C-x C-v
+#+ATTR_HTML: :width 500px
+#+ATTR_LATEX: :width 0.85\textwidth,height=0.65\textheight
+[[file:download.jpeg][file:~/PP/LaTeX/SEMEF-minicurso/Dia2/download.jpeg]]
+
+* Exercícios 1 - Lista 3
+* Overleaf
+** Texto com capa, tombo, e algum texto linguiça, uma imagem e uma tabela.
+- [[file:~/PP/LaTeX/MC-LaTeX/LabEELw/LabEELw/MaterialMC/abnt_modcanon/abntex2-modelo-include-comandos.tex][Comentar a tabela e imagem]] (documento autodocumentado do pacote ABNTeX2)
+- [[file:TCC/TCC-en.tex][TCC (Capa e tombo)]]
+** Apresentação beamer 
+* Alguns comentários
+** Apresentação Lupo
+** Fontes e materiais suplementares
+** Repositório criado para EEL-USP

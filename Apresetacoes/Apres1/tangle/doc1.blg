@@ -18,21 +18,21 @@ Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
-| Estilo bibliográfico abntex2-alf.bst versão v-1.9.7           |
+| Estilo bibliográfico abntex2-alf.bst versão v<VERSION>           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
 You've used 2 entries,
             6714 wiz_defined-function locations,
-            1205 strings with 9435 characters,
-and the built_in function-call counts, 1607 in all, are:
-= -- 241
+            1205 strings with 9438 characters,
+and the built_in function-call counts, 1649 in all, are:
+= -- 253
 > -- 16
 < -- 4
-+ -- 51
++ -- 54
 - -- 5
-* -- 87
-:= -- 271
+* -- 90
+:= -- 280
 add.period$ -- 3
 call.type$ -- 2
 change.case$ -- 10
@@ -41,19 +41,19 @@ cite$ -- 1
 duplicate$ -- 46
 empty$ -- 99
 format.name$ -- 23
-if$ -- 370
+if$ -- 379
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 27
 newline$ -- 13
 num.names$ -- 5
-pop$ -- 44
+pop$ -- 47
 preamble$ -- 1
 purify$ -- 6
 quote$ -- 0
 skip$ -- 118
 stack$ -- 1
-substring$ -- 94
+substring$ -- 97
 swap$ -- 24
 text.length$ -- 3
 text.prefix$ -- 0

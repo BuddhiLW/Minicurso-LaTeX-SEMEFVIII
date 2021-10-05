@@ -2,7 +2,7 @@
 \vspace{5mm}
 
 \begin{block}{\LaTeX{}}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{latex}
 \begin{tikzpicture}
   \def\couleur{alerted text.bg}
   \path[coordinate] (0,0)  coordinate(A)

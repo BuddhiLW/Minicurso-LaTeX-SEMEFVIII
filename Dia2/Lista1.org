@@ -1,0 +1,208 @@
+#+LATEX_HEADER:\documentclass[a4paper,11pt]{abntex2}
+# #+LATEX_HEADER: \usepackage[T1]{fontenc}
+# #+LATEX_HEADER: \usepackage[utf8]{inputenc}
+# #+LATEX_HEADER: \usepackage{graphicx}
+# #+LATEX_HEADER: \usepackage{xcolor}
+# #+LATEX_HEADER:  \input{imports/lista1-preambulo.tex}
+
+  # \begin{document}
+
+#+LATEX_HEADER:  \title{Lis:ta 1}
+
+#+LATEX_HEADER:  \author{\indent  Prof.: Pedro G. Branquinho, EEL-USP. \\ Orient.: Katia C. G. Candioto.}
+
+#+LATEX_HEADER:  \date{06/05/20 - 13/05/20}
+
+# #+LATEX_HEADER:  \maketitle
+
+  # \section*{Problema 1}
+* Problema 1
+  
+  Utilizando o template, no repositório do
+  \href{https://github.com/26-55-87-BuddhiLW/MC-LaTeX/tree/master/Exemplos/ArquivosCurso/ModRelatCient}{GitHub},
+  # \textbf{(re)produza uma capa e folha de capa},
+*(re)produza uma capa e folha de capa,* com um título de pesquisa que gostaria de fazer
+  pra um possível TCC (o assunto pode ser, por exemplo, culinária; ou
+  sistemas dinâmicas).  O modelo deve estar de acordo com as
+  seguintes normas, ABNT,
+
+  # \begin{itemize}[noitemsep]
+
+  # \item NBR 6023, Informação e documentação: referências: elaboração.
+  # \item NBR 6024, Informação e documentação: numeração progressiva das seções de um documento escrito: apresentação.
+  # \item NBR 6027, Informação e documentação: sumário: apresentação.
+  # \item NBR 6028, Informação e documentação: resumo: apresentação.
+  # \item NBR 10520, Informação e documentação: citações em documentos:apresentação.
+  # \item NBR 12225, Informação e documentação: lombada: apresentação.
+  # \item NBR 14724, Informação e documentação: trabalhos acadêmicos: apresentação.
+
+  # \end{itemize}
+
+-  NBR 6023, Informação e documentação: referências: elaboração.
+-  NBR 6024, Informação e documentação: numeração progressiva das seções de um documento escrito: apresentação.
+-  NBR 6027, Informação e documentação: sumário: apresentação.
+-  NBR 6028, Informação e documentação: resumo: apresentação.
+-  NBR 10520, Informação e documentação: citações em documentos:apresentação.
+-  NBR 12225, Informação e documentação: lombada: apresentação.
+-  NBR 14724, Informação e documentação: trabalhos acadêmicos: apresentação.
+
+
+  Como prescrito na diretriz, no site da
+  \href{http://sistemas.eel.usp.br/bibliotecas/arq/diretrizes_usp_eel_2009!.pdf}{EEL-USP}. Mais
+  especificamente,
+
+  A capa, em ordem, deve conter,
+
+  # \begin{enumerate}
+  #   \noitemsep
+  # \item nome da instituição (opcional);
+  # \item nome completo do autor;
+  # \item título: em letras minúsculas, com exceção da primeira letra,
+  #   nomes próprios ou científicos;
+  # \item subtítulos (se houver);
+  # \item número de volumes (se houver mais de um);
+  # \item local (cidade);
+  # \item  ano de depósito (da entrega).
+  # \end{enumerate}
+
+   # \item nome da instituição (opcional);
+  # \item nome completo do autor;
+  # \item título: em letras minúsculas, com exceção da primeira letra,
+  #   nomes próprios ou científicos;
+  # \item subtítulos (se houver);
+  # \item número de volumes (se houver mais de um);
+  # \item local (cidade);
+  # \item  ano de depósito (da entrega).
+ 
+
+  A folha de rosto, por sua vez, deve conter, como itens essenciais,
+
+  # \begin{enumerate}
+1. nome completo do autor;
+2. título;
+3. subtítulo (se houver);
+4. número de volumes (se houver mais de um);
+5. natureza do trabalho (dissertação ou tese);
+6. nome da instituição a que é submetido o trabalho;
+7. grau pretendido (aprovação em disciplina);
+8. área de concentração;
+9. nome do orientador, co-orientador2 (se houver);
+10. local (cidade);
+11. ano de depósito (da entrega).
+# \end{enumerate}
+
+  \clearpage
+  
+  Os exemplos dados na diretriz da EEL-USP, fornece os seguintes
+  exemplos,
+
+#   \begin{figure}[!htb]
+#     \begin{center}
+#       \caption{\label{fig:cp} Capa}\\
+
+#       \includegraphics[scale=0.5]{./imagens/2.png} \\
+
+#       \legend{Fonte: \href{http://sistemas.eel.usp.br/bibliotecas/arq/diretrizes_usp_eel_2009!.pdf}{diretrizes EEL-USP}}
+#     \end{center}
+#   \end{figure}
+
+#   \begin{figure}[!htb]
+#     \begin{center}
+#       \caption{\label{fig:fr} Folha de Rosto}\\
+
+#       \includegraphics[scale=0.5]{./imagens/1.png}\\
+
+#       \legend{Fonte: \href{http://sistemas.eel.usp.br/bibliotecas/arq/diretrizes_usp_eel_2009!.pdf}{diretrizes EEL-USP}}
+#     \end{center}
+#   \end{figure}
+
+#   \begin{center}
+#   {\noindent \textcolor{red!70!black}{ \textbf{(Obs: O problema é mais simples
+#       do que parece à primeira vista. Perceba que a classe abntex2,
+#       utilizada no
+#       \href{http://sistemas.eel.usp.br/bibliotecas/arq/diretrizes_usp_eel_2009!.pdf}{modelo}
+#       está de acordo com as normas ABNT. Com pequenos modificações,
+#       fica-se semelhante aos modelos na diretriz da EEL-USP.)}}}
+# \end{center}
+
+# \clearpage
+
+
+
+# \section*{Problem 2}
+
+# \textbf{2.(a) Reescreva a seguinte fórmula,}
+
+# \begin{figure}[!htb]
+#   \begin{center}
+#     \caption{\label{fig:ForLatex} } Fórmula em \TeX \\
+
+#     \includegraphics[scale=0.5]{./imagens/A2I71.png}\\
+
+#     \legend{Fonte: o autor}
+#   \end{center}
+# \end{figure}
+
+# \begin{figure}[!htb]
+#   \begin{center}
+#     \caption{\label{fig:mapa} Resultado}\\
+
+#     \includegraphics[scale=0.5]{./imagens/A2I72.png}\\
+
+#     \legend{Fonte: o autor}
+#   \end{center}
+# \end{figure}
+
+# \textcolor{red!70!black}{\textbf{(Obs: não é para ter o numeral (2.2) ao lado direito, como na imagem).}}
+
+# \vspace{0.5cm}
+# {\noident\textbf{2.(b) Em seguida, escreva a seguinte fórmula,}}
+
+# \begin{equation}
+#   \int_{- \infty}^{\infty}{e^{-x^2} \mathrm{d}x}=1
+# \end{equation}
+
+# \clearpage
+
+# \section*{Problema 3}
+
+# \textbf{Reproduza o seguinte ambiente de itemização}. Modifique-o,
+# colocando um(diversos)
+# símbolo(s) nos itens (o texto é irrelevante). Os itens  \textbf{não}
+# devem ser idênticos aos da imagem, mas pode-se(use!) utilizar o mesmo pacote
+# (digbat) utilizado para gerar a itemização da imagem. \href{https://github.com/26-55-87-BuddhiLW/MC-LaTeX/tree/master/Exemplos/ArquivosCurso/ModApresent}{No
+#   modelo de aprensetação}, se encontra tudo necessário para a
+# reprodução requisitada.
+
+# \begin{figure}[!htb]
+#   \begin{center}
+#     \caption{\label{fig:itemizacao} Itemização estilizada, modelo de
+#       itemização 1}\\
+
+#     \includegraphics[scale=0.5]{./imagens/3.png}\\
+
+#     \legend{Fonte: o autor}
+#   \end{center}
+# \end{figure}
+
+# \begin{figure}[!htb]
+#   \begin{center}
+#     \caption{\label{fig:itemizacao} Itemização estilizada, modelo de
+#       itemização 2}\\
+
+#     \includegraphics[scale=0.5]{./imagens/4.png}\\
+
+#     \legend{Fonte: o autor}
+#   \end{center}
+# \end{figure}
+
+# \end{document}
+
+* Problema 2
+
+\begin{equation}
+  \begin{aligned}
+    \int_{-\infty}^{\infty}{e^{-x^2} \mathrm{d}x}=1
+    % \au
+  \end{aligned}
+\end{equation}

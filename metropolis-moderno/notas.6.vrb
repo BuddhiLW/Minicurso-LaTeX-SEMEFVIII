@@ -1,0 +1,1 @@
+\ifx\beamer@frameenvironmentsubst \beamer@frametext \else \expandafter \endgroup \fi \beamer@reseteecodes \relax \end{document}

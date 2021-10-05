@@ -1,0 +1,81 @@
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+% \usepackage{Consolatas}
+\usepackage{yfonts}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+% \usepackage[noitemsep]{enumerate}
+% \setlist{noitemsep}
+% \selist{nosep}
+
+\setlist[2]{noitemsep} % sets the itemsep and parsep for all level two lists to 0
+
+\setenumerate{noitemsep} % sets no itemsep for enumerate lists only
+\begin{enumerate}[noitemsep] % sets no itemsep for just this list
+  % ...
+\end{enumerate}
+
+
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage[margin=1in]{geometry}
+\geometry{left=25mm,right=25mm,%
+  bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+\linespread{1.1}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+{1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+{{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{center}
+    \vspace{4ex}
+    { {\fontsize{40}{40}\selectfont \textfrak{\@title}} }
+    \vspace{2ex}
+    \\
+    \linia\\
+    \@author \hfill \@date
+    \vspace{6ex}
+  \end{center}
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Entrega até 14/05}
+\lfoot{Lista \textnumero{} 1}
+\cfoot{}
+\rfoot{Página \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%
+
+%%% ----------%%%----------%%%----------%%%----------%%%
+
+\usepackage{hyperref}
+
+{%Muda a cor do Sumário, pois são todo links.
+  \hypersetup{
+    colorlinks=true,
+    citecolor= violet,
+    linkcolor=black!85,
+    filecolor=magenta,
+    urlcolor=cyan,
+  }
+
+  %%% ----------%%%----------%%%----------%%%----------%%%

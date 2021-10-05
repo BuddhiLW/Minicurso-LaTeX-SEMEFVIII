@@ -497,7 +497,7 @@ Knuth \pause \tikz[remember picture] \node [] (a)
   \section{Secção número 1.1}
 
   \textbf{De acordo com \cite{knuth1984literate}, Literate programming
-    é o paradigma mais formal e divertido de todos.}
+    é o paradigma mais formal e divertido de todos - ao vivo.}
 
   \begin{figure}[ht]
     \centering

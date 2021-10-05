@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Exercícios 1, 2 e 3 - Lista 1.}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Exercício 1 (comentar)}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Exercício 2}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Exercício 3}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Exercício 1, (a), (b); 2; 3. - Lista 2}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exercício 1}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Item a}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Item b}{2}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Exercício 2}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Exercício 3}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Exercícios 1 - Lista 3}{3}{section.3}%
+\contentsline {section}{\numberline {4}Overleaf}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Texto com capa, tombo, e algum texto linguiça, uma imagem e uma tabela.}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Apresentação beamer}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Alguns comentários}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Apresentação Lupo}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Fontes e materiais suplementares}{4}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Repositório criado para EEL-USP}{4}{subsection.5.3}%

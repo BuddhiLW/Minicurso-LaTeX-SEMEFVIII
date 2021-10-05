@@ -2,3 +2,4 @@
 \beamer@sectionintoc {2}{No que consiste os arquivos .sty?}{7}{0}{2}
 \beamer@sectionintoc {3}{Imagens}{8}{0}{3}
 \beamer@subsectionintoc {3}{1}{Codigo tikz gerando uma imagem}{11}{0}{3}
+\beamer@sectionintoc {4}{titulo}{14}{0}{4}

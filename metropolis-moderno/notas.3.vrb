@@ -5,7 +5,7 @@
 \item \small{Clone o repositorio}
 \item \small{Entre no diretorio}
 \end{enumerate}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{shell}
 git clone https://github.com/matze/mtheme
 
 cd mtheme
@@ -15,7 +15,7 @@ cd mtheme
 \item \small Compile, e instale, com \alert{make}, os arquivos sty;
 \item \small{Faça o ecossistema do LaTeX reconhecer o tema.}
 \end{enumerate}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{shell}
 make sty && make install
 
 texhash

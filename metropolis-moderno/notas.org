@@ -54,7 +54,7 @@
 #+LATEX_HEADER: \tcbuselibrary{skins}
 
 #+LATEX_HEADER: \usepackage{minted}
-#+LATEX_HEADER: \usemintedstyle{vim}
+#+LATEX_HEADER: \usemintedstyle{vim} %lovelace
 
 #+LATEX_HEADER: \usepackage{listings}
 
@@ -191,3 +191,26 @@ chamados.
 \color{red} \textbf{Perguntas?} \rule{\linewidth}{0.5mm}
 \end{modern-quote}
 \end{modern-quote-env}
+
+** titulo 
+texto
+
+#+begin_src emacs-lisp :export both
+(defun fun (x))
+#+end_src
+
+*ein*
+#+NAME: e13c10bd-1ea2-49a9-aa5e-102a8172031b
+#+begin_src ein-python :session localhost :results output :export both
+import numpy as np
+#+end_src
+
+#+RESULTS: e13c10bd-1ea2-49a9-aa5e-102a8172031b
+
+#+NAME: edc9930b-1dda-4506-859d-0dec7d644ba9
+#+begin_src ein-python :session localhost :results output :export both
+np.sin(np.cos(np.pi/3))
+#+end_src
+
+#+RESULTS: edc9930b-1dda-4506-859d-0dec7d644ba9
+: 0.4794255386042031

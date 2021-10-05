@@ -1,4 +1,4 @@
-% Created 2021-09-28 Tue 13:36
+% Created 2021-09-29 Wed 20:00
 % Intended LaTeX compiler: xelatex
 \documentclass[bigger]{beamer}
 \usepackage{graphicx}
@@ -25,7 +25,7 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 \usepackage{minted}
-\usemintedstyle{vim}
+\usemintedstyle{vim} %lovelace
 \usepackage{listings}
 \newenvironment{modern-quote}{\begin{itemize}}{\end{itemize}}
 \tcolorboxenvironment{modern-quote}{blanker,before skip=6pt,after skip=6pt, borderline west={3mm}{0pt}{black!90!white}, colframe=black!90!white}
@@ -65,21 +65,21 @@
 {\usebackgroundtemplate{\includegraphics[height=\paperheight]{../Apresetacoes/Apres1/img/yellow-30.jpg}}
 
 \section{Codigo fonte}
-\label{sec:org8a3d9ee}
-\begin{frame}[label={sec:orgf21036e}]{Repositorio}
+\label{sec:org0d36e7c}
+\begin{frame}[label={sec:org594b747}]{Repositorio}
 Podemos acessar o codigo fonte da instalaçao por esse link:
 \textbf{https://github.com/matze/mtheme/tree/master/source}
 
 \transdissolve
 \end{frame}
-\begin{frame}[label={sec:orgd99905e},fragile]{Compile o .sty localmente}
+\begin{frame}[label={sec:org273d7c6},fragile]{Compile o .sty localmente}
  \begin{block}{Passos para compilar o \alert{estilo} localmente}
 \fvset{listparameters=\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}
 \begin{enumerate}[<1->]
 \item \small{Clone o repositorio}
 \item \small{Entre no diretorio}
 \end{enumerate}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{shell}
 git clone https://github.com/matze/mtheme
 
 cd mtheme
@@ -89,7 +89,7 @@ cd mtheme
 \item \small Compile, e instale, com \alert{make}, os arquivos sty;
 \item \small{Faça o ecossistema do LaTeX reconhecer o tema.}
 \end{enumerate}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{shell}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{shell}
 make sty && make install
 
 texhash
@@ -98,7 +98,7 @@ texhash
 \end{frame}
 
 \section{No que consiste os arquivos .sty?}
-\label{sec:org9169b6f}
+\label{sec:org48cbd82}
 
 Os \alert{estilos} em latex, donde vem a abreviaçao ".sty", nao sao nada
 mais, nada menos, do que arquivos onde comandos de estilizaçao sao
@@ -108,14 +108,14 @@ chamados.
 
 
 \section{Imagens}
-\label{sec:org80a2e28}
+\label{sec:org93b987b}
 \subsection{Codigo tikz gerando uma imagem}
-\label{sec:org886f43d}
-\begin{frame}[label={sec:org2f3a064},fragile,shrink=0]{}
+\label{sec:org97a019e}
+\begin{frame}[label={sec:orgf0a0020},fragile,shrink=0]{}
  \vspace{5mm}
 
 \begin{block}{\LaTeX{}}
-\begin{minted}[fontsize=\scriptsize,autogobble=false,frame=lines,framesep=4pt,linenos=false]{latex}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{latex}
 \begin{tikzpicture}
   \def\couleur{alerted text.bg}
   \path[coordinate] (0,0)  coordinate(A)
@@ -137,7 +137,7 @@ chamados.
 \end{minted}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org97d1268}]{Quadrado  rotativo}
+\begin{frame}[label={sec:orgaf99805}]{Quadrado  rotativo}
 \begin{figure}
    \newcounter{density}
    \setcounter{density}{20}
@@ -146,7 +146,7 @@ chamados.
      \path[coordinate] (0,0)  coordinate(A)
                  ++( 90:5cm) coordinate(B)
                  ++(0:5cm) coordinate(C)
-                 ++(-90:5cm) coordinate(D);
+                 ++(-90:5cm) coordinate(D); %black!20
      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
      \foreach \x in {1,...,40}{%
          \pgfmathsetcounter{density}{\thedensity+20}
@@ -164,11 +164,28 @@ chamados.
  \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org32d3afc},standout]{}
+\begin{frame}[label={sec:org0700a89},standout]{}
 \begin{modern-quote-env}
 \begin{modern-quote}
 \color{red} \textbf{Perguntas?} \rule{\linewidth}{0.5mm}
 \end{modern-quote}
 \end{modern-quote-env}
 \end{frame}
+
+\section{titulo}
+\label{sec:org38eb835}
+texto
+
+common-lispcode
+
+\begin{block}{\alert{ein}}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{python}
+import numpy as np
+\end{minted}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos=true]{python}
+np.sin(np.cos(np.pi/3))
+\end{minted}
+\begin{block}
+
 \end{document}
